@@ -20,6 +20,26 @@ lines. When asked to recommend or decide something, present the numbers and flag
 clear recommendation -- but always name any flag that should make the buyer double-check before \
 acting on it.`;
 
+/**
+ * Reference data from the comparison store (not from any raw document): the
+ * RFx line list and the valid vendor ids. Without it the model had no way to
+ * map "docking stations" to line 8 and probed line numbers one tool call at
+ * a time.
+ */
+function buildReferenceBlock(store: ComparisonStore): string {
+  const vendors = store.vendors.map((v) => `- ${v.vendor_id}: ${v.full_name}`).join("\n");
+  const lines = store.line_items
+    .map((li) => `${li.no}. ${li.item} (${li.spec}) -- qty ${li.qty}, ${li.uom}`)
+    .join("\n");
+  return `REFERENCE DATA (from the comparison store; use these exact vendor_ids in tool calls):
+
+Vendors:
+${vendors}
+
+RFx line items:
+${lines}`;
+}
+
 export interface ChatMessage {
   role: "user" | "assistant";
   content: string;
@@ -42,7 +62,7 @@ export async function runAgentTurn(
     const res = await claude().messages.create({
       model: MODEL.agent,
       max_tokens: 2048,
-      system: SYSTEM_PROMPT,
+      system: `${SYSTEM_PROMPT}\n\n${buildReferenceBlock(store)}`,
       tools: TOOL_DEFINITIONS,
       messages,
     });
