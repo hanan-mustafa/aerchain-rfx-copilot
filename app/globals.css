@@ -1,0 +1,76 @@
+/*
+  DESIGN TOKENS
+  Subject: an internal procurement analyst workbench, not a marketing page.
+  The comparison table is the hero -- everything else (chat, gate strip,
+  header) is quiet scaffolding around it. Grounded in the subject matter:
+  a buyer cross-checking numbers against source documents, so structure
+  (borders, flag tags, monospace figures) carries real information rather
+  than decorating a generic dashboard shell.
+*/
+:root {
+  --paper: #f7f6f2;
+  --paper-raised: #ffffff;
+  --ink: #1c1b19;
+  --ink-dim: #6b6862;
+  --line: #d8d5cc;
+  --line-strong: #b6b2a6;
+  --accent: #1f4b4b;
+  --accent-dim: #dce8e6;
+  --warn: #8a5a12;
+  --warn-dim: #f3e6cf;
+  --fail: #8c2f2f;
+  --fail-dim: #f3dcdc;
+  --ok: #2f6b4f;
+  --ok-dim: #dcece3;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+a {
+  color: var(--accent);
+}
+
+::selection {
+  background: var(--accent-dim);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
