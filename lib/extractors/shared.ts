@@ -62,7 +62,11 @@ ambiguously" rather than looking like the vendor never mentioned it.
 literally as quoted. Do not convert currency yourself.
 4. If a vendor's unit_of_measure differs from the RFx's stated UoM for that line (e.g. vendor says \
 "per box of 10" but RFx wants "per unit"), record the vendor's unit_of_measure EXACTLY as they wrote \
-it, and add the flag "UNIT_MISMATCH". Do not do the math yourself.
+it, and add the flag "UNIT_MISMATCH". Do not do the math yourself. unit_of_measure is the unit the \
+vendor's price actually applies to: if a template column says one thing (e.g. "lot") but the \
+vendor's own remarks or figures show the price is per device/unit (e.g. "applies to all 320 \
+units", or qty x price = line total only at a per-device reading), record the per-device/unit \
+reading and quote that evidence in source_excerpt.
 5. If a price is conditional (e.g. only applies with early payment, or is a "headline" price with a \
 rebate mentioned elsewhere), extract the headline price, add flag "CONDITIONAL_PRICING", and put the \
 full condition text in source_excerpt. If the condition is a simple percentage discount/rebate off \

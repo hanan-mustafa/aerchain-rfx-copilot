@@ -32,7 +32,13 @@ export const LINE_ITEMS: LineItemSpec[] = [
   { no: 27, item: "Desktop Label Printer", spec: "Thermal, USB", uom: "per unit", qty: 15 },
   { no: 28, item: "Network Switch, 24-port unmanaged", spec: "Gigabit", uom: "per unit", qty: 10 },
   { no: 29, item: "Desktop UPS 650VA", spec: "Line-interactive", uom: "per unit", qty: 40 },
-  { no: 30, item: "3-Year Onsite Warranty Extension", spec: "Per-device bundle, all laptops", uom: "lot", qty: 1 },
+  // The buyer's template (data/RFx_Template_ITHardware_FY27.xlsx) lists this
+  // line as "lot, qty 1", but its own spec is per device, and every vendor
+  // that quoted it priced it per device across the 320 laptops/ultrabooks on
+  // lines 1-4 (e.g. Global IT: 3,300 x 320 = 1,056,000 line total). As "lot"
+  // the line was not comparable across vendors, so it is defined here as
+  // what was actually requested and quoted.
+  { no: 30, item: "3-Year Onsite Warranty Extension", spec: "Per-device bundle, all laptops (lines 1-4)", uom: "per device", qty: 320 },
 ];
 
 export const QUESTIONNAIRE_FIELDS: string[] = [

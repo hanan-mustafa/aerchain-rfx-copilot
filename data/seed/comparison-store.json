@@ -1,0 +1,3267 @@
+{
+  "rfx_id": "PRC-ITHW-FY27-0142",
+  "line_items": [
+    {
+      "no": 1,
+      "item": "Business Laptop - Entry",
+      "spec": "i5, 8GB RAM, 256GB SSD",
+      "uom": "per unit",
+      "qty": 100
+    },
+    {
+      "no": 2,
+      "item": "Business Laptop - Standard",
+      "spec": "i5, 16GB RAM, 512GB SSD",
+      "uom": "per unit",
+      "qty": 150
+    },
+    {
+      "no": 3,
+      "item": "Business Laptop - Premium",
+      "spec": "i7, 16GB RAM, 512GB SSD",
+      "uom": "per unit",
+      "qty": 50
+    },
+    {
+      "no": 4,
+      "item": "Executive Ultrabook",
+      "spec": "i7, 32GB RAM, 1TB SSD",
+      "uom": "per unit",
+      "qty": 20
+    },
+    {
+      "no": 5,
+      "item": "Monitor 24-inch FHD",
+      "spec": "1920x1080, IPS",
+      "uom": "per unit",
+      "qty": 200
+    },
+    {
+      "no": 6,
+      "item": "Monitor 27-inch QHD",
+      "spec": "2560x1440, IPS",
+      "uom": "per unit",
+      "qty": 80
+    },
+    {
+      "no": 7,
+      "item": "Dual Monitor Arm/Stand",
+      "spec": "Desk-clamp, gas spring",
+      "uom": "per unit",
+      "qty": 100
+    },
+    {
+      "no": 8,
+      "item": "USB-C Docking Station",
+      "spec": "Universal, dual 4K out",
+      "uom": "per unit",
+      "qty": 220
+    },
+    {
+      "no": 9,
+      "item": "Wireless Keyboard+Mouse Combo",
+      "spec": "2.4GHz + BT",
+      "uom": "per unit",
+      "qty": 300
+    },
+    {
+      "no": 10,
+      "item": "Wired Keyboard",
+      "spec": "USB, full-size",
+      "uom": "per unit",
+      "qty": 50
+    },
+    {
+      "no": 11,
+      "item": "Wired Optical Mouse",
+      "spec": "USB",
+      "uom": "per unit",
+      "qty": 50
+    },
+    {
+      "no": 12,
+      "item": "USB Webcam 1080p",
+      "spec": "1080p30, auto-focus",
+      "uom": "per unit",
+      "qty": 150
+    },
+    {
+      "no": 13,
+      "item": "USB Webcam 4K",
+      "spec": "4K30, auto-focus",
+      "uom": "per unit",
+      "qty": 30
+    },
+    {
+      "no": 14,
+      "item": "Wired Noise-Cancelling Headset",
+      "spec": "USB, mic ANC",
+      "uom": "per unit",
+      "qty": 200
+    },
+    {
+      "no": 15,
+      "item": "Bluetooth Headset",
+      "spec": "BT 5.0, mic",
+      "uom": "per unit",
+      "qty": 100
+    },
+    {
+      "no": 16,
+      "item": "Conference Speakerphone",
+      "spec": "360-degree mic, USB/BT",
+      "uom": "per unit",
+      "qty": 25
+    },
+    {
+      "no": 17,
+      "item": "Conference PTZ Camera",
+      "spec": "1080p, 10x zoom",
+      "uom": "per unit",
+      "qty": 15
+    },
+    {
+      "no": 18,
+      "item": "65-inch Interactive Display Panel",
+      "spec": "4K touch, Android OS",
+      "uom": "per unit",
+      "qty": 8
+    },
+    {
+      "no": 19,
+      "item": "Laptop Sleeve 15.6-inch",
+      "spec": "Neoprene",
+      "uom": "per unit",
+      "qty": 300
+    },
+    {
+      "no": 20,
+      "item": "Spare 65W USB-C Charger",
+      "spec": "GaN, universal",
+      "uom": "per unit",
+      "qty": 100
+    },
+    {
+      "no": 21,
+      "item": "Portable SSD 1TB",
+      "spec": "USB 3.2, external",
+      "uom": "per unit",
+      "qty": 60
+    },
+    {
+      "no": 22,
+      "item": "USB-C to HDMI Adapter",
+      "spec": "4K30 support",
+      "uom": "per unit",
+      "qty": 150
+    },
+    {
+      "no": 23,
+      "item": "USB Hub 7-port",
+      "spec": "USB 3.0, powered",
+      "uom": "per unit",
+      "qty": 80
+    },
+    {
+      "no": 24,
+      "item": "Laptop Cable Lock",
+      "spec": "Keyed, Kensington slot",
+      "uom": "per unit",
+      "qty": 300
+    },
+    {
+      "no": 25,
+      "item": "External Blu-ray/DVD Drive",
+      "spec": "USB, slim",
+      "uom": "per unit",
+      "qty": 10
+    },
+    {
+      "no": 26,
+      "item": "Handheld Barcode Scanner (USB)",
+      "spec": "1D/2D, wired",
+      "uom": "per unit",
+      "qty": 25
+    },
+    {
+      "no": 27,
+      "item": "Desktop Label Printer",
+      "spec": "Thermal, USB",
+      "uom": "per unit",
+      "qty": 15
+    },
+    {
+      "no": 28,
+      "item": "Network Switch, 24-port unmanaged",
+      "spec": "Gigabit",
+      "uom": "per unit",
+      "qty": 10
+    },
+    {
+      "no": 29,
+      "item": "Desktop UPS 650VA",
+      "spec": "Line-interactive",
+      "uom": "per unit",
+      "qty": 40
+    },
+    {
+      "no": 30,
+      "item": "3-Year Onsite Warranty Extension",
+      "spec": "Per-device bundle, all laptops (lines 1-4)",
+      "uom": "per device",
+      "qty": 320
+    }
+  ],
+  "vendors": [
+    {
+      "vendor_id": "apex",
+      "full_name": "Apex Business Systems Pvt. Ltd.",
+      "contact": "Rakesh Menon, rakesh.menon@apexbusiness.in",
+      "source_format": "xlsx",
+      "source_file": "Vendor_A_Apex_Business_Systems_Quote.xlsx"
+    },
+    {
+      "vendor_id": "techmart",
+      "full_name": "TechMart Solutions",
+      "contact": "Priya Sharma, priya.sharma@techmartsol.com",
+      "source_format": "docx",
+      "source_file": "Vendor_B_TechMart_Solutions_Quote.docx"
+    },
+    {
+      "vendor_id": "global_it",
+      "full_name": "Global IT Distributors",
+      "contact": "Sanjay Bhatt, sanjay.bhatt@globalitdist.co.in",
+      "source_format": "pdf",
+      "source_file": "Vendor_C_Global_IT_Distributors_Quote.pdf"
+    },
+    {
+      "vendor_id": "quickserve",
+      "full_name": "QuickServe Traders",
+      "contact": "Manoj Iyer, quickservetraders@gmail.com",
+      "source_format": "email",
+      "source_file": "Vendor_D_QuickServe_Traders_Email.txt"
+    },
+    {
+      "vendor_id": "sunrise",
+      "full_name": "Sunrise Computech",
+      "contact": "Devendra Patil (phone only)",
+      "source_format": "image",
+      "source_file": "Vendor_E_Sunrise_Computech_RateCard.jpg"
+    }
+  ],
+  "normalized_lines": [
+    {
+      "vendor_id": "apex",
+      "line_ref": 1,
+      "normalized_unit_price_inr": 42000,
+      "normalized_line_total_inr": 4200000,
+      "original_unit_price": 42000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F2=42000, Line Items!G2=INR, Line Items!D2=per unit",
+      "source_location": "Line Items!F2"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 2,
+      "normalized_unit_price_inr": 58000,
+      "normalized_line_total_inr": 8700000,
+      "original_unit_price": 58000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F3=58000, Line Items!G3=INR, Line Items!D3=per unit",
+      "source_location": "Line Items!F3"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 3,
+      "normalized_unit_price_inr": 74000,
+      "normalized_line_total_inr": 3700000,
+      "original_unit_price": 74000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F4=74000, Line Items!G4=INR, Line Items!D4=per unit",
+      "source_location": "Line Items!F4"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 4,
+      "normalized_unit_price_inr": 118000,
+      "normalized_line_total_inr": 2360000,
+      "original_unit_price": 118000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F5=118000, Line Items!G5=INR, Line Items!D5=per unit",
+      "source_location": "Line Items!F5"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 5,
+      "normalized_unit_price_inr": 9800,
+      "normalized_line_total_inr": 1960000,
+      "original_unit_price": 9800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F6=9800, Line Items!G6=INR, Line Items!D6=per unit",
+      "source_location": "Line Items!F6"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 6,
+      "normalized_unit_price_inr": 16500,
+      "normalized_line_total_inr": 1320000,
+      "original_unit_price": 16500,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F7=16500, Line Items!G7=INR, Line Items!D7=per unit",
+      "source_location": "Line Items!F7"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 7,
+      "normalized_unit_price_inr": 3200,
+      "normalized_line_total_inr": 320000,
+      "original_unit_price": 3200,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F8=3200, Line Items!G8=INR, Line Items!D8=per unit",
+      "source_location": "Line Items!F8"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 8,
+      "normalized_unit_price_inr": 5400,
+      "normalized_line_total_inr": 1188000,
+      "original_unit_price": 5400,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F9=5400, Line Items!G9=INR, Line Items!D9=per unit",
+      "source_location": "Line Items!F9"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 9,
+      "normalized_unit_price_inr": 1450,
+      "normalized_line_total_inr": 435000,
+      "original_unit_price": 1450,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F10=1450, Line Items!G10=INR, Line Items!D10=per unit",
+      "source_location": "Line Items!F10"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 10,
+      "normalized_unit_price_inr": 650,
+      "normalized_line_total_inr": 32500,
+      "original_unit_price": 650,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F11=650, Line Items!G11=INR, Line Items!D11=per unit",
+      "source_location": "Line Items!F11"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 11,
+      "normalized_unit_price_inr": 350,
+      "normalized_line_total_inr": 17500,
+      "original_unit_price": 350,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F12=350, Line Items!G12=INR, Line Items!D12=per unit",
+      "source_location": "Line Items!F12"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 12,
+      "normalized_unit_price_inr": 2200,
+      "normalized_line_total_inr": 330000,
+      "original_unit_price": 2200,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F13=2200, Line Items!G13=INR, Line Items!D13=per unit",
+      "source_location": "Line Items!F13"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 13,
+      "normalized_unit_price_inr": 6800,
+      "normalized_line_total_inr": 204000,
+      "original_unit_price": 6800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F14=6800, Line Items!G14=INR, Line Items!D14=per unit",
+      "source_location": "Line Items!F14"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 14,
+      "normalized_unit_price_inr": 3400,
+      "normalized_line_total_inr": 680000,
+      "original_unit_price": 3400,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F15=3400, Line Items!G15=INR, Line Items!D15=per unit",
+      "source_location": "Line Items!F15"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 15,
+      "normalized_unit_price_inr": 1800,
+      "normalized_line_total_inr": 180000,
+      "original_unit_price": 1800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F16=1800, Line Items!G16=INR, Line Items!D16=per unit",
+      "source_location": "Line Items!F16"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 16,
+      "normalized_unit_price_inr": 22000,
+      "normalized_line_total_inr": 550000,
+      "original_unit_price": 22000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F17=22000, Line Items!G17=INR, Line Items!D17=per unit",
+      "source_location": "Line Items!F17"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 17,
+      "normalized_unit_price_inr": 65000,
+      "normalized_line_total_inr": 975000,
+      "original_unit_price": 65000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F18=65000, Line Items!G18=INR, Line Items!D18=per unit",
+      "source_location": "Line Items!F18"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 18,
+      "normalized_unit_price_inr": 385000,
+      "normalized_line_total_inr": 3080000,
+      "original_unit_price": 385000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F19=385000, Line Items!G19=INR, Line Items!D19=per unit",
+      "source_location": "Line Items!F19"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 19,
+      "normalized_unit_price_inr": 850,
+      "normalized_line_total_inr": 255000,
+      "original_unit_price": 850,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F20=850, Line Items!G20=INR, Line Items!D20=per unit",
+      "source_location": "Line Items!F20"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 20,
+      "normalized_unit_price_inr": 2100,
+      "normalized_line_total_inr": 210000,
+      "original_unit_price": 2100,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F21=2100, Line Items!G21=INR, Line Items!D21=per unit",
+      "source_location": "Line Items!F21"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 21,
+      "normalized_unit_price_inr": 7200,
+      "normalized_line_total_inr": 432000,
+      "original_unit_price": 7200,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F22=7200, Line Items!G22=INR, Line Items!D22=per unit",
+      "source_location": "Line Items!F22"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 22,
+      "normalized_unit_price_inr": 950,
+      "normalized_line_total_inr": 142500,
+      "original_unit_price": 950,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F23=950, Line Items!G23=INR, Line Items!D23=per unit",
+      "source_location": "Line Items!F23"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 23,
+      "normalized_unit_price_inr": 1600,
+      "normalized_line_total_inr": 128000,
+      "original_unit_price": 1600,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F24=1600, Line Items!G24=INR, Line Items!D24=per unit",
+      "source_location": "Line Items!F24"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 24,
+      "normalized_unit_price_inr": 550,
+      "normalized_line_total_inr": 165000,
+      "original_unit_price": 550,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F25=550, Line Items!G25=INR, Line Items!D25=per unit",
+      "source_location": "Line Items!F25"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 25,
+      "normalized_unit_price_inr": 3800,
+      "normalized_line_total_inr": 38000,
+      "original_unit_price": 3800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F26=3800, Line Items!G26=INR, Line Items!D26=per unit",
+      "source_location": "Line Items!F26"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 26,
+      "normalized_unit_price_inr": 9500,
+      "normalized_line_total_inr": 237500,
+      "original_unit_price": 9500,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F27=9500, Line Items!G27=INR, Line Items!D27=per unit",
+      "source_location": "Line Items!F27"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 27,
+      "normalized_unit_price_inr": 14500,
+      "normalized_line_total_inr": 217500,
+      "original_unit_price": 14500,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F28=14500, Line Items!G28=INR, Line Items!D28=per unit",
+      "source_location": "Line Items!F28"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 28,
+      "normalized_unit_price_inr": 8200,
+      "normalized_line_total_inr": 82000,
+      "original_unit_price": 8200,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F29=8200, Line Items!G29=INR, Line Items!D29=per unit",
+      "source_location": "Line Items!F29"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 29,
+      "normalized_unit_price_inr": 4600,
+      "normalized_line_total_inr": 184000,
+      "original_unit_price": 4600,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F30=4600, Line Items!G30=INR, Line Items!D30=per unit",
+      "source_location": "Line Items!F30"
+    },
+    {
+      "vendor_id": "apex",
+      "line_ref": 30,
+      "normalized_unit_price_inr": 3200,
+      "normalized_line_total_inr": 1024000,
+      "original_unit_price": 3200,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per device",
+      "conversion_notes": [],
+      "flags": [
+        "OK",
+        "UNIT_MISMATCH"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Line Items!F31=3200, Line Items!G31=INR, Line Items!D31=lot, Line Items!E31=1, Line Items!H31=1024000, Line Items!I31='Applies to all 320 laptop/ultrabook units (lines 1-4)'. The stated unit price of 3200 with qty 1 lot yields line total 1024000 only if price is per device (1024000 / 320 = 3200), and remark confirms 320 units.",
+      "source_location": "Line Items!F31"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 1,
+      "normalized_unit_price_inr": 44520,
+      "normalized_line_total_inr": 4452000,
+      "original_unit_price": 44520,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Entry (i5, 8GB RAM, 256GB SSD) | Qty: 100 | Unit Price (INR): 44,520",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 1"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 2,
+      "normalized_unit_price_inr": 61480,
+      "normalized_line_total_inr": 9222000,
+      "original_unit_price": 61480,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Standard (i5, 16GB RAM, 512GB SSD) | Qty: 150 | Unit Price (INR): 61,480",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 2"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 3,
+      "normalized_unit_price_inr": 78440,
+      "normalized_line_total_inr": 3922000,
+      "original_unit_price": 78440,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Premium (i7, 16GB RAM, 512GB SSD) | Qty: 50 | Unit Price (INR): 78,440",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 3"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 4,
+      "normalized_unit_price_inr": 125080,
+      "normalized_line_total_inr": 2501600,
+      "original_unit_price": 125080,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Executive Ultrabook (i7, 32GB RAM, 1TB SSD) | Qty: 20 | Unit Price (INR): 125,080",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 4"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 5,
+      "normalized_unit_price_inr": 10390,
+      "normalized_line_total_inr": 2078000,
+      "original_unit_price": 10390,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 24-inch FHD (1920x1080, IPS) | Qty: 200 | Unit Price (INR): 10,390",
+      "source_location": "table under heading 'Displays & Mounting', row 1"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 6,
+      "normalized_unit_price_inr": 17490,
+      "normalized_line_total_inr": 1399200,
+      "original_unit_price": 17490,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 27-inch QHD (2560x1440, IPS) | Qty: 80 | Unit Price (INR): 17,490",
+      "source_location": "table under heading 'Displays & Mounting', row 2"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 7,
+      "normalized_unit_price_inr": 3390,
+      "normalized_line_total_inr": 339000,
+      "original_unit_price": 3390,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Dual Monitor Arm/Stand (Desk-clamp, gas spring) | Qty: 100 | Unit Price (INR): 3,390",
+      "source_location": "table under heading 'Displays & Mounting', row 3"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 8,
+      "normalized_unit_price_inr": 5720,
+      "normalized_line_total_inr": 1258400,
+      "original_unit_price": 5720,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C Docking Station (Universal, dual 4K out) | Qty: 220 | Unit Price (INR): 5,720",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 1"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 9,
+      "normalized_unit_price_inr": 1540,
+      "normalized_line_total_inr": 462000,
+      "original_unit_price": 1540,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wireless Keyboard+Mouse Combo (2.4GHz + BT) | Qty: 300 | Unit Price (INR): 1,540",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 2"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 10,
+      "normalized_unit_price_inr": 690,
+      "normalized_line_total_inr": 34500,
+      "original_unit_price": 690,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Keyboard (USB, full-size) | Qty: 50 | Unit Price (INR): 690",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 3"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 11,
+      "normalized_unit_price_inr": 370,
+      "normalized_line_total_inr": 18500,
+      "original_unit_price": 370,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Optical Mouse (USB) | Qty: 50 | Unit Price (INR): 370",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 4"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 12,
+      "normalized_unit_price_inr": 2330,
+      "normalized_line_total_inr": 349500,
+      "original_unit_price": 2330,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 1080p (1080p30, auto-focus) | Qty: 150 | Unit Price (INR): 2,330",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 1"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 13,
+      "normalized_unit_price_inr": 7210,
+      "normalized_line_total_inr": 216300,
+      "original_unit_price": 7210,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 4K (4K30, auto-focus) | Qty: 30 | Unit Price (INR): 7,210",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 2"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 14,
+      "normalized_unit_price_inr": 3600,
+      "normalized_line_total_inr": 720000,
+      "original_unit_price": 3600,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Noise-Cancelling Headset (USB, mic ANC) | Qty: 200 | Unit Price (INR): 3,600",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 3"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 15,
+      "normalized_unit_price_inr": 1910,
+      "normalized_line_total_inr": 191000,
+      "original_unit_price": 1910,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Bluetooth Headset (BT 5.0, mic) | Qty: 100 | Unit Price (INR): 1,910",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 4"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 16,
+      "normalized_unit_price_inr": 23320,
+      "normalized_line_total_inr": 583000,
+      "original_unit_price": 23320,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference Speakerphone (360-degree mic, USB/BT) | Qty: 25 | Unit Price (INR): 23,320",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 5"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 17,
+      "normalized_unit_price_inr": 68900,
+      "normalized_line_total_inr": 1033500,
+      "original_unit_price": 68900,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference PTZ Camera (1080p, 10x zoom) | Qty: 15 | Unit Price (INR): 68,900",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 6"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 18,
+      "normalized_unit_price_inr": 408100,
+      "normalized_line_total_inr": 3264800,
+      "original_unit_price": 408100,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "65-inch Interactive Display Panel (4K touch, Android OS) | Qty: 8 | Unit Price (INR): 408,100",
+      "source_location": "table under heading 'Displays & Mounting', row 4"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 19,
+      "normalized_unit_price_inr": 900,
+      "normalized_line_total_inr": 270000,
+      "original_unit_price": 900,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Sleeve 15.6-inch (Neoprene) | Qty: 300 | Unit Price (INR): 900",
+      "source_location": "table under heading 'Storage & Accessories', row 1"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 20,
+      "normalized_unit_price_inr": 2230,
+      "normalized_line_total_inr": 223000,
+      "original_unit_price": 2230,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Spare 65W USB-C Charger (GaN, universal) | Qty: 100 | Unit Price (INR): 2,230",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 7"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 21,
+      "normalized_unit_price_inr": 7630,
+      "normalized_line_total_inr": 457800,
+      "original_unit_price": 7630,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Portable SSD 1TB (USB 3.2, external) | Qty: 60 | Unit Price (INR): 7,630",
+      "source_location": "table under heading 'Storage & Accessories', row 2"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 22,
+      "normalized_unit_price_inr": 1010,
+      "normalized_line_total_inr": 151500,
+      "original_unit_price": 1010,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C to HDMI Adapter (4K30 support) | Qty: 150 | Unit Price (INR): 1,010",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 5"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 23,
+      "normalized_unit_price_inr": 1700,
+      "normalized_line_total_inr": 136000,
+      "original_unit_price": 1700,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Hub 7-port (USB 3.0, powered) | Qty: 80 | Unit Price (INR): 1,700",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 6"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 24,
+      "normalized_unit_price_inr": 580,
+      "normalized_line_total_inr": 174000,
+      "original_unit_price": 580,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Cable Lock (Keyed, Kensington slot) | Qty: 300 | Unit Price (INR): 580",
+      "source_location": "table under heading 'Storage & Accessories', row 3"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 25,
+      "normalized_unit_price_inr": 4030,
+      "normalized_line_total_inr": 40300,
+      "original_unit_price": 4030,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "External Blu-ray/DVD Drive (USB, slim) | Qty: 10 | Unit Price (INR): 4,030",
+      "source_location": "table under heading 'Storage & Accessories', row 4"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 26,
+      "normalized_unit_price_inr": 10070,
+      "normalized_line_total_inr": 251750,
+      "original_unit_price": 10070,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Handheld Barcode Scanner (USB) (1D/2D, wired) | Qty: 25 | Unit Price (INR): 10,070",
+      "source_location": "table under heading 'Specialty / Warehouse Equipment', row 1"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 27,
+      "normalized_unit_price_inr": 15370,
+      "normalized_line_total_inr": 230550,
+      "original_unit_price": 15370,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Desktop Label Printer (Thermal, USB) | Qty: 15 | Unit Price (INR): 15,370",
+      "source_location": "table under heading 'Specialty / Warehouse Equipment', row 2"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 28,
+      "normalized_unit_price_inr": 8690,
+      "normalized_line_total_inr": 86900,
+      "original_unit_price": 8690,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Network Switch, 24-port unmanaged (Gigabit) | Qty: 10 | Unit Price (INR): 8,690",
+      "source_location": "table under heading 'Specialty / Warehouse Equipment', row 3"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 29,
+      "normalized_unit_price_inr": 4880,
+      "normalized_line_total_inr": 195200,
+      "original_unit_price": 4880,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Desktop UPS 650VA (Line-interactive) | Qty: 40 | Unit Price (INR): 4,880",
+      "source_location": "table under heading 'Power & Networking', row 1"
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 30,
+      "normalized_unit_price_inr": 3390,
+      "normalized_line_total_inr": 1084800,
+      "original_unit_price": 3390,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per device",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "3-Year Onsite Warranty Extension (Per-device bundle, all laptops) | Qty: 320 | Unit Price (INR): 3,390 | Notes: Applies across all laptop/ultrabook lines",
+      "source_location": "table under heading 'Extended Warranty', row 1"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 1,
+      "normalized_unit_price_inr": 43260,
+      "normalized_line_total_inr": 4326000,
+      "original_unit_price": 43260,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 43260.00 x (1 - 4%) = INR 41529.60 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 43,260 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 1 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 41529.6
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 2,
+      "normalized_unit_price_inr": 59740,
+      "normalized_line_total_inr": 8961000,
+      "original_unit_price": 59740,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 59740.00 x (1 - 4%) = INR 57350.40 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 59,740 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 2 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 57350.4
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 3,
+      "normalized_unit_price_inr": 76220,
+      "normalized_line_total_inr": 3811000,
+      "original_unit_price": 76220,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 76220.00 x (1 - 4%) = INR 73171.20 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 76,220 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 3 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 73171.2
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 4,
+      "normalized_unit_price_inr": 121540,
+      "normalized_line_total_inr": 2430800,
+      "original_unit_price": 121540,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 121540.00 x (1 - 4%) = INR 116678.40 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 121,540 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 4 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 116678.4
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 5,
+      "normalized_unit_price_inr": 10090,
+      "normalized_line_total_inr": 2018000,
+      "original_unit_price": 10090,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 10090.00 x (1 - 4%) = INR 9686.40 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 10,090 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 5 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 9686.4
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 6,
+      "normalized_unit_price_inr": 17000,
+      "normalized_line_total_inr": 1360000,
+      "original_unit_price": 17000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 17000.00 x (1 - 4%) = INR 16320.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 17,000 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 6 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 16320
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 7,
+      "normalized_unit_price_inr": 3300,
+      "normalized_line_total_inr": 330000,
+      "original_unit_price": 3300,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 3300.00 x (1 - 4%) = INR 3168.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 3,300 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 7 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 3168
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 8,
+      "normalized_unit_price_inr": 5560,
+      "normalized_line_total_inr": 1223200,
+      "original_unit_price": 5560,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 5560.00 x (1 - 4%) = INR 5337.60 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 5,560 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 8 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 5337.599999999999
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 9,
+      "normalized_unit_price_inr": 1490,
+      "normalized_line_total_inr": 447000,
+      "original_unit_price": 1490,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 1490.00 x (1 - 4%) = INR 1430.40 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 1,490 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 9 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 1430.3999999999999
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 10,
+      "normalized_unit_price_inr": 670,
+      "normalized_line_total_inr": 33500,
+      "original_unit_price": 670,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 670.00 x (1 - 4%) = INR 643.20 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 670 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 10 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 643.1999999999999
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 11,
+      "normalized_unit_price_inr": 360,
+      "normalized_line_total_inr": 18000,
+      "original_unit_price": 360,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 360.00 x (1 - 4%) = INR 345.60 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 360 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 11 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 345.59999999999997
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 12,
+      "normalized_unit_price_inr": 2270,
+      "normalized_line_total_inr": 340500,
+      "original_unit_price": 2270,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 2270.00 x (1 - 4%) = INR 2179.20 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 2,270 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 12 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 2179.2
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 13,
+      "normalized_unit_price_inr": 7000,
+      "normalized_line_total_inr": 210000,
+      "original_unit_price": 7000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 7000.00 x (1 - 4%) = INR 6720.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 7,000 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 13 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 6720
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 14,
+      "normalized_unit_price_inr": 3500,
+      "normalized_line_total_inr": 700000,
+      "original_unit_price": 3500,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 3500.00 x (1 - 4%) = INR 3360.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 3,500 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 14 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 3360
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 15,
+      "normalized_unit_price_inr": 1850,
+      "normalized_line_total_inr": 185000,
+      "original_unit_price": 1850,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 1850.00 x (1 - 4%) = INR 1776.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 1,850 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 15 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 1776
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 16,
+      "normalized_unit_price_inr": 22660,
+      "normalized_line_total_inr": 566500,
+      "original_unit_price": 22660,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 22660.00 x (1 - 4%) = INR 21753.60 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 22,660 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 16 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 21753.6
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 17,
+      "normalized_unit_price_inr": 66950,
+      "normalized_line_total_inr": 1004250,
+      "original_unit_price": 66950,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 66950.00 x (1 - 4%) = INR 64272.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 66,950 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 17 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 64272
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 18,
+      "normalized_unit_price_inr": 396550,
+      "normalized_line_total_inr": 3172400,
+      "original_unit_price": 396550,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 396550.00 x (1 - 4%) = INR 380688.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 396,550 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 18 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 380688
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 19,
+      "normalized_unit_price_inr": 880,
+      "normalized_line_total_inr": 264000,
+      "original_unit_price": 880,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 880.00 x (1 - 4%) = INR 844.80 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 880 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 19 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 844.8
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 20,
+      "normalized_unit_price_inr": 2160,
+      "normalized_line_total_inr": 216000,
+      "original_unit_price": 2160,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 2160.00 x (1 - 4%) = INR 2073.60 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 2,160 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 20 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 2073.6
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 21,
+      "normalized_unit_price_inr": 7420,
+      "normalized_line_total_inr": 445200,
+      "original_unit_price": 7420,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 7420.00 x (1 - 4%) = INR 7123.20 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 7,420 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 21 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 7123.2
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 22,
+      "normalized_unit_price_inr": 980,
+      "normalized_line_total_inr": 147000,
+      "original_unit_price": 980,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 980.00 x (1 - 4%) = INR 940.80 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 980 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 22 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 940.8
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 23,
+      "normalized_unit_price_inr": 1650,
+      "normalized_line_total_inr": 132000,
+      "original_unit_price": 1650,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 1650.00 x (1 - 4%) = INR 1584.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 1,650 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 23 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 1584
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 24,
+      "normalized_unit_price_inr": 570,
+      "normalized_line_total_inr": 171000,
+      "original_unit_price": 570,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 570.00 x (1 - 4%) = INR 547.20 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 570 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 24 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 547.1999999999999
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 25,
+      "normalized_unit_price_inr": 3910,
+      "normalized_line_total_inr": 39100,
+      "original_unit_price": 3910,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 3910.00 x (1 - 4%) = INR 3753.60 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 3,910 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 25 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 3753.6
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 26,
+      "normalized_unit_price_inr": 9780,
+      "normalized_line_total_inr": 244500,
+      "original_unit_price": 9780,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 9780.00 x (1 - 4%) = INR 9388.80 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 9,780 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 26 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 9388.8
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 27,
+      "normalized_unit_price_inr": 14940,
+      "normalized_line_total_inr": 224100,
+      "original_unit_price": 14940,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 14940.00 x (1 - 4%) = INR 14342.40 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 14,940 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 27 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 14342.4
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 28,
+      "normalized_unit_price_inr": 8450,
+      "normalized_line_total_inr": 84500,
+      "original_unit_price": 8450,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 8450.00 x (1 - 4%) = INR 8112.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 8,450 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 28 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 8112
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 29,
+      "normalized_unit_price_inr": 4740,
+      "normalized_line_total_inr": 189600,
+      "original_unit_price": 4740,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 4740.00 x (1 - 4%) = INR 4550.40 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 4,740 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 29 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 4550.4
+      }
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 30,
+      "normalized_unit_price_inr": 3300,
+      "normalized_line_total_inr": 1056000,
+      "original_unit_price": 3300,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per device",
+      "conversion_notes": [
+        "Conditional pricing: headline INR 3300.00 x (1 - 4%) = INR 3168.00 if condition is met (if paid within 7 days of invoice). Buyer must choose which basis to compare on -- both are shown, neither is picked automatically."
+      ],
+      "flags": [
+        "CONDITIONAL_PRICING",
+        "UNIT_MISMATCH"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Qty: 1, Unit Price (INR)*: 3,300, Line Total (INR)*: 1,056,000. The RFx specifies Qty required: 320 per device, and the line total 1,056,000 = 320 × 3,300, indicating the unit price applies per device, not per lot. | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 30 table row; Note 7 on Page 3",
+      "alternate_basis": {
+        "label": "Net of 4% rebate (if paid within 7 days of invoice)",
+        "unit_price_inr": 3168
+      }
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 1,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": 70800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "UNRESOLVED_AMBIGUOUS",
+        "LOW_CONFIDENCE"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Laptops - all variants same as last year's rate, average around Rs 70,800/- per unit, exact split will depend on final config you finalize, we can share breakup on call if needed.",
+      "source_location": "paragraph 4"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 2,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": 70800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "UNRESOLVED_AMBIGUOUS",
+        "LOW_CONFIDENCE"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Laptops - all variants same as last year's rate, average around Rs 70,800/- per unit, exact split will depend on final config you finalize, we can share breakup on call if needed.",
+      "source_location": "paragraph 4"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 3,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": 70800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "UNRESOLVED_AMBIGUOUS",
+        "LOW_CONFIDENCE"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Laptops - all variants same as last year's rate, average around Rs 70,800/- per unit, exact split will depend on final config you finalize, we can share breakup on call if needed.",
+      "source_location": "paragraph 4"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 4,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": 70800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "UNRESOLVED_AMBIGUOUS",
+        "LOW_CONFIDENCE"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Laptops - all variants same as last year's rate, average around Rs 70,800/- per unit, exact split will depend on final config you finalize, we can share breakup on call if needed.",
+      "source_location": "paragraph 4"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 5,
+      "normalized_unit_price_inr": 9500,
+      "normalized_line_total_inr": 1900000,
+      "original_unit_price": 9500,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "24\" monitor - Rs 9,500",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 6,
+      "normalized_unit_price_inr": 16000,
+      "normalized_line_total_inr": 1280000,
+      "original_unit_price": 16000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "27\" monitor - Rs 16,000",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 7,
+      "normalized_unit_price_inr": 3100,
+      "normalized_line_total_inr": 310000,
+      "original_unit_price": 3100,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "monitor arm - Rs 3,100",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 8,
+      "normalized_unit_price_inr": 5200,
+      "normalized_line_total_inr": 1144000,
+      "original_unit_price": 5200,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "docking station - Rs 5,200 (USB C)",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 9,
+      "normalized_unit_price_inr": 1400,
+      "normalized_line_total_inr": 420000,
+      "original_unit_price": 1400,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "wireless kb+mouse combo - Rs 1,400",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 10,
+      "normalized_unit_price_inr": 600,
+      "normalized_line_total_inr": 30000,
+      "original_unit_price": 600,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "wired keyboard - Rs 600",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 11,
+      "normalized_unit_price_inr": 300,
+      "normalized_line_total_inr": 15000,
+      "original_unit_price": 300,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "wired mouse - Rs 300",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 12,
+      "normalized_unit_price_inr": 2100,
+      "normalized_line_total_inr": 315000,
+      "original_unit_price": 2100,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "webcam 1080p - Rs 2,100",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 13,
+      "normalized_unit_price_inr": 6600,
+      "normalized_line_total_inr": 198000,
+      "original_unit_price": 6600,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "webcam 4k - Rs 6,600",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 14,
+      "normalized_unit_price_inr": 3300,
+      "normalized_line_total_inr": 660000,
+      "original_unit_price": 3300,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "headset wired - Rs 3,300",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 15,
+      "normalized_unit_price_inr": 1700,
+      "normalized_line_total_inr": 170000,
+      "original_unit_price": 1700,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "headset bluetooth - Rs 1,700",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 16,
+      "normalized_unit_price_inr": 21300,
+      "normalized_line_total_inr": 532500,
+      "original_unit_price": 21300,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "speakerphone for conf room - Rs 21,300",
+      "source_location": "paragraph 5"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 17,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "For barcode scanner, label printer, network switch, blu ray drive and the PTZ camera - these are not our regular stock items, we will need 2-3 days to check with our supplier and get back, better to exclude from this round if you are in a hurry.",
+      "source_location": "paragraph 8"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 19,
+      "normalized_unit_price_inr": 800,
+      "normalized_line_total_inr": 240000,
+      "original_unit_price": 800,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "laptop sleeve - Rs 800",
+      "source_location": "paragraph 6"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 20,
+      "normalized_unit_price_inr": 2000,
+      "normalized_line_total_inr": 200000,
+      "original_unit_price": 2000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "charger 65w - Rs 2,000",
+      "source_location": "paragraph 6"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 21,
+      "normalized_unit_price_inr": 7000,
+      "normalized_line_total_inr": 420000,
+      "original_unit_price": 7000,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "portable ssd 1tb - Rs 7,000",
+      "source_location": "paragraph 6"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 22,
+      "normalized_unit_price_inr": 900,
+      "normalized_line_total_inr": 135000,
+      "original_unit_price": 900,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "hdmi adapter - Rs 900",
+      "source_location": "paragraph 6"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 23,
+      "normalized_unit_price_inr": 1600,
+      "normalized_line_total_inr": 128000,
+      "original_unit_price": 1600,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "usb hub - Rs 1,600",
+      "source_location": "paragraph 6"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 24,
+      "normalized_unit_price_inr": 500,
+      "normalized_line_total_inr": 150000,
+      "original_unit_price": 500,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "cable lock - Rs 500",
+      "source_location": "paragraph 6"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 25,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "For barcode scanner, label printer, network switch, blu ray drive and the PTZ camera - these are not our regular stock items, we will need 2-3 days to check with our supplier and get back, better to exclude from this round if you are in a hurry.",
+      "source_location": "paragraph 8"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 26,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "For barcode scanner, label printer, network switch, blu ray drive and the PTZ camera - these are not our regular stock items, we will need 2-3 days to check with our supplier and get back, better to exclude from this round if you are in a hurry.",
+      "source_location": "paragraph 8"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 27,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "For barcode scanner, label printer, network switch, blu ray drive and the PTZ camera - these are not our regular stock items, we will need 2-3 days to check with our supplier and get back, better to exclude from this round if you are in a hurry.",
+      "source_location": "paragraph 8"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 28,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "For barcode scanner, label printer, network switch, blu ray drive and the PTZ camera - these are not our regular stock items, we will need 2-3 days to check with our supplier and get back, better to exclude from this round if you are in a hurry.",
+      "source_location": "paragraph 8"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 29,
+      "normalized_unit_price_inr": 4500,
+      "normalized_line_total_inr": 180000,
+      "original_unit_price": 4500,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "ups 650va - Rs 4,500",
+      "source_location": "paragraph 7"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 30,
+      "normalized_unit_price_inr": 3100,
+      "normalized_line_total_inr": 992000,
+      "original_unit_price": 3100,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per device",
+      "conversion_notes": [],
+      "flags": [
+        "LOW_CONFIDENCE"
+      ],
+      "resolvable": true,
+      "source_excerpt": "warranty extension - can quote separately once laptop model is finalised, per device it will be approx Rs 3,100 extra but depends on which brand you go with",
+      "source_location": "paragraph 7"
+    },
+    {
+      "vendor_id": "quickserve",
+      "line_ref": 18,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "QuickServe Traders's response does not mention this line item.",
+      "source_location": "n/a"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 1,
+      "normalized_unit_price_inr": 41999.659999999996,
+      "normalized_line_total_inr": 4199966,
+      "original_unit_price": 506.02,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 506.02 x 83.00 (rate as of 2026-09-29) = INR 41999.66"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Entry | 100 | per unit | $506.02 (row tied by qty 100)",
+      "source_location": "row 1, top of table"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 2,
+      "normalized_unit_price_inr": 58000.399999999994,
+      "normalized_line_total_inr": 8700060,
+      "original_unit_price": 698.8,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 698.80 x 83.00 (rate as of 2026-09-29) = INR 58000.40"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Standard | 150 | per unit | $698.80 (row tied by qty 150)",
+      "source_location": "row 2"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 3,
+      "normalized_unit_price_inr": 74000.31,
+      "normalized_line_total_inr": 3700015.5,
+      "original_unit_price": 891.57,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 891.57 x 83.00 (rate as of 2026-09-29) = INR 74000.31"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Premium | 50 | per unit | $891.57 (row tied by qty 50)",
+      "source_location": "row 3"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 4,
+      "normalized_unit_price_inr": 118000.27,
+      "normalized_line_total_inr": 2360005.4,
+      "original_unit_price": 1421.69,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 1421.69 x 83.00 (rate as of 2026-09-29) = INR 118000.27"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Executive Ultrabook | 20 | per unit | $1,421.69 (row tied by qty 20)",
+      "source_location": "row 4"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 5,
+      "normalized_unit_price_inr": 9799.81,
+      "normalized_line_total_inr": 1959962,
+      "original_unit_price": 118.07,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 118.07 x 83.00 (rate as of 2026-09-29) = INR 9799.81"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 24-inch FHD | 200 | per unit | $118.07 (row tied by qty 200)",
+      "source_location": "row 5"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 6,
+      "normalized_unit_price_inr": 16500.4,
+      "normalized_line_total_inr": 1320032,
+      "original_unit_price": 198.8,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 198.80 x 83.00 (rate as of 2026-09-29) = INR 16500.40"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 27-inch QHD | 80 | per unit | $198.80 (row tied by qty 80)",
+      "source_location": "row 6"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 7,
+      "normalized_unit_price_inr": 3199.6499999999996,
+      "normalized_line_total_inr": 319964.99999999994,
+      "original_unit_price": 38.55,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 38.55 x 83.00 (rate as of 2026-09-29) = INR 3199.65"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Dual Monitor Arm/Stand | 100 | per unit | $38.55 (row tied by qty 100)",
+      "source_location": "row 7"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 8,
+      "normalized_unit_price_inr": 5399.9800000000005,
+      "normalized_line_total_inr": 1187995.6,
+      "original_unit_price": 65.06,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 65.06 x 83.00 (rate as of 2026-09-29) = INR 5399.98"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C Docking Station | 220 | per unit | $65.06 (row tied by qty 220)",
+      "source_location": "row 8"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 9,
+      "normalized_unit_price_inr": 1450.01,
+      "normalized_line_total_inr": 435003,
+      "original_unit_price": 17.47,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 17.47 x 83.00 (rate as of 2026-09-29) = INR 1450.01"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wireless Keyboard+Mouse Combo | 300 | per unit | $17.47 (row tied by qty 300)",
+      "source_location": "row 9"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 10,
+      "normalized_unit_price_inr": 649.89,
+      "normalized_line_total_inr": 32494.5,
+      "original_unit_price": 7.83,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 7.83 x 83.00 (rate as of 2026-09-29) = INR 649.89"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Keyboard | 50 | per unit | $7.83 (row tied by qty 50)",
+      "source_location": "row 10"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 11,
+      "normalized_unit_price_inr": 350.26,
+      "normalized_line_total_inr": 17513,
+      "original_unit_price": 4.22,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 4.22 x 83.00 (rate as of 2026-09-29) = INR 350.26"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Optical Mouse | 50 | per unit | $4.22 (row tied by qty 50)",
+      "source_location": "row 11"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 12,
+      "normalized_unit_price_inr": 2200.33,
+      "normalized_line_total_inr": 330049.5,
+      "original_unit_price": 26.51,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 26.51 x 83.00 (rate as of 2026-09-29) = INR 2200.33"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 1080p | 150 | per unit | $26.51 (row tied by qty 150)",
+      "source_location": "row 12"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 13,
+      "normalized_unit_price_inr": 6800.1900000000005,
+      "normalized_line_total_inr": 204005.7,
+      "original_unit_price": 81.93,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 81.93 x 83.00 (rate as of 2026-09-29) = INR 6800.19"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 4K | 30 | per unit | $81.93 (row tied by qty 30)",
+      "source_location": "row 13"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 14,
+      "normalized_unit_price_inr": 3399.6800000000003,
+      "normalized_line_total_inr": 679936,
+      "original_unit_price": 40.96,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 40.96 x 83.00 (rate as of 2026-09-29) = INR 3399.68"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Noise-Cancelling Headset | 200 | per unit | $40.96 (row tied by qty 200)",
+      "source_location": "row 14"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 15,
+      "normalized_unit_price_inr": 1800.2700000000002,
+      "normalized_line_total_inr": 180027.00000000003,
+      "original_unit_price": 21.69,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 21.69 x 83.00 (rate as of 2026-09-29) = INR 1800.27"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Bluetooth Headset | 100 | per unit | $21.69 (row tied by qty 100)",
+      "source_location": "row 15"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 16,
+      "normalized_unit_price_inr": 21999.98,
+      "normalized_line_total_inr": 549999.5,
+      "original_unit_price": 265.06,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 265.06 x 83.00 (rate as of 2026-09-29) = INR 21999.98"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference Speakerphone | 25 | per unit | $265.06 (row tied by qty 25)",
+      "source_location": "row 16"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 17,
+      "normalized_unit_price_inr": 64999.79,
+      "normalized_line_total_inr": 974996.85,
+      "original_unit_price": 783.13,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 783.13 x 83.00 (rate as of 2026-09-29) = INR 64999.79"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference PTZ Camera | 15 | per unit | $783.13 (row tied by qty 15)",
+      "source_location": "row 17"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 18,
+      "normalized_unit_price_inr": 384999.65,
+      "normalized_line_total_inr": 3079997.2,
+      "original_unit_price": 4638.55,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 4638.55 x 83.00 (rate as of 2026-09-29) = INR 384999.65"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "65-inch Interactive Display Panel | 8 | per unit | $4,638.55 (row tied by qty 8)",
+      "source_location": "row 18"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 19,
+      "normalized_unit_price_inr": 849.9200000000001,
+      "normalized_line_total_inr": 254976.00000000003,
+      "original_unit_price": 10.24,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 10.24 x 83.00 (rate as of 2026-09-29) = INR 849.92"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Sleeve 15.6-inch | 300 | per unit | $10.24 (row tied by qty 300)",
+      "source_location": "row 19"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 20,
+      "normalized_unit_price_inr": 2099.9,
+      "normalized_line_total_inr": 209990,
+      "original_unit_price": 25.3,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 25.30 x 83.00 (rate as of 2026-09-29) = INR 2099.90"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Spare 65W USB-C Charger | 100 | per unit | $25.30 (row tied by qty 100)",
+      "source_location": "row 20"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 21,
+      "normalized_unit_price_inr": 7200.25,
+      "normalized_line_total_inr": 432015,
+      "original_unit_price": 86.75,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 86.75 x 83.00 (rate as of 2026-09-29) = INR 7200.25"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Portable SSD 1TB | 60 | per unit | $86.75 (row tied by qty 60)",
+      "source_location": "row 21"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 22,
+      "normalized_unit_price_inr": 950.3499999999999,
+      "normalized_line_total_inr": 142552.5,
+      "original_unit_price": 11.45,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 11.45 x 83.00 (rate as of 2026-09-29) = INR 950.35"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C to HDMI Adapter | 150 | per unit | $11.45 (row tied by qty 150)",
+      "source_location": "row 22"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 23,
+      "normalized_unit_price_inr": 1600.24,
+      "normalized_line_total_inr": 128019.2,
+      "original_unit_price": 19.28,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 19.28 x 83.00 (rate as of 2026-09-29) = INR 1600.24"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Hub 7-port | 80 | per unit | $19.28 (row tied by qty 80)",
+      "source_location": "row 23"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 24,
+      "normalized_unit_price_inr": 550.0409999999999,
+      "normalized_line_total_inr": 165012.3,
+      "original_unit_price": 66.27,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per box (10)",
+      "conversion_notes": [
+        "USD 66.27 x 83.00 (rate as of 2026-09-29) = INR 5500.41",
+        "Vendor quoted per box (10) at INR 5500.41; divided by 10 to get RFx-spec (per unit) price of INR 550.04."
+      ],
+      "flags": [
+        "UNIT_MISMATCH",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Cable Lock | 300 | per box (10) | $66.27 (row tied by qty 300; unit column reads 'per box (10)', RFx wants per unit)",
+      "source_location": "row 24, unit column near bottom of table"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 26,
+      "normalized_unit_price_inr": 9500.18,
+      "normalized_line_total_inr": 237504.5,
+      "original_unit_price": 114.46,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 114.46 x 83.00 (rate as of 2026-09-29) = INR 9500.18"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Handheld Barcode Scanner (USB) | 25 | per unit | $114.46 (row tied by qty 25)",
+      "source_location": "row 25, second to last row"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 29,
+      "normalized_unit_price_inr": 4599.860000000001,
+      "normalized_line_total_inr": 183994.40000000002,
+      "original_unit_price": 55.42,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [
+        "USD 55.42 x 83.00 (rate as of 2026-09-29) = INR 4599.86"
+      ],
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Desktop UPS 650VA | 40 | per unit | $55.42 (row tied by qty 40)",
+      "source_location": "row 26, last row"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 30,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "USD",
+      "original_unit_of_measure": "per device",
+      "conversion_notes": [
+        "Not normalized: vendor response is ambiguous/unresolvable for this line -- see source_excerpt."
+      ],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Note: 3-Year Onsite Warranty Extension to be quoted separately after laptop brand/model is finalized.",
+      "source_location": "footnote below table, first note"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 25,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Sunrise Computech's response does not mention this line item.",
+      "source_location": "n/a"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 27,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Sunrise Computech's response does not mention this line item.",
+      "source_location": "n/a"
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 28,
+      "normalized_unit_price_inr": null,
+      "normalized_line_total_inr": null,
+      "original_unit_price": null,
+      "original_currency": "INR",
+      "original_unit_of_measure": "per unit",
+      "conversion_notes": [],
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Sunrise Computech's response does not mention this line item.",
+      "source_location": "n/a"
+    }
+  ],
+  "questionnaire_verdicts": [
+    {
+      "vendor_id": "apex",
+      "answers": [
+        {
+          "vendor_id": "apex",
+          "question": "Authorized OEM reseller? (name brands + attach proof)",
+          "raw_answer": "Yes - Authorized Premier Partner for Dell, HP and Lenovo. Partner certificates attached as Annexure A.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Names specific brands (Dell, HP, Lenovo), claims Premier Partner status, and references attached partner certificates (Annexure A) as proof."
+        },
+        {
+          "vendor_id": "apex",
+          "question": "ISO 9001 certified? (certificate number)",
+          "raw_answer": "Yes - ISO 9001:2015 certified. Certificate No. IN-QMS-4471, valid till Mar 2027.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Provides specific certificate number (IN-QMS-4471), version (ISO 9001:2015), and validity period (through Mar 2027)."
+        },
+        {
+          "vendor_id": "apex",
+          "question": "RoHS / Energy Star compliance on hardware supplied?",
+          "raw_answer": "Yes - all supplied hardware is RoHS compliant and Energy Star rated where applicable to the category.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Direct, unhedged affirmative covering full scope: states all supplied hardware is RoHS compliant and Energy Star rated where applicable. Question asks whether compliance exists, not for certificate numbers, so this specific confirmation constitutes proof."
+        },
+        {
+          "vendor_id": "apex",
+          "question": "Local service center cities and average onsite response SLA",
+          "raw_answer": "12 service center cities. SLA: 4 business hours onsite response in metros, 8 hours in Tier-2 cities.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "States '12 service center cities' but does not name them. SLA figures are specific (4 hours metros, 8 hours Tier-2) but without named cities, the service footprint cannot be verified."
+        },
+        {
+          "vendor_id": "apex",
+          "question": "Standard warranty terms per product category",
+          "raw_answer": "Laptops/Ultrabooks: 3-year onsite (OEM). Monitors: 3-year onsite. Peripherals: 1-year replacement. UPS: 2-year onsite.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Provides specific warranty terms for each product category with concrete durations and service types (e.g., 3-year onsite for laptops, 1-year replacement for peripherals)."
+        },
+        {
+          "vendor_id": "apex",
+          "question": "Asset disposal / data-wipe policy for buyback of old devices",
+          "raw_answer": "NIST 800-88 compliant data sanitization; certificate of data destruction issued per device.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Cites specific standard (NIST 800-88) and commits to issuing certificate of data destruction per device, providing verifiable specifics."
+        },
+        {
+          "vendor_id": "apex",
+          "question": "Similar-scale deployment references (2+, with contact)",
+          "raw_answer": "1) Meridian Financial Services - 450-seat refresh, Mar 2025, contact: it.procurement@meridianfs.in. 2) Coastal Logistics Group - 280-seat refresh, Aug 2024, contact: nikhil.rao@coastallogistics.in.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Provides two references with company names, deployment scale (450-seat, 280-seat), dates, and contactable email addresses for verification."
+        },
+        {
+          "vendor_id": "apex",
+          "question": "Average lead time from PO to delivery",
+          "raw_answer": "10 business days ex-stock for standard SKUs; 3-4 weeks for the 65-inch display panel.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Specific timelines provided: 10 business days for standard SKUs and 3-4 weeks for the 65-inch display panel."
+        }
+      ],
+      "gate_result": "PASS",
+      "gate_reasons": [
+        "Rule: PASS -- all compliance-critical questions (OEM authorization, ISO 9001, RoHS/Energy Star, data-wipe policy) answered with verifiable specifics."
+      ]
+    },
+    {
+      "vendor_id": "techmart",
+      "answers": [
+        {
+          "vendor_id": "techmart",
+          "question": "Authorized OEM reseller? (name brands + attach proof)",
+          "raw_answer": "We are an authorized reseller for HP and Lenovo. Dell items are sourced through our distribution partner, so we are not directly OEM-authorized for the Dell-equivalent SKUs quoted here.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "Names HP and Lenovo as authorized brands but provides no proof (authorization letters, partner IDs, certificates). Discloses Dell limitation transparently but still no verification documents attached."
+        },
+        {
+          "vendor_id": "techmart",
+          "question": "ISO 9001 certified? (certificate number)",
+          "raw_answer": "Yes, ISO 9001 certified.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "Claims ISO 9001 certification but provides no certificate number as explicitly requested by the question."
+        },
+        {
+          "vendor_id": "techmart",
+          "question": "RoHS / Energy Star compliance on hardware supplied?",
+          "raw_answer": "All our products meet applicable regulations.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "Generic statement 'meet applicable regulations' without specific confirmation of RoHS or Energy Star compliance as asked."
+        },
+        {
+          "vendor_id": "techmart",
+          "question": "Local service center cities and average onsite response SLA",
+          "raw_answer": "Service desks in Bengaluru, Mumbai, Delhi, Pune, Chennai and Hyderabad. Standard response SLA is 24 hours.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Names six specific cities (Bengaluru, Mumbai, Delhi, Pune, Chennai, Hyderabad) and provides concrete SLA figure (24 hours). Verifiable and specific."
+        },
+        {
+          "vendor_id": "techmart",
+          "question": "Standard warranty terms per product category",
+          "raw_answer": "Standard OEM warranty passed through - 1 year on laptops unless extension is separately purchased.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Provides specific warranty term (1 year on laptops) and clarifies the pass-through nature and extension option. Concrete and specific to the question asked."
+        },
+        {
+          "vendor_id": "techmart",
+          "question": "Asset disposal / data-wipe policy for buyback of old devices",
+          "raw_answer": "We wipe drives before disposal as a standard practice.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "States 'standard practice' for drive wiping but provides no specifics on the process, standards used (e.g., DoD 5220.22-M), certification, or documented policy."
+        },
+        {
+          "vendor_id": "techmart",
+          "question": "Similar-scale deployment references (2+, with contact)",
+          "raw_answer": "1) A mid-size fintech client (name confidential), 200-seat rollout, 2024. 2) A logistics company in Pune, approx. 150 seats, 2023.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Provides two references but both lack contactable information: first marked confidential (no name or contact), second gives only city and approximate size with no contact person or verifiable details. Question explicitly asked for contact information."
+        },
+        {
+          "vendor_id": "techmart",
+          "question": "Average lead time from PO to delivery",
+          "raw_answer": "3 to 4 weeks depending on the specific laptop model and current stock position.",
+          "quality": "ANSWERED_WITH_PROOF",
+          "notes": "Provides specific timeframe (3-4 weeks) with reasonable qualifiers about variability factors. Concrete and responsive to the question."
+        }
+      ],
+      "gate_result": "BORDERLINE",
+      "gate_reasons": [
+        "Rule: BORDERLINE if any compliance-critical question is answered without verifiable specifics. Triggered by: \"Authorized OEM reseller? (name brands + attach proof)\"; \"ISO 9001 certified? (certificate number)\"; \"RoHS / Energy Star compliance on hardware supplied?\"; \"Asset disposal / data-wipe policy for buyback of old devices\"."
+      ]
+    },
+    {
+      "vendor_id": "global_it",
+      "answers": [
+        {
+          "vendor_id": "global_it",
+          "question": "Authorized OEM reseller? (name brands + attach proof)",
+          "raw_answer": "We are a distributor with access to all leading brands.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Claims distributor access to leading brands but provides no brand names and no proof of authorization as requested"
+        },
+        {
+          "vendor_id": "global_it",
+          "question": "ISO 9001 certified? (certificate number)",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question explicitly not answered"
+        },
+        {
+          "vendor_id": "global_it",
+          "question": "RoHS / Energy Star compliance on hardware supplied?",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question explicitly not answered"
+        },
+        {
+          "vendor_id": "global_it",
+          "question": "Local service center cities and average onsite response SLA",
+          "raw_answer": "PAN India support available.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "PAN India support is a generic claim with no specific cities listed and no SLA figures provided"
+        },
+        {
+          "vendor_id": "global_it",
+          "question": "Standard warranty terms per product category",
+          "raw_answer": "As per manufacturer warranty card.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Deflects to manufacturer warranty card without stating actual terms or providing category-specific information"
+        },
+        {
+          "vendor_id": "global_it",
+          "question": "Asset disposal / data-wipe policy for buyback of old devices",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question explicitly not answered"
+        },
+        {
+          "vendor_id": "global_it",
+          "question": "Similar-scale deployment references (2+, with contact)",
+          "raw_answer": "(not answered - available on request)",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Defers to later conversation by stating available on request rather than providing the requested references with contacts"
+        },
+        {
+          "vendor_id": "global_it",
+          "question": "Average lead time from PO to delivery",
+          "raw_answer": "Subject to stock availability at the time of order.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Deflects by making it conditional on stock availability rather than providing average lead time figures"
+        }
+      ],
+      "gate_result": "FAIL",
+      "gate_reasons": [
+        "Rule: FAIL if any compliance-critical question is unanswered or evasive. Triggered by: \"Authorized OEM reseller? (name brands + attach proof)\" (ANSWERED_EVASIVE); \"ISO 9001 certified? (certificate number)\" (UNANSWERED); \"RoHS / Energy Star compliance on hardware supplied?\" (UNANSWERED); \"Asset disposal / data-wipe policy for buyback of old devices\" (UNANSWERED)."
+      ]
+    },
+    {
+      "vendor_id": "quickserve",
+      "answers": [
+        {
+          "vendor_id": "quickserve",
+          "question": "Authorized OEM reseller? (name brands + attach proof)",
+          "raw_answer": "We comply with standard industry practices.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Deflects with generic statement instead of naming brands or providing authorization proof as requested"
+        },
+        {
+          "vendor_id": "quickserve",
+          "question": "ISO 9001 certified? (certificate number)",
+          "raw_answer": "We comply with standard industry practices.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Generic compliance statement instead of providing certificate number as specifically requested"
+        },
+        {
+          "vendor_id": "quickserve",
+          "question": "RoHS / Energy Star compliance on hardware supplied?",
+          "raw_answer": "We comply with standard industry practices.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Generic compliance statement does not specifically address RoHS or Energy Star compliance as asked"
+        },
+        {
+          "vendor_id": "quickserve",
+          "question": "Local service center cities and average onsite response SLA",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question was not answered"
+        },
+        {
+          "vendor_id": "quickserve",
+          "question": "Standard warranty terms per product category",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question was not answered"
+        },
+        {
+          "vendor_id": "quickserve",
+          "question": "Asset disposal / data-wipe policy for buyback of old devices",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question was not answered"
+        },
+        {
+          "vendor_id": "quickserve",
+          "question": "Similar-scale deployment references (2+, with contact)",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question was not answered"
+        },
+        {
+          "vendor_id": "quickserve",
+          "question": "Average lead time from PO to delivery",
+          "raw_answer": "(not answered)",
+          "quality": "UNANSWERED",
+          "notes": "Question was not answered"
+        }
+      ],
+      "gate_result": "FAIL",
+      "gate_reasons": [
+        "Rule: FAIL if any compliance-critical question is unanswered or evasive. Triggered by: \"Authorized OEM reseller? (name brands + attach proof)\" (ANSWERED_EVASIVE); \"ISO 9001 certified? (certificate number)\" (ANSWERED_EVASIVE); \"RoHS / Energy Star compliance on hardware supplied?\" (ANSWERED_EVASIVE); \"Asset disposal / data-wipe policy for buyback of old devices\" (UNANSWERED)."
+      ]
+    },
+    {
+      "vendor_id": "sunrise",
+      "answers": [
+        {
+          "vendor_id": "sunrise",
+          "question": "Authorized OEM reseller? (name brands + attach proof)",
+          "raw_answer": "Yes we are authorized dealers (mentioned verbally in the covering call, not in writing).",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Claims authorization verbally only, explicitly states no written proof provided. The question asks for proof to be attached, which was not done."
+        },
+        {
+          "vendor_id": "sunrise",
+          "question": "ISO 9001 certified? (certificate number)",
+          "raw_answer": "We are ISO certified.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "Claims ISO certification but provides no certificate number as requested. This is an unproven claim rather than deflection."
+        },
+        {
+          "vendor_id": "sunrise",
+          "question": "RoHS / Energy Star compliance on hardware supplied?",
+          "raw_answer": "All items are standard compliant.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "Generic claim of 'standard compliant' without specifying which standards or confirming the specific RoHS/Energy Star requirements asked about."
+        },
+        {
+          "vendor_id": "sunrise",
+          "question": "Local service center cities and average onsite response SLA",
+          "raw_answer": "Same day support in most cases.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "Provides only a vague timeframe ('same day support in most cases') without listing specific cities or concrete SLA figures as requested."
+        },
+        {
+          "vendor_id": "sunrise",
+          "question": "Standard warranty terms per product category",
+          "raw_answer": "Standard warranty applies.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "States 'standard warranty applies' without specifying what those terms are or breaking down by product category as asked."
+        },
+        {
+          "vendor_id": "sunrise",
+          "question": "Asset disposal / data-wipe policy for buyback of old devices",
+          "raw_answer": "We can discuss this separately once order is confirmed.",
+          "quality": "ANSWERED_EVASIVE",
+          "notes": "Defers answer to post-order discussion rather than providing the requested policy information."
+        },
+        {
+          "vendor_id": "sunrise",
+          "question": "Similar-scale deployment references (2+, with contact)",
+          "raw_answer": "We supplied networking gear to a college in Nashik last year.",
+          "quality": "ANSWERED_VAGUE",
+          "notes": "Provides only one reference (not the requested 2+), lacks contact details, and gives minimal verifiable information (just 'a college in Nashik')."
+        },
+        {
+          "vendor_id": "sunrise",
+          "question": "Average lead time from PO to delivery",
+          "raw_answer": "(not stated)",
+          "quality": "UNANSWERED",
+          "notes": "No answer provided to this question."
+        }
+      ],
+      "gate_result": "FAIL",
+      "gate_reasons": [
+        "Rule: FAIL if any compliance-critical question is unanswered or evasive. Triggered by: \"Authorized OEM reseller? (name brands + attach proof)\" (ANSWERED_EVASIVE); \"Asset disposal / data-wipe policy for buyback of old devices\" (ANSWERED_EVASIVE)."
+      ]
+    }
+  ],
+  "generated_at": "2026-09-29T20:37:57.995Z"
+}

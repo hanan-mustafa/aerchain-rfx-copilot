@@ -35,11 +35,21 @@ export const FX_RATE_DATE = "2026-09-29"; // stamped at RFx issue, frozen for th
  * as "cannot safely normalize" and leave the line for human review rather
  * than assuming a multiplier of 1.
  */
+// Wordings that all mean "one of the thing the RFx line is counting".
+const SINGLE_UNIT_UOMS = new Set(["per unit", "each", "per piece", "per pc", "per device"]);
+
+/** True when two unit-of-measure strings mean the same thing (e.g. "per unit" vs "per device"). */
+export function sameUnit(vendorUom: string, rfxUom: string): boolean {
+  const v = vendorUom.trim().toLowerCase();
+  const r = rfxUom.trim().toLowerCase();
+  return v === r || (SINGLE_UNIT_UOMS.has(v) && SINGLE_UNIT_UOMS.has(r));
+}
+
 export function parseUnitMultiplier(vendorUom: string, rfxUom: string): number | null {
   const v = vendorUom.trim().toLowerCase();
   const r = rfxUom.trim().toLowerCase();
 
-  if (v === r || v === "per unit" || v === "each" || v === "per piece") {
+  if (sameUnit(v, r) || SINGLE_UNIT_UOMS.has(v)) {
     return 1;
   }
 
@@ -108,7 +118,7 @@ export function normalizeLine(
   // --- Unit-of-measure conversion (deterministic) ---
   if (price !== null) {
     const multiplier = parseUnitMultiplier(extracted.unit_of_measure, lineSpec.uom);
-    if (extracted.unit_of_measure.trim().toLowerCase() !== lineSpec.uom.trim().toLowerCase()) {
+    if (!sameUnit(extracted.unit_of_measure, lineSpec.uom)) {
       flags.add("UNIT_MISMATCH");
       if (multiplier === null) {
         conversionNotes.push(

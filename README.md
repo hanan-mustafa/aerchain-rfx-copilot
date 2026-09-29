@@ -14,8 +14,8 @@ npm run dev
 ```
 
 Open http://localhost:3000, click **Run extraction** (this makes real Claude API calls
-against the five vendor files in `data/vendor-uploads/` — expect 20-40 seconds), then use
-the chat panel.
+against the five vendor files in `data/vendor-uploads/`, all five vendors in parallel —
+expect about a minute), then use the chat panel.
 
 ### Deploying to Vercel
 
@@ -79,9 +79,11 @@ is strictly worse than using it:
 - **email** (QuickServe): raw text with numbered paragraphs. This is the vendor most likely
   to collapse multiple SKUs into one ambiguous price — handled by a shared extraction rule
   (`lib/extractors/shared.ts`, rule #2), not a QuickServe-specific hack.
-- **image** (Sunrise): the only extractor that goes through vision. Two independent vision
-  passes are run and reconciled — any per-line disagreement beyond 2% forces a
-  `LOW_CONFIDENCE` flag. See the note in `lib/extractors/image.ts` on why this is a
+- **image** (Sunrise): the only extractor that goes through vision (`claude-sonnet-5-5` — on
+  this photo `claude-sonnet-4-5` misread 5-7 of 26 lines per run, the newer model 0 of 26 in
+  3/3 runs; reproduce with `npx tsx scripts/eval-sunrise-vision.ts`). Two independent vision
+  passes read the card in opposite orders and are reconciled — a price disagreement beyond 2%,
+  a different unit of measure, or a line only one pass found forces a `LOW_CONFIDENCE` flag. See the note in `lib/extractors/image.ts` on why this is a
   self-consistency check rather than true OCR cross-validation (Tesseract's native binary is
   a poor fit for Vercel serverless; the honest trade-off is documented right there in code,
   not hidden).
@@ -114,6 +116,16 @@ npx tsx scripts/test-normalize.ts
 npx tsx scripts/test-questionnaire-gate.ts
 ```
 
+Check a real extraction run against the answer key (after **Run extraction**):
+```bash
+npx tsx scripts/validate-ground-truth.ts
+```
+
+**RFx line 30 (warranty extension)** is defined in `lib/rfxData.ts` as *per device, qty 320*,
+not the template's "lot, qty 1": the line's own spec is per device, and every vendor that
+quoted it priced it per device across the 320 laptops on lines 1-4. As a "lot" it was not
+comparable across vendors.
+
 ### Questionnaire gate (`lib/questionnaire.ts`)
 
 The LLM classifies each raw answer's quality (genuinely a judgment call — vague vs. evasive
@@ -139,9 +151,10 @@ that vendor list — it doesn't reason its way to a total by itself.
 
 - **No real database.** `lib/store.ts` persists the comparison store as a JSON file. Every
   extractor, the normalizer, and the agent tools only ever import `getStore`/`saveStore` —
-  swapping in Postgres/Vercel KV/Mongo touches exactly one file. Noted explicitly because a
-  JSON file won't reliably persist across invocations on Vercel's serverless functions in
-  production; fine for this single-session demo, not fine to ship as-is.
+  swapping in Postgres/Vercel KV/Mongo touches exactly one file. On Vercel the file lives in
+  per-instance `/tmp`, so a fresh extraction is not guaranteed to be visible to the next chat
+  request; reads fall back to `data/seed/comparison-store.json`, a committed snapshot of a
+  run that passes `validate-ground-truth.ts`. Fine for this demo, not fine to ship as-is.
 - **No real inbox/SMTP.** Vendor files are read directly from `data/vendor-uploads/` — the
   assignment explicitly says to stub this ("fake the SMTP server if you like"), and
   building it would have taken time away from the extraction/reasoning loops that were
@@ -175,13 +188,16 @@ lib/
   questionnaire.ts       LLM classification + rule-based gate
   agent/                 tool definitions, tool execution, the chat loop
   pipeline.ts            orchestrates extraction → normalization → questionnaire per vendor
-  store.ts               file-based persistence (swap point for a real DB)
+  store.ts               file-based persistence (swap point for a real DB), seed fallback
   rfxData.ts              the RFx line items, vendor metadata, questionnaire raw answers
 data/
   vendor-uploads/         the five fabricated vendor response files
   RFx_Template_ITHardware_FY27.xlsx
   Ground_Truth_Answer_Key_INTERNAL.xlsx   (not part of the app — validation reference)
+  seed/comparison-store.json              validated snapshot served when no live run is on disk
 scripts/
   test-normalize.ts             normalization math checks (no API key needed)
   test-questionnaire-gate.ts    gate rule checks (no API key needed)
+  validate-ground-truth.ts      checks the current store against the answer key
+  eval-sunrise-vision.ts        vision-model accuracy on the rate-card photo (real API calls)
 ```
