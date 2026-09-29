@@ -10,18 +10,42 @@ import { buildExtractionSystemPrompt, parseExtractionResponse } from "./shared";
  * a footnote on a LATER page than the price table -- the model needs to see
  * page boundaries to connect "Note 7" back to the table on page 1.
  */
+/**
+ * pdf-parse's default renderer glues same-line text items together with no
+ * separator (so a table row "100 | 43,260 | 4,326,000" arrives as
+ * "10043,2604,326,000") and does not emit \f between pages for this file.
+ * This renderer keeps a " | " between items on the same line and records
+ * each page separately so page numbers are real.
+ */
+async function pdfToPagedText(buf: Buffer): Promise<string[]> {
+  const pages: string[] = [];
+  await pdf(buf, {
+    pagerender: async (pageData: any) => {
+      const content = await pageData.getTextContent({ normalizeWhitespace: false, disableCombineTextItems: false });
+      let lastY: number | undefined;
+      let text = "";
+      for (const item of content.items) {
+        const y = item.transform[5];
+        if (lastY === undefined) text += item.str;
+        else if (y === lastY) text += ` | ${item.str}`;
+        else text += `\n${item.str}`;
+        lastY = y;
+      }
+      pages[pageData.pageIndex] = text;
+      return text;
+    },
+  });
+  return pages;
+}
+
 export async function extractFromPdf(
   buf: Buffer,
   vendorId: string,
   lineItems: LineItemSpec[]
 ): Promise<ExtractedLine[]> {
-  const data = await pdf(buf);
-  // pdf-parse gives us the full text with \f (form feed) page breaks in
-  // most PDFs produced by reportlab/libreoffice; make page numbers explicit
-  // to help the model's source_location output.
-  const pages = data.text.split("\f");
+  const pages = await pdfToPagedText(buf);
   const tagged = pages
-    .map((p, i) => `=== PAGE ${i + 1} ===\n${p.trim()}`)
+    .map((p, i) => `=== PAGE ${i + 1} ===\n${(p ?? "").trim()}`)
     .join("\n\n");
 
   const system = buildExtractionSystemPrompt(lineItems);
