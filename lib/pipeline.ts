@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import { ComparisonStore, NormalizedLine, VendorQuestionnaireVerdict } from "./schema";
+import { ComparisonStore, ExtractedLine, NormalizedLine, VendorQuestionnaireVerdict } from "./schema";
 import { LINE_ITEMS, VENDORS, RFX_ID, QUESTIONNAIRE_RAW_ANSWERS } from "./rfxData";
 import { extractFromXlsx } from "./extractors/xlsx";
 import { extractFromDocx } from "./extractors/docx";
@@ -17,10 +17,11 @@ const UPLOADS_DIR = path.join(process.cwd(), "data", "vendor-uploads");
  * extraction (real LLM/vision call) -> normalization (deterministic) ->
  * fill NOT_QUOTED gaps -> questionnaire classification + gate.
  *
- * This is intentionally NOT parallelized across all five vendors in one
- * Promise.all at the top level (see app/api/extract/route.ts) so that a
- * failure in one vendor's extraction is isolated and reported per-vendor,
- * rather than one bad file taking down the whole demo run.
+ * Vendors run concurrently via Promise.allSettled in runFullPipeline, so a
+ * failure in one vendor's extraction is still isolated and reported
+ * per-vendor rather than taking down the whole run -- but the wall-clock
+ * cost is the slowest vendor, not the sum of all five (run sequentially the
+ * first real run took ~4.5 minutes, well past the route's maxDuration).
  */
 export async function runVendorPipeline(
   vendorId: string
@@ -31,7 +32,23 @@ export async function runVendorPipeline(
   const filePath = path.join(UPLOADS_DIR, vendor.source_file);
   const buf = await fs.readFile(filePath);
 
-  let extracted;
+  const startedAt = Date.now();
+  // Questionnaire classification doesn't depend on the price extraction, so
+  // it runs alongside it rather than after it.
+  const verdictPromise = (async () => {
+    const rawAnswers = QUESTIONNAIRE_RAW_ANSWERS[vendorId];
+    const rawAnswerPairs = Object.entries(rawAnswers).map(([question, raw_answer]) => ({
+      question,
+      raw_answer,
+    }));
+    const classified = await classifyQuestionnaireAnswers(vendorId, rawAnswerPairs);
+    return applyQuestionnaireGate(vendorId, classified);
+  })();
+  // If extraction throws first, this promise is never awaited; mark it
+  // handled so a questionnaire failure can't surface as an unhandled rejection.
+  verdictPromise.catch(() => {});
+
+  let extracted: ExtractedLine[];
   switch (vendor.source_format) {
     case "xlsx":
       extracted = await extractFromXlsx(buf, vendorId, LINE_ITEMS);
@@ -67,13 +84,10 @@ export async function runVendorPipeline(
 
   const complete = fillMissingLinesAsNotQuoted(normalized, vendor, LINE_ITEMS);
 
-  const rawAnswers = QUESTIONNAIRE_RAW_ANSWERS[vendorId];
-  const rawAnswerPairs = Object.entries(rawAnswers).map(([question, raw_answer]) => ({
-    question,
-    raw_answer,
-  }));
-  const classified = await classifyQuestionnaireAnswers(vendorId, rawAnswerPairs);
-  const verdict = applyQuestionnaireGate(vendorId, classified);
+  const verdict = await verdictPromise;
+  console.log(
+    `[pipeline:${vendorId}] ${extracted.length} extracted rows -> ${complete.length} normalized lines, gate ${verdict.gate_result}, ${((Date.now() - startedAt) / 1000).toFixed(1)}s`
+  );
 
   return { normalizedLines: complete, questionnaireVerdict: verdict };
 }
@@ -86,15 +100,18 @@ export async function runFullPipeline(): Promise<{
   const allNormalized: NormalizedLine[] = [];
   const allVerdicts: VendorQuestionnaireVerdict[] = [];
 
-  for (const vendor of VENDORS) {
-    try {
-      const { normalizedLines, questionnaireVerdict } = await runVendorPipeline(vendor.vendor_id);
-      allNormalized.push(...normalizedLines);
-      allVerdicts.push(questionnaireVerdict);
-    } catch (err: any) {
-      errors.push({ vendor_id: vendor.vendor_id, error: err.message ?? String(err) });
+  const results = await Promise.allSettled(VENDORS.map((v) => runVendorPipeline(v.vendor_id)));
+  results.forEach((r, i) => {
+    const vendor = VENDORS[i];
+    if (r.status === "fulfilled") {
+      allNormalized.push(...r.value.normalizedLines);
+      allVerdicts.push(r.value.questionnaireVerdict);
+    } else {
+      const err: any = r.reason;
+      console.error(`[pipeline:${vendor.vendor_id}] FAILED: ${err?.message ?? String(err)}`);
+      errors.push({ vendor_id: vendor.vendor_id, error: err?.message ?? String(err) });
     }
-  }
+  });
 
   const store: ComparisonStore = {
     rfx_id: RFX_ID,

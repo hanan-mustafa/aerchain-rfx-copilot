@@ -43,11 +43,18 @@ export async function classifyQuestionnaireAnswers(
   const system = `You classify procurement vendor questionnaire answers by quality. For each \
 question/answer pair, decide:
 - ANSWERED_WITH_PROOF: specific, verifiable detail (certificate numbers, named contactable \
-references, concrete SLA figures, named cities/partners).
-- ANSWERED_VAGUE: an answer was given but has no verifiable specifics (e.g. "we comply with \
-standard practices", "PAN India support").
+references, concrete SLA figures, named cities/partners). Judge against what the question asks \
+for: if the question asks for a certificate number or proof, a bare "yes" is not proof; if it only \
+asks whether something is true (e.g. "RoHS / Energy Star compliance?"), a direct, unhedged, \
+specific affirmative that covers the whole scope ("all supplied hardware is RoHS compliant and \
+Energy Star rated where applicable") counts as ANSWERED_WITH_PROOF.
+- ANSWERED_VAGUE: an answer was given but has no verifiable specifics, or claims the thing \
+without the proof the question asked for (e.g. "Yes, ISO 9001 certified." with no certificate \
+number; "we comply with standard practices"; "PAN India support"; "meets applicable regulations"). \
+A plain claim that is merely unproven is VAGUE, not EVASIVE.
 - ANSWERED_EVASIVE: deflects, defers to a later conversation, or is a verbal-only/unwritten claim \
-presented as if it were documented (e.g. "mentioned verbally in the covering call").
+presented as if it were documented (e.g. "mentioned verbally in the covering call", "we can \
+discuss this once the order is confirmed"), or answers a different question than was asked.
 - UNANSWERED: the question was skipped or explicitly marked not answered.
 
 Output ONLY this JSON shape, nothing else:

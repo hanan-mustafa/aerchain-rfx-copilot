@@ -18,7 +18,12 @@ export function claude(): Anthropic {
 // Centralized model choice so it's one line to change everywhere.
 export const MODEL = {
   extraction: "claude-sonnet-4-5", // structured extraction, needs to follow a strict schema
-  vision: "claude-sonnet-4-5", // same model handles vision; kept as a separate name so it's easy to change independently
+  // Vision runs on the newer Sonnet: on the Sunrise rate-card photo,
+  // claude-sonnet-4-5 got 5-7 of 26 lines wrong per run (and made the same
+  // digit misread in both passes, which the dual-pass cross-check cannot
+  // catch), while claude-sonnet-5-5 read all 26 correctly in 3/3 runs.
+  // See scripts/eval-sunrise-vision.ts.
+  vision: "claude-sonnet-5-5",
   agent: "claude-sonnet-4-5", // analyst chat / tool-calling
 } as const;
 
