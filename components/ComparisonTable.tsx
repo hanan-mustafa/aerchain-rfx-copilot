@@ -1,33 +1,50 @@
 "use client";
 
-import { useState } from "react";
 import { ComparisonStore, NormalizedLine } from "@/lib/schema";
 import { FlagTag } from "./FlagTag";
 
-function formatInr(n: number | null): string {
+export function formatInr(n: number | null): string {
   if (n === null) return "—";
   return n.toLocaleString("en-IN", { maximumFractionDigits: 0 });
 }
 
-export function ComparisonTable({ store }: { store: ComparisonStore }) {
-  const [expanded, setExpanded] = useState<string | null>(null); // key: `${vendor_id}:${line_ref}`
+export interface CellRef {
+  vendor_id: string;
+  line_ref: number;
+}
 
+/**
+ * The comparison grid. Cells stay compact -- price, a short conditional
+ * price, flag tags -- and the full provenance (source quote, location,
+ * conversion steps) opens in the SourceDrawer when a cell is clicked, so
+ * reading a source never reflows the table.
+ */
+export function ComparisonTable({
+  store,
+  selected,
+  onSelect,
+}: {
+  store: ComparisonStore;
+  selected: CellRef | null;
+  onSelect: (cell: CellRef) => void;
+}) {
   const lineFor = (vendorId: string, lineRef: number): NormalizedLine | undefined =>
     store.normalized_lines.find((l) => l.vendor_id === vendorId && l.line_ref === lineRef);
 
   return (
     <div style={{ overflowX: "auto", border: "1px solid var(--line)", borderRadius: "4px" }}>
+      <div style={{ padding: "8px 12px", fontSize: "12px", color: "var(--ink-dim)", borderBottom: "1px solid var(--line)" }}>
+        Click any price to see exactly where it came from and how it was converted.
+      </div>
       <table style={{ borderCollapse: "collapse", width: "100%", minWidth: "900px" }}>
         <thead>
           <tr style={{ borderBottom: "1px solid var(--line-strong)" }}>
             <th style={thStyle("left", "220px")}>Line item</th>
             <th style={thStyle("right", "70px")}>Qty</th>
             {store.vendors.map((v) => (
-              <th key={v.vendor_id} style={thStyle("left", "180px")}>
+              <th key={v.vendor_id} style={thStyle("left", "160px")}>
                 <div>{v.full_name.split(" ").slice(0, 2).join(" ")}</div>
-                <div style={{ fontSize: "10px", color: "var(--ink-dim)", fontWeight: 400 }}>
-                  {v.source_format}
-                </div>
+                <div style={{ fontSize: "10px", color: "var(--ink-dim)", fontWeight: 400 }}>{v.source_format}</div>
               </th>
             ))}
           </tr>
@@ -36,7 +53,12 @@ export function ComparisonTable({ store }: { store: ComparisonStore }) {
           {store.line_items.map((li) => (
             <tr key={li.no} style={{ borderBottom: "1px solid var(--line)" }}>
               <td style={{ ...tdStyle, verticalAlign: "top" }}>
-                <div style={{ fontWeight: 500 }}>{li.item}</div>
+                <div style={{ fontWeight: 500 }}>
+                  <span className="mono" style={{ color: "var(--ink-dim)", fontSize: "11px", marginRight: "6px" }}>
+                    {li.no}
+                  </span>
+                  {li.item}
+                </div>
                 <div style={{ fontSize: "11px", color: "var(--ink-dim)" }}>{li.spec}</div>
               </td>
               <td className="mono" style={{ ...tdStyle, textAlign: "right", verticalAlign: "top" }}>
@@ -44,14 +66,30 @@ export function ComparisonTable({ store }: { store: ComparisonStore }) {
               </td>
               {store.vendors.map((v) => {
                 const line = lineFor(v.vendor_id, li.no);
-                const key = `${v.vendor_id}:${li.no}`;
-                const isOpen = expanded === key;
-                const hasFlags = (line?.flags ?? []).some((f) => f !== "OK");
+                const isSelected = selected?.vendor_id === v.vendor_id && selected?.line_ref === li.no;
+                const select = () => line && onSelect({ vendor_id: v.vendor_id, line_ref: li.no });
                 return (
                   <td
                     key={v.vendor_id}
-                    style={{ ...tdStyle, verticalAlign: "top", cursor: line ? "pointer" : "default" }}
-                    onClick={() => line && setExpanded(isOpen ? null : key)}
+                    role={line ? "button" : undefined}
+                    tabIndex={line ? 0 : undefined}
+                    aria-label={line ? `${v.full_name}, line ${li.no} ${li.item}: show source` : undefined}
+                    aria-pressed={line ? isSelected : undefined}
+                    onClick={select}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        select();
+                      }
+                    }}
+                    className={line ? "cmp-cell" : undefined}
+                    style={{
+                      ...tdStyle,
+                      verticalAlign: "top",
+                      cursor: line ? "pointer" : "default",
+                      background: isSelected ? "var(--accent-dim)" : undefined,
+                      boxShadow: isSelected ? "inset 0 0 0 2px var(--accent)" : undefined,
+                    }}
                   >
                     <div className="mono" style={{ fontWeight: 500 }}>
                       {line?.normalized_unit_price_inr !== null && line?.normalized_unit_price_inr !== undefined
@@ -60,40 +98,10 @@ export function ComparisonTable({ store }: { store: ComparisonStore }) {
                     </div>
                     {line?.alternate_basis && (
                       <div className="mono" style={{ fontSize: "11px", color: "var(--ink-dim)" }}>
-                        or ₹{formatInr(line.alternate_basis.unit_price_inr)} ({line.alternate_basis.label})
+                        or ₹{formatInr(line.alternate_basis.unit_price_inr)} net of rebate
                       </div>
                     )}
                     <div>{line?.flags.map((f) => <FlagTag key={f} flag={f} />)}</div>
-                    {hasFlags && (
-                      <div style={{ fontSize: "11px", color: "var(--accent)", marginTop: "2px" }}>
-                        {isOpen ? "hide source ▲" : "show source ▼"}
-                      </div>
-                    )}
-                    {isOpen && line && (
-                      <div
-                        style={{
-                          marginTop: "6px",
-                          padding: "8px",
-                          background: "var(--paper)",
-                          border: "1px solid var(--line)",
-                          borderRadius: "3px",
-                          fontSize: "11px",
-                          color: "var(--ink)",
-                        }}
-                      >
-                        <div style={{ color: "var(--ink-dim)", marginBottom: "3px" }}>
-                          {line.source_location}
-                        </div>
-                        <div style={{ marginBottom: line.conversion_notes.length ? "6px" : 0 }}>
-                          &ldquo;{line.source_excerpt}&rdquo;
-                        </div>
-                        {line.conversion_notes.map((note, i) => (
-                          <div key={i} style={{ color: "var(--accent)" }}>
-                            {note}
-                          </div>
-                        ))}
-                      </div>
-                    )}
                   </td>
                 );
               })}

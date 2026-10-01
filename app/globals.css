@@ -199,3 +199,63 @@ a {
     animation: none;
   }
 }
+
+/* Comparison table cells open the source drawer */
+.cmp-cell:hover {
+  background: var(--paper);
+}
+
+/* Source drawer (components/SourceDrawer.tsx): slides over the chat column */
+.source-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(460px, 100vw);
+  background: var(--paper-raised);
+  border-left: 1px solid var(--line-strong);
+  box-shadow: -12px 0 32px rgba(28, 27, 25, 0.12);
+  overflow-y: auto;
+  z-index: 50;
+  animation: drawer-in 0.18s ease-out;
+}
+.drawer-h {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-dim);
+  margin: 0 0 6px;
+}
+@keyframes drawer-in {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .source-drawer {
+    animation: none;
+  }
+}
+
+/* Table + chat layout: side by side on desktop, stacked on narrow screens */
+.workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 440px;
+  gap: 24px;
+  align-items: start;
+}
+.workbench-chat {
+  position: sticky;
+  top: 24px;
+  height: calc(100vh - 140px);
+}
+@media (max-width: 1000px) {
+  .workbench {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workbench-chat {
+    position: static;
+    height: 70vh;
+  }
+}

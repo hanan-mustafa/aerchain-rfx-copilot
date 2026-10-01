@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { ComparisonStore } from "@/lib/schema";
-import { ComparisonTable } from "@/components/ComparisonTable";
+import { ComparisonTable, CellRef } from "@/components/ComparisonTable";
+import { SourceDrawer } from "@/components/SourceDrawer";
 import { QuestionnaireStrip } from "@/components/QuestionnaireStrip";
 import { ChatPanel } from "@/components/ChatPanel";
 import { VendorFiles } from "@/components/VendorFiles";
@@ -13,6 +14,8 @@ export default function Home() {
   const [loading, setLoading] = useState<false | "cached" | "live">(false);
   const [errors, setErrors] = useState<{ vendor_id: string; error: string }[]>([]);
   const [loadErr, setLoadErr] = useState<string | null>(null);
+  const [selectedCell, setSelectedCell] = useState<CellRef | null>(null);
+  const closeDrawer = useCallback(() => setSelectedCell(null), []);
 
   const loadExisting = useCallback(async () => {
     const res = await fetch("/api/vendors");
@@ -134,15 +137,18 @@ export default function Home() {
       )}
 
       {store && (
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 440px", gap: "24px", alignItems: "start" }}>
-          <div>
+        <div className="workbench">
+          <div style={{ minWidth: 0 }}>
             <QuestionnaireStrip vendors={store.vendors} verdicts={store.questionnaire_verdicts} />
-            <ComparisonTable store={store} />
+            <ComparisonTable store={store} selected={selectedCell} onSelect={setSelectedCell} />
           </div>
-          <div style={{ position: "sticky", top: "24px", height: "calc(100vh - 140px)" }}>
+          <div className="workbench-chat">
             <ChatPanel />
           </div>
         </div>
+      )}
+      {store && selectedCell && (
+        <SourceDrawer store={store} cell={selectedCell} onSelect={setSelectedCell} onClose={closeDrawer} />
       )}
     </main>
   );
