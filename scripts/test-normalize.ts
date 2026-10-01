@@ -99,4 +99,29 @@ check(
   normLaptop.source_excerpt.includes("70,800")
 );
 
+// --- Line 30 (warranty, per device): vendor wording "per unit" vs RFx "per device" ---
+const warrantyLine: LineItemSpec = { no: 30, item: "3-Year Onsite Warranty Extension", spec: "Per-device", uom: "per device", qty: 320 };
+const warrantyExtracted: ExtractedLine = {
+  vendor_id: "techmart",
+  line_ref: 30,
+  raw_item_text: "3-Year Onsite Warranty Extension (Per-device bundle, all laptops)",
+  qty_quoted: 320,
+  unit_price: 3390,
+  currency: "INR",
+  unit_of_measure: "per unit",
+  flags: ["OK"],
+  resolvable: true,
+  source_excerpt: "3-Year Onsite Warranty Extension | 320 | 3,390",
+  source_location: "table under heading 'Extended Warranty', row 1",
+  extraction_confidence: 0.95,
+  conditional_discount_pct: null,
+  conditional_discount_description: null,
+};
+const normWarranty = normalizeLine(warrantyExtracted, warrantyLine);
+check("Warranty per unit vs per device: price kept as-is (INR 3,390)", normWarranty.normalized_unit_price_inr === 3390);
+check("Warranty per unit vs per device: not flagged UNIT_MISMATCH", !normWarranty.flags.includes("UNIT_MISMATCH"));
+check("Warranty per unit vs per device: line total = 3,390 x 320", normWarranty.normalized_line_total_inr === 3390 * 320);
+const normLotOnly = normalizeLine({ ...warrantyExtracted, unit_of_measure: "lot" }, warrantyLine);
+check("Warranty quoted per lot vs RFx per device: left null for review, not guessed", normLotOnly.normalized_unit_price_inr === null && normLotOnly.flags.includes("UNIT_MISMATCH"));
+
 console.log("\nDone.");

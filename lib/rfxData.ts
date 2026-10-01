@@ -32,7 +32,13 @@ export const LINE_ITEMS: LineItemSpec[] = [
   { no: 27, item: "Desktop Label Printer", spec: "Thermal, USB", uom: "per unit", qty: 15 },
   { no: 28, item: "Network Switch, 24-port unmanaged", spec: "Gigabit", uom: "per unit", qty: 10 },
   { no: 29, item: "Desktop UPS 650VA", spec: "Line-interactive", uom: "per unit", qty: 40 },
-  { no: 30, item: "3-Year Onsite Warranty Extension", spec: "Per-device bundle, all laptops", uom: "lot", qty: 1 },
+  // The buyer's template (data/RFx_Template_ITHardware_FY27.xlsx) lists this
+  // line as "lot, qty 1", but its own spec is per device, and every vendor
+  // that quoted it priced it per device across the 320 laptops/ultrabooks on
+  // lines 1-4 (e.g. Global IT: 3,300 x 320 = 1,056,000 line total). As "lot"
+  // the line was not comparable across vendors, so it is defined here as
+  // what was actually requested and quoted.
+  { no: 30, item: "3-Year Onsite Warranty Extension", spec: "Per-device bundle, all laptops (lines 1-4)", uom: "per device", qty: 320 },
 ];
 
 export const QUESTIONNAIRE_FIELDS: string[] = [
@@ -53,6 +59,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Rakesh Menon, rakesh.menon@apexbusiness.in",
     source_format: "xlsx",
     source_file: "Vendor_A_Apex_Business_Systems_Quote.xlsx",
+    edge_case: "Clean control case: fills the buyer's template exactly, all 30 lines in INR.",
   },
   {
     vendor_id: "techmart",
@@ -60,6 +67,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Priya Sharma, priya.sharma@techmartsol.com",
     source_format: "docx",
     source_file: "Vendor_B_TechMart_Solutions_Quote.docx",
+    edge_case: "Own layout: items grouped by the vendor's categories, not the RFx line numbers; prices quoted GST-inclusive.",
   },
   {
     vendor_id: "global_it",
@@ -67,6 +75,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Sanjay Bhatt, sanjay.bhatt@globalitdist.co.in",
     source_format: "pdf",
     source_file: "Vendor_C_Global_IT_Distributors_Quote.pdf",
+    edge_case: "A 4% early-payment rebate that changes every price is disclosed only in a numbered note on a later page.",
   },
   {
     vendor_id: "quickserve",
@@ -74,6 +83,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Manoj Iyer, quickservetraders@gmail.com",
     source_format: "email",
     source_file: "Vendor_D_QuickServe_Traders_Email.txt",
+    edge_case: "Casual email: four laptop tiers collapsed into one 'average' price, six lines skipped.",
   },
   {
     vendor_id: "sunrise",
@@ -81,6 +91,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Devendra Patil (phone only)",
     source_format: "image",
     source_file: "Vendor_E_Sunrise_Computech_RateCard.jpg",
+    edge_case: "Phone photo of a tilted printed rate card: priced in USD, cable locks quoted per box of 10, four lines missing.",
   },
 ];
 

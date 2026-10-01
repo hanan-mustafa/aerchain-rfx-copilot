@@ -1,0 +1,580 @@
+{
+  "vendor_id": "sunrise",
+  "source_file": "Vendor_E_Sunrise_Computech_RateCard.jpg",
+  "extraction_key": "b7e70ca65bc22d077a3feb4d0796db0b3306410fbcfb2a17dee345caf481ce62",
+  "extracted": [
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 1,
+      "raw_item_text": "Business Laptop - Entry",
+      "qty_quoted": null,
+      "unit_price": 506.02,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Entry | 100 | per unit | $506.02 (row tied by qty 100)",
+      "source_location": "row 1, top of table",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 2,
+      "raw_item_text": "Business Laptop - Standard",
+      "qty_quoted": null,
+      "unit_price": 698.8,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Standard | 150 | per unit | $698.80 (row tied by qty 150)",
+      "source_location": "row 2",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 3,
+      "raw_item_text": "Business Laptop - Premium",
+      "qty_quoted": null,
+      "unit_price": 891.57,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Premium | 50 | per unit | $891.57 (row tied by qty 50)",
+      "source_location": "row 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 4,
+      "raw_item_text": "Executive Ultrabook",
+      "qty_quoted": null,
+      "unit_price": 1421.69,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Executive Ultrabook | 20 | per unit | $1,421.69 (row tied by qty 20)",
+      "source_location": "row 4",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 5,
+      "raw_item_text": "Monitor 24-inch FHD",
+      "qty_quoted": null,
+      "unit_price": 118.07,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 24-inch FHD | 200 | per unit | $118.07 (row tied by qty 200)",
+      "source_location": "row 5",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 6,
+      "raw_item_text": "Monitor 27-inch QHD",
+      "qty_quoted": null,
+      "unit_price": 198.8,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 27-inch QHD | 80 | per unit | $198.80 (row tied by qty 80)",
+      "source_location": "row 6",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 7,
+      "raw_item_text": "Dual Monitor Arm/Stand",
+      "qty_quoted": null,
+      "unit_price": 38.55,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Dual Monitor Arm/Stand | 100 | per unit | $38.55 (row tied by qty 100)",
+      "source_location": "row 7",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 8,
+      "raw_item_text": "USB-C Docking Station",
+      "qty_quoted": null,
+      "unit_price": 65.06,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C Docking Station | 220 | per unit | $65.06 (row tied by qty 220)",
+      "source_location": "row 8",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 9,
+      "raw_item_text": "Wireless Keyboard+Mouse Combo",
+      "qty_quoted": null,
+      "unit_price": 17.47,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wireless Keyboard+Mouse Combo | 300 | per unit | $17.47 (row tied by qty 300)",
+      "source_location": "row 9",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 10,
+      "raw_item_text": "Wired Keyboard",
+      "qty_quoted": null,
+      "unit_price": 7.83,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Keyboard | 50 | per unit | $7.83 (row tied by qty 50)",
+      "source_location": "row 10",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 11,
+      "raw_item_text": "Wired Optical Mouse",
+      "qty_quoted": null,
+      "unit_price": 4.22,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Optical Mouse | 50 | per unit | $4.22 (row tied by qty 50)",
+      "source_location": "row 11",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 12,
+      "raw_item_text": "USB Webcam 1080p",
+      "qty_quoted": null,
+      "unit_price": 26.51,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 1080p | 150 | per unit | $26.51 (row tied by qty 150)",
+      "source_location": "row 12",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 13,
+      "raw_item_text": "USB Webcam 4K",
+      "qty_quoted": null,
+      "unit_price": 81.93,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 4K | 30 | per unit | $81.93 (row tied by qty 30)",
+      "source_location": "row 13",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 14,
+      "raw_item_text": "Wired Noise-Cancelling Headset",
+      "qty_quoted": null,
+      "unit_price": 40.96,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Noise-Cancelling Headset | 200 | per unit | $40.96 (row tied by qty 200)",
+      "source_location": "row 14",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 15,
+      "raw_item_text": "Bluetooth Headset",
+      "qty_quoted": null,
+      "unit_price": 21.69,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Bluetooth Headset | 100 | per unit | $21.69 (row tied by qty 100)",
+      "source_location": "row 15",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 16,
+      "raw_item_text": "Conference Speakerphone",
+      "qty_quoted": null,
+      "unit_price": 265.06,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference Speakerphone | 25 | per unit | $265.06 (row tied by qty 25)",
+      "source_location": "row 16",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 17,
+      "raw_item_text": "Conference PTZ Camera",
+      "qty_quoted": null,
+      "unit_price": 783.13,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference PTZ Camera | 15 | per unit | $783.13 (row tied by qty 15)",
+      "source_location": "row 17",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 18,
+      "raw_item_text": "65-inch Interactive Display Panel",
+      "qty_quoted": null,
+      "unit_price": 4638.55,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "65-inch Interactive Display Panel | 8 | per unit | $4,638.55 (row tied by qty 8)",
+      "source_location": "row 18",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 19,
+      "raw_item_text": "Laptop Sleeve 15.6-inch",
+      "qty_quoted": null,
+      "unit_price": 10.24,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Sleeve 15.6-inch | 300 | per unit | $10.24 (row tied by qty 300)",
+      "source_location": "row 19",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 20,
+      "raw_item_text": "Spare 65W USB-C Charger",
+      "qty_quoted": null,
+      "unit_price": 25.3,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Spare 65W USB-C Charger | 100 | per unit | $25.30 (row tied by qty 100)",
+      "source_location": "row 20",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 21,
+      "raw_item_text": "Portable SSD 1TB",
+      "qty_quoted": null,
+      "unit_price": 86.75,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Portable SSD 1TB | 60 | per unit | $86.75 (row tied by qty 60)",
+      "source_location": "row 21",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 22,
+      "raw_item_text": "USB-C to HDMI Adapter",
+      "qty_quoted": null,
+      "unit_price": 11.45,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C to HDMI Adapter | 150 | per unit | $11.45 (row tied by qty 150)",
+      "source_location": "row 22",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 23,
+      "raw_item_text": "USB Hub 7-port",
+      "qty_quoted": null,
+      "unit_price": 19.28,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Hub 7-port | 80 | per unit | $19.28 (row tied by qty 80)",
+      "source_location": "row 23",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 24,
+      "raw_item_text": "Laptop Cable Lock",
+      "qty_quoted": null,
+      "unit_price": 66.27,
+      "currency": "USD",
+      "unit_of_measure": "per box (10)",
+      "flags": [
+        "UNIT_MISMATCH",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Cable Lock | 300 | per box (10) | $66.27 (row tied by qty 300; unit column reads 'per box (10)', RFx wants per unit)",
+      "source_location": "row 24, unit column near bottom of table",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 26,
+      "raw_item_text": "Handheld Barcode Scanner (USB)",
+      "qty_quoted": null,
+      "unit_price": 114.46,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Handheld Barcode Scanner (USB) | 25 | per unit | $114.46 (row tied by qty 25)",
+      "source_location": "row 25, second to last row",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 29,
+      "raw_item_text": "Desktop UPS 650VA",
+      "qty_quoted": null,
+      "unit_price": 55.42,
+      "currency": "USD",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK",
+        "CURRENCY_CONVERTED"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Desktop UPS 650VA | 40 | per unit | $55.42 (row tied by qty 40)",
+      "source_location": "row 26, last row",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "sunrise",
+      "line_ref": 30,
+      "raw_item_text": "3-Year Onsite Warranty Extension",
+      "qty_quoted": null,
+      "unit_price": null,
+      "currency": "USD",
+      "unit_of_measure": "per device",
+      "flags": [
+        "NOT_QUOTED"
+      ],
+      "resolvable": false,
+      "source_excerpt": "Note: 3-Year Onsite Warranty Extension to be quoted separately after laptop brand/model is finalized.",
+      "source_location": "footnote below table, first note",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    }
+  ],
+  "questionnaire_key": "572e5ac3702c28f00b189bc42d59d99b0026358353917490d8c3f5d32900ddf9",
+  "questionnaire_answers": [
+    {
+      "vendor_id": "sunrise",
+      "question": "Authorized OEM reseller? (name brands + attach proof)",
+      "raw_answer": "Yes we are authorized dealers (mentioned verbally in the covering call, not in writing).",
+      "quality": "ANSWERED_EVASIVE",
+      "notes": "Claims authorization verbally only, explicitly states no written proof provided. The question asks for proof to be attached, which was not done."
+    },
+    {
+      "vendor_id": "sunrise",
+      "question": "ISO 9001 certified? (certificate number)",
+      "raw_answer": "We are ISO certified.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "Claims ISO certification but provides no certificate number as requested. This is an unproven claim rather than deflection."
+    },
+    {
+      "vendor_id": "sunrise",
+      "question": "RoHS / Energy Star compliance on hardware supplied?",
+      "raw_answer": "All items are standard compliant.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "Generic claim of 'standard compliant' without specifying which standards or confirming the specific RoHS/Energy Star requirements asked about."
+    },
+    {
+      "vendor_id": "sunrise",
+      "question": "Local service center cities and average onsite response SLA",
+      "raw_answer": "Same day support in most cases.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "Provides only a vague timeframe ('same day support in most cases') without listing specific cities or concrete SLA figures as requested."
+    },
+    {
+      "vendor_id": "sunrise",
+      "question": "Standard warranty terms per product category",
+      "raw_answer": "Standard warranty applies.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "States 'standard warranty applies' without specifying what those terms are or breaking down by product category as asked."
+    },
+    {
+      "vendor_id": "sunrise",
+      "question": "Asset disposal / data-wipe policy for buyback of old devices",
+      "raw_answer": "We can discuss this separately once order is confirmed.",
+      "quality": "ANSWERED_EVASIVE",
+      "notes": "Defers answer to post-order discussion rather than providing the requested policy information."
+    },
+    {
+      "vendor_id": "sunrise",
+      "question": "Similar-scale deployment references (2+, with contact)",
+      "raw_answer": "We supplied networking gear to a college in Nashik last year.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "Provides only one reference (not the requested 2+), lacks contact details, and gives minimal verifiable information (just 'a college in Nashik')."
+    },
+    {
+      "vendor_id": "sunrise",
+      "question": "Average lead time from PO to delivery",
+      "raw_answer": "(not stated)",
+      "quality": "UNANSWERED",
+      "notes": "No answer provided to this question."
+    }
+  ],
+  "created_at": "2026-09-29T20:37:57.995Z",
+  "origin": "reconstructed-from-validated-run"
+}

@@ -5,10 +5,12 @@ import { ComparisonStore } from "@/lib/schema";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { QuestionnaireStrip } from "@/components/QuestionnaireStrip";
 import { ChatPanel } from "@/components/ChatPanel";
+import { VendorFiles } from "@/components/VendorFiles";
+import { VENDORS } from "@/lib/rfxData";
 
 export default function Home() {
   const [store, setStore] = useState<ComparisonStore | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<false | "cached" | "live">(false);
   const [errors, setErrors] = useState<{ vendor_id: string; error: string }[]>([]);
   const [loadErr, setLoadErr] = useState<string | null>(null);
 
@@ -22,12 +24,17 @@ export default function Home() {
     loadExisting();
   }, [loadExisting]);
 
-  async function runExtraction() {
-    setLoading(true);
+  // Default run reuses stored extractions of unchanged files (no API cost);
+  // a live run calls Claude for every file and refreshes that cache.
+  async function runExtraction(live: boolean) {
+    if (live && !window.confirm("Re-extract all five files live with Claude? This makes real API calls (uses credits) and takes about a minute.")) {
+      return;
+    }
+    setLoading(live ? "live" : "cached");
     setLoadErr(null);
     setErrors([]);
     try {
-      const res = await fetch("/api/extract", { method: "POST" });
+      const res = await fetch(live ? "/api/extract?fresh=1" : "/api/extract", { method: "POST" });
       const data = await res.json();
       if (data.ok) {
         setStore(data.store);
@@ -61,21 +68,34 @@ export default function Home() {
             {store && <> · extracted {new Date(store.generated_at).toLocaleString()}</>}
           </div>
         </div>
-        <button
-          onClick={runExtraction}
-          disabled={loading}
-          style={{
-            padding: "10px 18px",
-            border: "1px solid var(--ink)",
-            borderRadius: "4px",
-            background: loading ? "var(--line)" : "var(--ink)",
-            color: loading ? "var(--ink-dim)" : "white",
-            fontSize: "13.5px",
-            fontWeight: 500,
-          }}
-        >
-          {loading ? "Extracting all 5 vendor responses…" : store ? "Re-run extraction" : "Run extraction"}
-        </button>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "6px" }}>
+          <button
+            onClick={() => runExtraction(false)}
+            disabled={loading !== false}
+            style={{
+              padding: "10px 18px",
+              border: "1px solid var(--ink)",
+              borderRadius: "4px",
+              background: loading ? "var(--line)" : "var(--ink)",
+              color: loading ? "var(--ink-dim)" : "white",
+              fontSize: "13.5px",
+              fontWeight: 500,
+            }}
+          >
+            {loading === "cached"
+              ? "Running pipeline…"
+              : loading === "live"
+              ? "Extracting live with Claude (~1 min)…"
+              : "Run extraction"}
+          </button>
+          <button
+            onClick={() => runExtraction(true)}
+            disabled={loading !== false}
+            style={{ border: "none", background: "none", padding: 0, fontSize: "12px", color: "var(--accent)", textDecoration: "underline" }}
+          >
+            Re-extract live with Claude (uses API credits)
+          </button>
+        </div>
       </header>
 
       {loadErr && (
@@ -90,6 +110,20 @@ export default function Home() {
               {e.vendor_id}: {e.error}
             </div>
           ))}
+        </div>
+      )}
+
+      <VendorFiles vendors={store?.vendors ?? VENDORS} sources={store?.extraction_sources} />
+
+      {store?.extraction_sources && (
+        <div style={{ fontSize: "12.5px", color: "var(--ink-dim)", marginBottom: "14px" }}>
+          {(() => {
+            const vals = Object.values(store.extraction_sources);
+            const cached = vals.filter((v) => v === "cache").length;
+            return cached === vals.length
+              ? `All ${vals.length} files were already extracted, so their stored results were reused: no API calls. Normalization and the questionnaire gate re-ran in code.`
+              : `${vals.length - cached} file(s) extracted live with Claude, ${cached} reused from cache.`;
+          })()}
         </div>
       )}
 

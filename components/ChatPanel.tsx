@@ -18,10 +18,13 @@ export function ChatPanel() {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    // Scroll only the message list, not the window: scrollIntoView on mount
+    // used to yank the whole page down past the header on first load.
+    const el = scrollRef.current;
+    if (el) el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
   }, [messages, loading]);
 
   async function send(text: string) {
@@ -67,7 +70,7 @@ export function ChatPanel() {
         </div>
       </div>
 
-      <div style={{ flex: 1, overflowY: "auto", padding: "14px", display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div ref={scrollRef} style={{ flex: 1, overflowY: "auto", padding: "14px", display: "flex", flexDirection: "column", gap: "12px" }}>
         {messages.length === 0 && (
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <div style={{ fontSize: "12px", color: "var(--ink-dim)" }}>Try asking:</div>
@@ -110,7 +113,6 @@ export function ChatPanel() {
         {loading && (
           <div style={{ fontSize: "12px", color: "var(--ink-dim)" }}>thinking, calling tools…</div>
         )}
-        <div ref={bottomRef} />
       </div>
 
       <form

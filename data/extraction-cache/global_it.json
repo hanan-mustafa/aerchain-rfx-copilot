@@ -1,0 +1,609 @@
+{
+  "vendor_id": "global_it",
+  "source_file": "Vendor_C_Global_IT_Distributors_Quote.pdf",
+  "extraction_key": "0ed13a06ba6e26efdcbe8778ae66347a9f2f026eec6c6a2e5dd822b2f28c35c7",
+  "extracted": [
+    {
+      "vendor_id": "global_it",
+      "line_ref": 1,
+      "raw_item_text": "Business Laptop - Entry",
+      "qty_quoted": null,
+      "unit_price": 43260,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 43,260 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 1 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 2,
+      "raw_item_text": "Business Laptop - Standard",
+      "qty_quoted": null,
+      "unit_price": 59740,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 59,740 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 2 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 3,
+      "raw_item_text": "Business Laptop - Premium",
+      "qty_quoted": null,
+      "unit_price": 76220,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 76,220 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 3 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 4,
+      "raw_item_text": "Executive Ultrabook",
+      "qty_quoted": null,
+      "unit_price": 121540,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 121,540 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 4 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 5,
+      "raw_item_text": "Monitor 24-inch FHD",
+      "qty_quoted": null,
+      "unit_price": 10090,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 10,090 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 5 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 6,
+      "raw_item_text": "Monitor 27-inch QHD",
+      "qty_quoted": null,
+      "unit_price": 17000,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 17,000 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 6 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 7,
+      "raw_item_text": "Dual Monitor Arm/Stand",
+      "qty_quoted": null,
+      "unit_price": 3300,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 3,300 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 7 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 8,
+      "raw_item_text": "USB-C Docking Station",
+      "qty_quoted": null,
+      "unit_price": 5560,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 5,560 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 8 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 9,
+      "raw_item_text": "Wireless Keyboard+Mouse Combo",
+      "qty_quoted": null,
+      "unit_price": 1490,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 1,490 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 9 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 10,
+      "raw_item_text": "Wired Keyboard",
+      "qty_quoted": null,
+      "unit_price": 670,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 670 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 10 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 11,
+      "raw_item_text": "Wired Optical Mouse",
+      "qty_quoted": null,
+      "unit_price": 360,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 360 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 11 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 12,
+      "raw_item_text": "USB Webcam 1080p",
+      "qty_quoted": null,
+      "unit_price": 2270,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 2,270 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 12 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 13,
+      "raw_item_text": "USB Webcam 4K",
+      "qty_quoted": null,
+      "unit_price": 7000,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 7,000 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 13 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 14,
+      "raw_item_text": "Wired Noise-Cancelling Headset",
+      "qty_quoted": null,
+      "unit_price": 3500,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 3,500 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 14 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 15,
+      "raw_item_text": "Bluetooth Headset",
+      "qty_quoted": null,
+      "unit_price": 1850,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 1,850 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 15 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 16,
+      "raw_item_text": "Conference Speakerphone",
+      "qty_quoted": null,
+      "unit_price": 22660,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 22,660 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 16 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 17,
+      "raw_item_text": "Conference PTZ Camera",
+      "qty_quoted": null,
+      "unit_price": 66950,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 66,950 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 17 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 18,
+      "raw_item_text": "65-inch Interactive Display Panel",
+      "qty_quoted": null,
+      "unit_price": 396550,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 396,550 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 18 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 19,
+      "raw_item_text": "Laptop Sleeve 15.6-inch",
+      "qty_quoted": null,
+      "unit_price": 880,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 880 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 19 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 20,
+      "raw_item_text": "Spare 65W USB-C Charger",
+      "qty_quoted": null,
+      "unit_price": 2160,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 2,160 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 20 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 21,
+      "raw_item_text": "Portable SSD 1TB",
+      "qty_quoted": null,
+      "unit_price": 7420,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 7,420 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 21 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 22,
+      "raw_item_text": "USB-C to HDMI Adapter",
+      "qty_quoted": null,
+      "unit_price": 980,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 980 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 22 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 23,
+      "raw_item_text": "USB Hub 7-port",
+      "qty_quoted": null,
+      "unit_price": 1650,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 1,650 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 23 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 24,
+      "raw_item_text": "Laptop Cable Lock",
+      "qty_quoted": null,
+      "unit_price": 570,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 570 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 24 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 25,
+      "raw_item_text": "External Blu-ray/DVD Drive",
+      "qty_quoted": null,
+      "unit_price": 3910,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 3,910 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 25 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 26,
+      "raw_item_text": "Handheld Barcode Scanner (USB)",
+      "qty_quoted": null,
+      "unit_price": 9780,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 9,780 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 26 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 27,
+      "raw_item_text": "Desktop Label Printer",
+      "qty_quoted": null,
+      "unit_price": 14940,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 14,940 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 27 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 28,
+      "raw_item_text": "Network Switch, 24-port unmanaged",
+      "qty_quoted": null,
+      "unit_price": 8450,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 8,450 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 28 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 29,
+      "raw_item_text": "Desktop UPS 650VA",
+      "qty_quoted": null,
+      "unit_price": 4740,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "CONDITIONAL_PRICING"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Unit Price (INR)*: 4,740 | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 29 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    },
+    {
+      "vendor_id": "global_it",
+      "line_ref": 30,
+      "raw_item_text": "3-Year Onsite Warranty Extension",
+      "qty_quoted": null,
+      "unit_price": 3300,
+      "currency": "INR",
+      "unit_of_measure": "per device",
+      "flags": [
+        "CONDITIONAL_PRICING",
+        "UNIT_MISMATCH"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Qty: 1, Unit Price (INR)*: 3,300, Line Total (INR)*: 1,056,000. The RFx specifies Qty required: 320 per device, and the line total 1,056,000 = 320 × 3,300, indicating the unit price applies per device, not per lot. | Note 7: A 4% early-payment rebate applies to the headline prices above if full payment is received within 7 days of invoice date, in place of the standard Net 30 term.",
+      "source_location": "Page 1, Line 30 table row; Note 7 on Page 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": 4,
+      "conditional_discount_description": "if paid within 7 days of invoice"
+    }
+  ],
+  "questionnaire_key": "89167146bb6c0850ffe074e26837890eb6ee9605dba69acc49bda45bc784920f",
+  "questionnaire_answers": [
+    {
+      "vendor_id": "global_it",
+      "question": "Authorized OEM reseller? (name brands + attach proof)",
+      "raw_answer": "We are a distributor with access to all leading brands.",
+      "quality": "ANSWERED_EVASIVE",
+      "notes": "Claims distributor access to leading brands but provides no brand names and no proof of authorization as requested"
+    },
+    {
+      "vendor_id": "global_it",
+      "question": "ISO 9001 certified? (certificate number)",
+      "raw_answer": "(not answered)",
+      "quality": "UNANSWERED",
+      "notes": "Question explicitly not answered"
+    },
+    {
+      "vendor_id": "global_it",
+      "question": "RoHS / Energy Star compliance on hardware supplied?",
+      "raw_answer": "(not answered)",
+      "quality": "UNANSWERED",
+      "notes": "Question explicitly not answered"
+    },
+    {
+      "vendor_id": "global_it",
+      "question": "Local service center cities and average onsite response SLA",
+      "raw_answer": "PAN India support available.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "PAN India support is a generic claim with no specific cities listed and no SLA figures provided"
+    },
+    {
+      "vendor_id": "global_it",
+      "question": "Standard warranty terms per product category",
+      "raw_answer": "As per manufacturer warranty card.",
+      "quality": "ANSWERED_EVASIVE",
+      "notes": "Deflects to manufacturer warranty card without stating actual terms or providing category-specific information"
+    },
+    {
+      "vendor_id": "global_it",
+      "question": "Asset disposal / data-wipe policy for buyback of old devices",
+      "raw_answer": "(not answered)",
+      "quality": "UNANSWERED",
+      "notes": "Question explicitly not answered"
+    },
+    {
+      "vendor_id": "global_it",
+      "question": "Similar-scale deployment references (2+, with contact)",
+      "raw_answer": "(not answered - available on request)",
+      "quality": "ANSWERED_EVASIVE",
+      "notes": "Defers to later conversation by stating available on request rather than providing the requested references with contacts"
+    },
+    {
+      "vendor_id": "global_it",
+      "question": "Average lead time from PO to delivery",
+      "raw_answer": "Subject to stock availability at the time of order.",
+      "quality": "ANSWERED_EVASIVE",
+      "notes": "Deflects by making it conditional on stock availability rather than providing average lead time figures"
+    }
+  ],
+  "created_at": "2026-09-29T20:37:57.995Z",
+  "origin": "reconstructed-from-validated-run"
+}

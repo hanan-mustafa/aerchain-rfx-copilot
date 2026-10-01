@@ -1,5 +1,15 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { ComparisonStore, NormalizedLine } from "../schema";
+import { VENDORS } from "../rfxData";
+
+// vendor_id params are constrained to the real ids: on a free-text field the
+// model passed "Global IT" instead of "global_it" and got back an empty total.
+const VENDOR_IDS = VENDORS.map((v) => v.vendor_id);
+const vendorIdSchema = {
+  type: "string",
+  enum: VENDOR_IDS,
+  description: `One of: ${VENDORS.map((v) => `${v.vendor_id} (${v.full_name})`).join(", ")}.`,
+} as const;
 
 /**
  * DESIGN PRINCIPLE: the analyst agent never does arithmetic "in its head."
@@ -32,7 +42,7 @@ export const TOOL_DEFINITIONS: Anthropic.Tool[] = [
       properties: {
         vendor_ids: {
           type: "array",
-          items: { type: "string" },
+          items: { type: "string", enum: VENDOR_IDS },
           description: "Optional: restrict comparison to these vendor_ids only. Omit to consider all vendors.",
         },
         basis: {
@@ -51,7 +61,7 @@ export const TOOL_DEFINITIONS: Anthropic.Tool[] = [
     input_schema: {
       type: "object",
       properties: {
-        vendor_id: { type: "string" },
+        vendor_id: vendorIdSchema,
         basis: { type: "string", enum: ["headline", "best_available"] },
       },
       required: ["vendor_id"],
@@ -78,7 +88,7 @@ export const TOOL_DEFINITIONS: Anthropic.Tool[] = [
     description: "Get the full questionnaire verdict (gate result, reasons, and per-question classifications) for one vendor.",
     input_schema: {
       type: "object",
-      properties: { vendor_id: { type: "string" } },
+      properties: { vendor_id: vendorIdSchema },
       required: ["vendor_id"],
     },
   },
@@ -118,11 +128,28 @@ function effectivePrice(line: NormalizedLine, basis: "headline" | "best_availabl
   return line.normalized_unit_price_inr;
 }
 
+function unknownVendorIds(store: ComparisonStore, ids: string[]): string[] {
+  const known = new Set(store.vendors.map((v) => v.vendor_id));
+  return ids.filter((id) => !known.has(id));
+}
+
 export function executeToolCall(
   store: ComparisonStore,
   toolName: string,
   input: any
 ): any {
+  // Fail loudly on a bad vendor_id instead of computing over zero lines.
+  const requestedIds: string[] = [
+    ...(typeof input?.vendor_id === "string" ? [input.vendor_id] : []),
+    ...(Array.isArray(input?.vendor_ids) ? input.vendor_ids : []),
+  ];
+  const unknown = unknownVendorIds(store, requestedIds);
+  if (unknown.length > 0) {
+    return {
+      error: `Unknown vendor_id(s): ${unknown.join(", ")}. Valid vendor_ids: ${store.vendors.map((v) => v.vendor_id).join(", ")}.`,
+    };
+  }
+
   switch (toolName) {
     case "get_line_comparison": {
       const lineRef = input.line_ref as number;
@@ -178,6 +205,7 @@ export function executeToolCall(
       let pricedLines = 0;
       let notQuoted = 0;
       let unresolved = 0;
+      const lowConfidenceIncluded: number[] = [];
       for (const l of lines) {
         if (l.flags.includes("NOT_QUOTED")) {
           notQuoted++;
@@ -192,6 +220,7 @@ export function executeToolCall(
         if (price !== null && spec) {
           total += price * spec.qty;
           pricedLines++;
+          if (l.flags.includes("LOW_CONFIDENCE") || l.flags.includes("UNIT_MISMATCH")) lowConfidenceIncluded.push(l.line_ref);
         }
       }
       return {
@@ -201,9 +230,15 @@ export function executeToolCall(
         lines_priced: pricedLines,
         lines_not_quoted: notQuoted,
         lines_unresolved_ambiguous: unresolved,
-        note: notQuoted + unresolved > 0
-          ? `Total excludes ${notQuoted} not-quoted and ${unresolved} unresolved/ambiguous line(s) -- this is NOT a like-for-like total against a vendor who quoted all 30 lines.`
-          : "All 30 lines were resolvable and included.",
+        // Priced lines that went into the total but still carry a review flag.
+        included_lines_needing_review: lowConfidenceIncluded,
+        note:
+          pricedLines < store.line_items.length
+            ? `Total covers ${pricedLines} of ${store.line_items.length} lines; it excludes ${notQuoted} not-quoted, ${unresolved} unresolved/ambiguous and ${store.line_items.length - pricedLines - notQuoted - unresolved} unpriceable (e.g. unit could not be converted) line(s) -- this is NOT a like-for-like total against a vendor who priced every line.`
+            : `All ${store.line_items.length} lines were resolvable and included.` +
+              (lowConfidenceIncluded.length > 0
+                ? ` But line(s) ${lowConfidenceIncluded.join(", ")} carry LOW_CONFIDENCE/UNIT_MISMATCH and should be checked before relying on this total.`
+                : ""),
       };
     }
 
