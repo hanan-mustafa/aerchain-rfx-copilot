@@ -3,6 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { ComparisonStore, ProcessedResponse, RfxDefinition, VendorMeta } from "./schema";
 import { buildComparison } from "./comparison";
+import type { AwardAllocation } from "./award";
 
 /**
  * The buyer's workspace: every RFx with its vendors, invitations, received
@@ -26,12 +27,6 @@ export interface ResponseRecord extends ProcessedResponse {
   note?: string; // vendor's covering note (vendor portal)
 }
 
-export interface AwardAllocation {
-  line_ref: number;
-  vendor_id: string;
-  unit_price_inr: number;
-  line_total_inr: number;
-}
 
 export interface AwardDecision {
   scenario_id: string;
@@ -169,6 +164,21 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (ready) save(state);
   }, [state, ready]);
+
+  // Another tab (e.g. the vendor reply page) changed the workspace: adopt its
+  // version so this tab doesn't overwrite it on the next save.
+  useEffect(() => {
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== STORAGE_KEY || !e.newValue) return;
+      try {
+        setState(JSON.parse(e.newValue) as WorkspaceState);
+      } catch {
+        // ignore malformed writes
+      }
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
 
   const update = useCallback((rfxId: string, fn: (entry: WorkspaceRfx) => WorkspaceRfx) => {
     setState((s) => ({

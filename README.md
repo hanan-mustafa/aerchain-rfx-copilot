@@ -1,9 +1,21 @@
-# Kill the Quote Spreadsheet — RFx Comparison Copilot
+# RFx Copilot
 
-Built for the Aerchain product take-home. A buyer drafts an RFx (fabricated here for a
-FY27 IT hardware refresh), five vendors reply in five different messy real-world formats,
-the system extracts and normalizes every line into one comparable table, and a buyer can
-interrogate the result in plain language.
+Built for the Aerchain product take-home. The full sourcing loop in one product:
+
+1. **Draft** an RFx by describing what you need. The co-pilot writes the line items, supplier
+   questionnaire and commercial terms; you edit anything directly.
+2. **Send** it to vendors: each gets an email with the RFx summary, an Excel template and a
+   personal reply link.
+3. **Collect** replies in whatever format vendors already use (Excel, Word, PDF, a plain email,
+   a phone photo). Nobody is forced into the template.
+4. **Compare** every response side by side: same lines, same units, same currency, with
+   commercial terms, questionnaire answers and the original documents alongside the numbers.
+   Every price opens to the vendor's own wording and the exact conversion applied.
+5. **Ask**: a natural-language analyst over the whole comparison that answers with text,
+   tables, charts and Excel exports, every figure computed in code.
+6. **Award**: compare award scenarios (single vendor, split by line, by eligibility, headline or
+   net of rebates), record the rationale, approve, and download an award memo that cites the
+   evidence for every awarded line.
 
 ## Quick start
 
@@ -13,208 +25,172 @@ cp .env.example .env.local   # add your ANTHROPIC_API_KEY
 npm run dev
 ```
 
-Open http://localhost:3000. The landing page shows the five raw vendor files (with previews
-and links to the originals). **Run extraction** runs the pipeline; files that were already
-extracted are served from the extraction cache (no API call, about a second), and
-**Re-extract live with Claude** forces real Claude calls for all five files (about a minute,
-uses API credits). Then use the chat panel (chat always calls Claude).
+Open http://localhost:3000. The workspace opens with a **sample RFx** (FY27 Workplace Hardware
+Refresh) whose five vendor responses are already processed. Everything except the co-pilot, the
+analyst chat and processing a *new* document works without an API key.
 
 ### Deploying to Vercel
 
-```bash
-vercel link
-vercel env add ANTHROPIC_API_KEY   # paste your key when prompted
-vercel deploy --prod
-```
+Import the repo at vercel.com/new (or `vercel deploy --prod`) and set `ANTHROPIC_API_KEY` in the
+project's environment variables. No database or other configuration is needed (see
+**Known trade-offs**).
 
-No other configuration needed — the app has no external database; see **Known trade-offs**
-below for what that means in production.
+## Keeping API usage low
 
-## The dataset
+Only three things call Claude, and each is built to call it as little as possible:
 
-`data/vendor-uploads/` contains five fabricated vendor responses to the same RFx, each with
-a specific, deliberate "ugly edge" baked in (see `data/Ground_Truth_Answer_Key_INTERNAL.xlsx`
-for the full answer key used to build and sanity-check this pipeline):
+| Feature | Model | Calls |
+|---|---|---|
+| Reading a vendor document | `claude-sonnet-4-5` (photos: `claude-sonnet-5-5`, two reads) | **One call per new document** returns prices, questionnaire answers and commercial terms together. Results are cached by file hash (`lib/extractionCache.ts`): the same file is never read twice. Questionnaire answers are then classified in one small call, skipped entirely if the response answers nothing. |
+| RFx co-pilot | `claude-haiku-4-5` | One call per message. Templates start a draft with no call at all. |
+| Analyst chat | `claude-sonnet-4-5` | One conversation turn per question; an identical question over identical data is answered from a local cache. |
+
+Everything else is plain code with zero API cost: unit and currency conversion, the
+qualification gate, building the comparison, award scenarios, charts, exports and the award memo.
+
+The sample RFx's five documents ship with **committed cache entries**, so a fresh deploy demos
+end to end without spending credits. Those entries were rebuilt from the validated run by
+`scripts/seed-extraction-cache.ts`, which proves (with no API key set) that the cached path
+reproduces that run exactly. "Re-read" on a sample response forces a live call.
+
+## The sample dataset
+
+`data/vendor-uploads/` holds five fabricated responses to the sample RFx, each with a deliberate
+edge case (`data/Ground_Truth_Answer_Key_INTERNAL.xlsx` is the answer key):
 
 | Vendor | Format | The edge case |
 |---|---|---|
-| Apex Business Systems | `.xlsx` | Clean control case — fills the template exactly |
-| TechMart Solutions | `.docx` | Own layout, grouped by category not by RFx line number, commercial terms buried in prose |
-| Global IT Distributors | `.pdf` | A 4% early-payment rebate that changes effective pricing is disclosed only in a footnote on page 2 |
-| QuickServe Traders | plain-text email | Collapses 4 laptop tiers into one ambiguous "average" price; skips 6 line items outright |
-| Sunrise Computech | photographed rate card (`.jpg`) | USD instead of INR; cable locks quoted per box of 10 instead of per unit; 3 items missing |
+| Apex Business Systems | `.xlsx` | Clean control case: fills the template exactly |
+| TechMart Solutions | `.docx` | Own layout grouped by category, not RFx line numbers; prices GST-inclusive |
+| Global IT Distributors | `.pdf` | A 4% early-payment rebate disclosed only in note 7 on a later page |
+| QuickServe Traders | plain-text email | Four laptop tiers collapsed into one "average" price; six lines skipped |
+| Sunrise Computech | photo of a tilted rate card | USD instead of INR; cable locks per box of 10; four lines missing |
+
+```bash
+npx tsx scripts/validate-ground-truth.ts   # the sample comparison vs the answer key: ALL CHECKS PASS
+```
 
 ## Architecture
 
 ```
-Vendor file (any format)
-      │
-[1] Format-specific extraction (real LLM/vision call, strict JSON schema)
-      │
-[2] Normalization (deterministic code: currency, units, conditional pricing)
-      │
-[3] Comparison store (single source of truth — JSON file for this demo)
-      │
-      ├──► [4] Comparison UI  (reads store only)
-      └──► [5] Analyst agent  (tool-calling over store only, never re-reads raw docs)
+Buyer drafts RFx (co-pilot: Haiku) ──► RFx definition (data, not constants)
+        │
+        ▼
+Send: invitation email + Excel template + reply link per vendor
+        │
+Vendor reply, any format ──► [1] Extraction: one AI call per new document, cached by file hash
+                                 (prices + questionnaire answers + commercial terms)
+                                         │
+                             [2] Comparison (pure code, runs in the browser):
+                                 normalization, NOT_QUOTED backfill, qualification gate
+                                         │
+                     ┌───────────────────┼────────────────────┐
+                     ▼                   ▼                    ▼
+              Compare UI          Analyst (tool-calling;   Award scenarios + memo
+          (source drawer)         all figures from code)       (pure code)
 ```
 
-**The one rule everything else follows: once a document is extracted, nothing downstream
-ever opens it again.** The UI and the chat agent both read exclusively from the normalized
-`ComparisonStore` (`lib/schema.ts`). This is what makes "would a buyer act on this screen"
-answerable — every number is traceable to a `source_excerpt` + `source_location`, and
-nothing gets silently re-interpreted twice.
+**The rule everything follows: once a document is read, nothing downstream opens it again.**
+The comparison UI, the analyst and the award memo all read the same normalized data, and every
+number traces to a `source_excerpt` + `source_location` from the vendor's document.
+
+### Where state lives
+
+The workspace (RFxs, vendors, invitations, responses, award decisions) is held in the browser:
+`lib/workspace.tsx` (localStorage, synced across tabs) and `lib/fileStore.ts` (uploaded originals
+in IndexedDB). The server is stateless: it reads documents and answers questions. This keeps the
+app working on serverless hosting with no database, and swapping in a real backend touches
+`lib/workspace.tsx` only.
 
 ### Extraction (`lib/extractors/*.ts`)
 
-Each format gets its own deterministic pre-processing before the LLM ever sees it, because
-throwing away structure you already have exactly (e.g. sending a spreadsheet as an image)
-is strictly worse than using it:
+Each format gets its own pre-processing before the model sees it:
 
-- **xlsx** (Apex): every populated cell serialized as `Sheet!Ref=value`, so the model's
-  cited `source_location` is a real, checkable cell reference.
-- **docx** (TechMart): `mammoth` → HTML, preserving the vendor's own headings/tables intact
-  (this vendor groups items by category, not by the buyer's line numbers — losing that
-  structure would hide it from the model).
-- **pdf** (Global IT): `pdf-parse` text layer with explicit page markers, so a footnote on
-  page 2 can be connected back to a price shown in a table on page 1.
-- **email** (QuickServe): raw text with numbered paragraphs. This is the vendor most likely
-  to collapse multiple SKUs into one ambiguous price — handled by a shared extraction rule
-  (`lib/extractors/shared.ts`, rule #2), not a QuickServe-specific hack.
-- **image** (Sunrise): the only extractor that goes through vision (`claude-sonnet-5-5` — on
-  this photo `claude-sonnet-4-5` misread 5-7 of 26 lines per run, the newer model 0 of 26 in
-  3/3 runs; reproduce with `npx tsx scripts/eval-sunrise-vision.ts`). Two independent vision
-  passes read the card in opposite orders and are reconciled — a price disagreement beyond 2%,
-  a different unit of measure, or a line only one pass found forces a `LOW_CONFIDENCE` flag. See the note in `lib/extractors/image.ts` on why this is a
-  self-consistency check rather than true OCR cross-validation (Tesseract's native binary is
-  a poor fit for Vercel serverless; the honest trade-off is documented right there in code,
-  not hidden).
+- **xlsx**: every populated cell serialized as `Sheet!Ref=value`, so cited locations are real cell references.
+- **docx**: `mammoth` → HTML, preserving the vendor's own headings and tables.
+- **pdf**: text layer per page with cell separators, so a note on a later page can be connected to a price on page 1.
+- **email / text**: numbered paragraphs.
+- **image**: vision on `claude-sonnet-5-5` (on the Sunrise photo `claude-sonnet-4-5` misread 5–7 of 26 lines per run;
+  the newer model 0 of 26 in 3/3 runs: `npx tsx scripts/eval-sunrise-vision.ts`). Two independent reads in
+  opposite orders are reconciled; any price, unit or coverage disagreement forces `LOW_CONFIDENCE`.
 
-All five extractors output the *same* schema (`ExtractedLine` in `lib/schema.ts`) regardless
-of source format — this uniform contract is what lets normalization be format-agnostic.
-
-**The extraction prompt (`lib/extractors/shared.ts`) enforces, as hard rules, not
-suggestions:** never guess a `line_ref` you're not confident of; never split a
-vendor's collapsed multi-SKU price into an invented per-line breakdown
-(`UNRESOLVED_AMBIGUOUS` + `resolvable: false` instead); never do currency or unit
-conversion yourself (that's normalization's job); always cite a real, checkable
-`source_excerpt`.
-
-### Extraction cache (`lib/extractionCache.ts`)
-
-The LLM steps (price extraction and questionnaire classification) are cached per vendor,
-keyed on a SHA-256 of the file's bytes, the model id and the shared extraction prompt. An
-unchanged file is never sent to Claude twice; normalization and the questionnaire gate are
-deterministic and always re-run, so changes there still apply to cached runs. Entries live
-in `data/extraction-cache/` (committed, so a fresh deploy demos with zero API calls); on
-Vercel new entries go to `/tmp`. Per-format extractor instructions are not hashed
-automatically: **bump `EXTRACTION_CACHE_VERSION` when changing `lib/extractors/*.ts` or the
-classifier prompt.** The committed entries were rebuilt from the validated seed run by
-`scripts/seed-extraction-cache.ts`, which proves (with no API key set) that a cached run
-reproduces that run exactly; a live re-extract replaces them with Claude's raw output.
+The shared prompt (`lib/extractors/shared.ts`) enforces: never guess a line mapping; never split a
+collapsed multi-item price into an invented breakdown; never convert units or currency; always
+quote the vendor; report questionnaire answers and terms only where the vendor states them.
 
 ### Normalization (`lib/normalize.ts`)
 
-Currency conversion, unit-of-measure conversion, and conditional-pricing math are
-**arithmetic, not judgment calls**, so they run in plain deterministic TypeScript, never
-inside an LLM call. The LLM's job in extraction is only to *identify* that something needs
-converting (e.g. "this is USD," "this is per box of 10," "this 4% rebate is conditional on
-7-day payment") — the actual division/multiplication happens once, here, auditable, with
-every conversion step logged in `conversion_notes` next to the number it produced.
+Currency, unit-of-measure and conditional-pricing math are arithmetic, so they run in code, never
+in a model call, with every step logged next to the number it produced. Original vendor figures
+are never overwritten.
 
-The original vendor figure is *never* overwritten — `original_unit_price`,
-`original_currency`, and `original_unit_of_measure` sit alongside every normalized value.
-
-Verify this logic directly (no API key needed — pure functions):
 ```bash
 npx tsx scripts/test-normalize.ts
 npx tsx scripts/test-questionnaire-gate.ts
 ```
 
-Check a real extraction run against the answer key (after **Run extraction**):
-```bash
-npx tsx scripts/validate-ground-truth.ts
-```
+**Sample RFx line 30 (warranty extension)** is *per device, qty 320*, not the template's
+"lot, qty 1": its own spec is per device and every vendor priced it that way.
 
-**RFx line 30 (warranty extension)** is defined in `lib/rfxData.ts` as *per device, qty 320*,
-not the template's "lot, qty 1": the line's own spec is per device, and every vendor that
-quoted it priced it per device across the 320 laptops on lines 1-4. As a "lot" it was not
-comparable across vendors.
+### Qualification gate (`lib/gate.ts`)
 
-### Questionnaire gate (`lib/questionnaire.ts`)
+The model classifies each answer's quality (with proof / vague / evasive / unanswered); the gate is
+a stated rule over those labels, using the questions the buyer marked **Required to qualify**:
+any required question unanswered or evasive → not qualified; any answered vaguely → borderline.
 
-The LLM classifies each raw answer's quality (genuinely a judgment call — vague vs. evasive
-vs. backed by proof). The PASS/BORDERLINE/FAIL **gate itself is a plain, stated rule** over
-those classifications (fail if any compliance-critical question is unanswered or evasive;
-borderline if any is vague), not a second opaque model verdict. When a buyer asks "why was
-this vendor disqualified," the answer is a rule they can read (`gate_reasons` in the output),
-not "the model decided."
+### Analyst (`lib/agent/`)
 
-### Analyst agent (`lib/agent/`)
+Tool-calling over the comparison, never over raw documents. Eleven tools, including
+`compute_award_scenario`, `compare_award_scenarios`, `get_commercial_terms`, `make_chart` and
+`make_export`. **All arithmetic and filtering happens in the tools** (`lib/award.ts` is shared with
+the Award page and memo, so the same scenario shows the same numbers everywhere). Charts and
+exports are computed in code and rendered in the chat; only a summary goes back to the model.
 
-Tool-calling, not chat-over-raw-documents. The agent has six tools
-(`get_line_comparison`, `compute_cheapest_per_line`, `get_vendor_total`,
-`filter_vendors_by_questionnaire`, `get_questionnaire_verdict`, `list_lines_with_flag`) —
-see `lib/agent/tools.ts`. **All arithmetic and filtering happens inside these tool
-functions, in code — never in the model's head.** This is what makes the chat's answers
-verifiable the same way the table is: ask "what if we split it, cheapest per line, but only
-among vendors who cleared the questionnaire" (the exact question from the assignment brief)
-and the agent calls `filter_vendors_by_questionnaire` then `compute_cheapest_per_line` with
-that vendor list — it doesn't reason its way to a total by itself.
+## Known trade-offs
 
-## What I deliberately left out (and why)
-
-- **No real database.** `lib/store.ts` persists the comparison store as a JSON file. Every
-  extractor, the normalizer, and the agent tools only ever import `getStore`/`saveStore` —
-  swapping in Postgres/Vercel KV/Mongo touches exactly one file. On Vercel the file lives in
-  per-instance `/tmp`, so a fresh extraction is not guaranteed to be visible to the next chat
-  request; reads fall back to `data/seed/comparison-store.json`, a committed snapshot of a
-  run that passes `validate-ground-truth.ts`. Fine for this demo, not fine to ship as-is.
-- **No real inbox/SMTP.** Vendor files are read directly from `data/vendor-uploads/` — the
-  assignment explicitly says to stub this ("fake the SMTP server if you like"), and
-  building it would have taken time away from the extraction/reasoning loops that were
-  supposed to be real.
-- **OCR cross-check is two vision passes, not Tesseract.** See the design note in
-  `lib/extractors/image.ts`. A smaller safety net than true independent-engine
-  cross-validation, and that trade-off is stated in the code rather than dressed up as
-  something it isn't.
-- **No auth, no multi-RFx support, no vendor portal.** Single hardcoded RFx, single
-  comparison run at a time. Scoped this way to keep the five real "ugly edge" cases
-  central rather than diluting effort into product surface area the brief didn't ask for.
-- **`xlsx` (SheetJS) has an open, unpatched prototype-pollution/ReDoS advisory** as of this
-  build; no fix is available upstream yet. Given the file's contents here are trusted
-  (fabricated by the same person building the pipeline), this is an acceptable risk for a
-  demo — it would need addressing (e.g. sandboxed parsing, or a different library) before
-  ever accepting arbitrary vendor-uploaded files in production.
+- **No real database or auth.** The workspace lives in the browser. Fine for a demo; a real
+  deployment needs a backend (one-module swap, see above).
+- **Simulated channel.** Invitations are generated and shown in an outbox rather than sent over
+  SMTP, and the vendor reply link saves to the workspace in the same browser. The brief allows
+  stubbing the channel; the response-reading path behind it is real.
+- **Sample questionnaire answers come from the dataset**, not from a live read of each document
+  (the committed cache was rebuilt from the validated run; a live "Re-read" replaces it). For
+  Sunrise, the answers reflect the vendor's covering call; the photo itself contains none.
+- **Photo cross-check is two vision reads, not OCR.** It can't catch an error both reads share;
+  model choice is the first line of defence (see above).
+- **Cache invalidation is partly manual.** The cache key hashes the file, model, RFx and shared
+  prompt, but not each extractor's own instructions: bump `EXTRACTION_CACHE_VERSION` when changing them.
+- **GST treatment is flagged, not normalized.** TechMart quotes GST-inclusive while others quote
+  ex-GST; the comparison flags it rather than silently adjusting prices.
+- **`xlsx` (SheetJS) has an open prototype-pollution/ReDoS advisory.** Acceptable for trusted demo
+  files; sandbox parsing or switch libraries before accepting untrusted uploads in production.
 
 ## Project layout
 
 ```
 app/
-  page.tsx              dashboard: comparison table + questionnaire strip + chat
-  api/extract/route.ts  runs the full pipeline across all 5 vendors
-  api/vendors/route.ts  fetches the current comparison store
-  api/chat/route.ts     analyst agent endpoint
-components/             ComparisonTable, QuestionnaireStrip, ChatPanel, FlagTag
+  (app)/page.tsx                    RFx list
+  (app)/rfx/new/page.tsx            co-pilot + draft editor + review & send
+  (app)/rfx/[id]/                   overview · vendors & responses · compare & analyze · award
+  respond/[rfxId]/[vendorId]/       vendor reply page (any file format)
+  api/sample                        the sample RFx with processed responses (cached, no API calls)
+  api/responses/{process,sample}    read a vendor document
+  api/chat · api/copilot            analyst and RFx co-pilot
+  api/export · api/rfx-pack         Excel downloads
+  api/files/[vendorId]              sample originals and previews
+components/                         table, source drawer, terms table, chat, chart, sidebar
 lib/
-  schema.ts             the core data contracts (read this first)
-  extractors/           one file per source format + shared prompt logic
-  normalize.ts           deterministic currency/unit/conditional-pricing math
-  questionnaire.ts       LLM classification + rule-based gate
-  agent/                 tool definitions, tool execution, the chat loop
-  pipeline.ts            orchestrates extraction → normalization → questionnaire per vendor
-  store.ts               file-based persistence (swap point for a real DB), seed fallback
-  rfxData.ts              the RFx line items, vendor metadata, questionnaire raw answers
+  schema.ts                         data contracts (read this first)
+  extractors/ · pipeline.ts         document reading (AI) + format detection
+  extractionCache.ts                content-addressed cache of AI results
+  normalize.ts · gate.ts · comparison.ts   pure comparison logic (runs in the browser)
+  award.ts · awardMemo.ts           award scenarios and the memo
+  agent/ · copilot.ts               analyst tools/loop and RFx co-pilot
+  workspace.tsx · fileStore.ts      browser workspace state
+  rfxData.ts · rfxTemplates.ts      sample RFx and starting templates
 data/
-  vendor-uploads/         the five fabricated vendor response files
-  RFx_Template_ITHardware_FY27.xlsx
-  Ground_Truth_Answer_Key_INTERNAL.xlsx   (not part of the app — validation reference)
-  seed/comparison-store.json              validated snapshot served when no live run is on disk
-  extraction-cache/<vendor>.json          stored LLM output per file (see Extraction cache)
-scripts/
-  test-normalize.ts             normalization math checks (no API key needed)
-  test-questionnaire-gate.ts    gate rule checks (no API key needed)
-  validate-ground-truth.ts      checks the current store against the answer key
-  eval-sunrise-vision.ts        vision-model accuracy on the rate-card photo (real API calls)
-  seed-extraction-cache.ts      rebuilds data/extraction-cache from the seed run and verifies it
+  vendor-uploads/                   the five sample vendor responses
+  extraction-cache/                 committed cache entries for the sample documents
+  seed/comparison-store.json        the validated sample comparison
+scripts/                            normalization/gate tests, answer-key validator, cache seeding, vision eval
 ```

@@ -35,7 +35,7 @@ export function FlagTag({ flag }: { flag: ConfidenceFlag }) {
 
 /** Plain-English meaning of each flag, shown in the source drawer. */
 export const FLAG_EXPLANATION: Record<ConfidenceFlag, string> = {
-  OK: "Clean extraction, matched one-to-one to this RFx line.",
+  OK: "Read cleanly and matched one-to-one to this RFx line.",
   LOW_CONFIDENCE:
     "This value couldn't be read with full confidence: approximate wording, a hard-to-read photo, figures that contradict each other, or two independent reads that disagreed. Check the source before relying on it.",
   UNIT_MISMATCH:

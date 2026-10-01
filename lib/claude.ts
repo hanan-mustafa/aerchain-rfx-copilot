@@ -25,6 +25,10 @@ export const MODEL = {
   // See scripts/eval-sunrise-vision.ts.
   vision: "claude-sonnet-5-5",
   agent: "claude-sonnet-4-5", // analyst chat / tool-calling
+  // RFx drafting is structured rewriting of a short brief, not hard
+  // reasoning: the cheapest current model keeps each co-pilot turn at a
+  // fraction of a cent.
+  copilot: "claude-haiku-4-5",
 } as const;
 
 /**

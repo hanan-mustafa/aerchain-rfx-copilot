@@ -12,9 +12,9 @@ const FORMAT_LABEL: Record<VendorMeta["source_format"], string> = {
 };
 
 /**
- * The five raw vendor responses, exactly as they arrived, so a viewer sees
- * what the pipeline is up against before (and after) looking at the
- * normalized table. Previews are plain-text reads of the file, not LLM output.
+ * The sample RFx's vendor responses exactly as they arrived, with a short
+ * plain-text preview of each file (a direct read, not AI output) and what
+ * makes each one hard to compare.
  */
 export function VendorFiles({
   vendors,
@@ -38,9 +38,9 @@ export function VendorFiles({
   return (
     <section style={{ marginBottom: "22px" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "10px", gap: "12px", flexWrap: "wrap" }}>
-        <h2 style={{ fontSize: "18px" }}>Five vendor responses, five formats</h2>
+        <h2 style={{ fontSize: "16px" }}>Response documents</h2>
         <div style={{ fontSize: "12px", color: "var(--ink-dim)" }}>
-          Each reply hides a different trap. The table below is built from these files and nothing else.
+          Each vendor replied in their own format. The comparison is built from these files.
         </div>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "12px" }}>
@@ -74,18 +74,7 @@ export function VendorFiles({
                   >
                     {FORMAT_LABEL[v.source_format]}
                   </span>
-                  {src && (
-                    <span
-                      title={
-                        src === "cache"
-                          ? "This exact file was already extracted, so the stored result was reused (no API call). Normalization still re-ran."
-                          : "Extracted by Claude on this run."
-                      }
-                      style={{ fontSize: "10.5px", color: src === "cache" ? "var(--ok)" : "var(--warn)" }}
-                    >
-                      {src === "cache" ? "● cached · no API call" : "● extracted live"}
-                    </span>
-                  )}
+                  {src && <span className="badge badge-ok badge-dot" style={{ fontSize: "10.5px" }}>Processed</span>}
                 </div>
                 <div style={{ fontWeight: 600, fontSize: "13.5px", marginTop: "6px" }}>{v.full_name}</div>
                 <div style={{ fontSize: "12px", color: "var(--ink-dim)", marginTop: "2px" }}>{v.edge_case}</div>
