@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { ChatMarkdown } from "./ChatMarkdown";
 
 interface Msg {
   role: "user" | "assistant";
   content: string;
+  isError?: boolean; // shown as plain text, and never sent back as history
 }
 
 const SUGGESTED = [
@@ -13,6 +15,36 @@ const SUGGESTED = [
   "Which lines need a human to look at before we award this?",
   "What's Global IT's real effective price after the rebate?",
 ];
+
+// Shown one after another while the analyst works. Deliberately generic:
+// they describe what the agent typically does, not live tool-call status.
+const PROGRESS_MESSAGES = [
+  "Reading your question…",
+  "Checking the comparison store…",
+  "Looking up vendor prices…",
+  "Running the numbers in code…",
+  "Checking flags and caveats…",
+  "Cross-checking questionnaire results…",
+  "Drafting the answer…",
+];
+const PROGRESS_INTERVAL_MS = 2200;
+
+function ProgressIndicator() {
+  const [step, setStep] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setStep((s) => (s + 1) % PROGRESS_MESSAGES.length), PROGRESS_INTERVAL_MS);
+    return () => clearInterval(id);
+  }, []);
+  return (
+    <div className="chat-progress" role="status" aria-live="polite">
+      <span className="chat-progress-dot" />
+      {/* key restarts the fade-in on every change */}
+      <span key={step} className="chat-progress-text">
+        {PROGRESS_MESSAGES[step]}
+      </span>
+    </div>
+  );
+}
 
 export function ChatPanel() {
   const [messages, setMessages] = useState<Msg[]>([]);
@@ -30,6 +62,8 @@ export function ChatPanel() {
   async function send(text: string) {
     if (!text.trim() || loading) return;
     const next = [...messages, { role: "user" as const, content: text }];
+    // Error bubbles are UI only; the API expects real user/assistant turns.
+    const history = next.filter((m) => !m.isError).map(({ role, content }) => ({ role, content }));
     setMessages(next);
     setInput("");
     setLoading(true);
@@ -37,16 +71,16 @@ export function ChatPanel() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ history: next }),
+        body: JSON.stringify({ history }),
       });
       const data = await res.json();
       if (data.ok) {
         setMessages((m) => [...m, { role: "assistant", content: data.reply }]);
       } else {
-        setMessages((m) => [...m, { role: "assistant", content: `Error: ${data.error}` }]);
+        setMessages((m) => [...m, { role: "assistant", content: `Error: ${data.error}`, isError: true }]);
       }
     } catch (err: any) {
-      setMessages((m) => [...m, { role: "assistant", content: `Error: ${err.message}` }]);
+      setMessages((m) => [...m, { role: "assistant", content: `Error: ${err.message}`, isError: true }]);
     } finally {
       setLoading(false);
     }
@@ -98,21 +132,24 @@ export function ChatPanel() {
             key={i}
             style={{
               alignSelf: m.role === "user" ? "flex-end" : "flex-start",
-              maxWidth: "92%",
-              background: m.role === "user" ? "var(--accent-dim)" : "var(--paper)",
+              maxWidth: m.role === "user" ? "85%" : "100%",
+              minWidth: 0,
+              background: m.isError ? "var(--fail-dim)" : m.role === "user" ? "var(--accent-dim)" : "var(--paper)",
+              color: m.isError ? "var(--fail)" : undefined,
               border: "1px solid var(--line)",
               borderRadius: "6px",
               padding: "8px 10px",
               fontSize: "13px",
-              whiteSpace: "pre-wrap",
             }}
           >
-            {m.content}
+            {m.role === "assistant" && !m.isError ? (
+              <ChatMarkdown text={m.content} />
+            ) : (
+              <span style={{ whiteSpace: "pre-wrap" }}>{m.content}</span>
+            )}
           </div>
         ))}
-        {loading && (
-          <div style={{ fontSize: "12px", color: "var(--ink-dim)" }}>thinking, calling tools…</div>
-        )}
+        {loading && <ProgressIndicator />}
       </div>
 
       <form

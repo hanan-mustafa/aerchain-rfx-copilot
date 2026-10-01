@@ -134,7 +134,7 @@ export default function Home() {
       )}
 
       {store && (
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 380px", gap: "24px", alignItems: "start" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) 440px", gap: "24px", alignItems: "start" }}>
           <div>
             <QuestionnaireStrip vendors={store.vendors} verdicts={store.questionnaire_verdicts} />
             <ComparisonTable store={store} />
