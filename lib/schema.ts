@@ -111,6 +111,7 @@ export interface VendorMeta {
   contact: string;
   source_format: "xlsx" | "docx" | "pdf" | "image" | "email";
   source_file: string;
+  edge_case?: string; // the deliberate "ugly edge" this response tests, shown on the landing page
 }
 
 /**
@@ -125,4 +126,7 @@ export interface ComparisonStore {
   normalized_lines: NormalizedLine[];
   questionnaire_verdicts: VendorQuestionnaireVerdict[];
   generated_at: string;
+  // Per vendor: whether this run called Claude ("live") or reused a stored
+  // extraction of the identical file ("cache"). See lib/extractionCache.ts.
+  extraction_sources?: Record<string, "live" | "cache">;
 }

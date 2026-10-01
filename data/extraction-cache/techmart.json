@@ -1,0 +1,608 @@
+{
+  "vendor_id": "techmart",
+  "source_file": "Vendor_B_TechMart_Solutions_Quote.docx",
+  "extraction_key": "e87cb64c9c46f029fce62e2e0fc849509d95d70de93bdd41091007da74f95826",
+  "extracted": [
+    {
+      "vendor_id": "techmart",
+      "line_ref": 1,
+      "raw_item_text": "Business Laptop - Entry",
+      "qty_quoted": null,
+      "unit_price": 44520,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Entry (i5, 8GB RAM, 256GB SSD) | Qty: 100 | Unit Price (INR): 44,520",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 2,
+      "raw_item_text": "Business Laptop - Standard",
+      "qty_quoted": null,
+      "unit_price": 61480,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Standard (i5, 16GB RAM, 512GB SSD) | Qty: 150 | Unit Price (INR): 61,480",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 2",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 3,
+      "raw_item_text": "Business Laptop - Premium",
+      "qty_quoted": null,
+      "unit_price": 78440,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Business Laptop - Premium (i7, 16GB RAM, 512GB SSD) | Qty: 50 | Unit Price (INR): 78,440",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 4,
+      "raw_item_text": "Executive Ultrabook",
+      "qty_quoted": null,
+      "unit_price": 125080,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Executive Ultrabook (i7, 32GB RAM, 1TB SSD) | Qty: 20 | Unit Price (INR): 125,080",
+      "source_location": "table under heading 'Compute (Laptops & Ultrabooks)', row 4",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 5,
+      "raw_item_text": "Monitor 24-inch FHD",
+      "qty_quoted": null,
+      "unit_price": 10390,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 24-inch FHD (1920x1080, IPS) | Qty: 200 | Unit Price (INR): 10,390",
+      "source_location": "table under heading 'Displays & Mounting', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 6,
+      "raw_item_text": "Monitor 27-inch QHD",
+      "qty_quoted": null,
+      "unit_price": 17490,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Monitor 27-inch QHD (2560x1440, IPS) | Qty: 80 | Unit Price (INR): 17,490",
+      "source_location": "table under heading 'Displays & Mounting', row 2",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 7,
+      "raw_item_text": "Dual Monitor Arm/Stand",
+      "qty_quoted": null,
+      "unit_price": 3390,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Dual Monitor Arm/Stand (Desk-clamp, gas spring) | Qty: 100 | Unit Price (INR): 3,390",
+      "source_location": "table under heading 'Displays & Mounting', row 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 8,
+      "raw_item_text": "USB-C Docking Station",
+      "qty_quoted": null,
+      "unit_price": 5720,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C Docking Station (Universal, dual 4K out) | Qty: 220 | Unit Price (INR): 5,720",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 9,
+      "raw_item_text": "Wireless Keyboard+Mouse Combo",
+      "qty_quoted": null,
+      "unit_price": 1540,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wireless Keyboard+Mouse Combo (2.4GHz + BT) | Qty: 300 | Unit Price (INR): 1,540",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 2",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 10,
+      "raw_item_text": "Wired Keyboard",
+      "qty_quoted": null,
+      "unit_price": 690,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Keyboard (USB, full-size) | Qty: 50 | Unit Price (INR): 690",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 11,
+      "raw_item_text": "Wired Optical Mouse",
+      "qty_quoted": null,
+      "unit_price": 370,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Optical Mouse (USB) | Qty: 50 | Unit Price (INR): 370",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 4",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 12,
+      "raw_item_text": "USB Webcam 1080p",
+      "qty_quoted": null,
+      "unit_price": 2330,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 1080p (1080p30, auto-focus) | Qty: 150 | Unit Price (INR): 2,330",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 13,
+      "raw_item_text": "USB Webcam 4K",
+      "qty_quoted": null,
+      "unit_price": 7210,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Webcam 4K (4K30, auto-focus) | Qty: 30 | Unit Price (INR): 7,210",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 2",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 14,
+      "raw_item_text": "Wired Noise-Cancelling Headset",
+      "qty_quoted": null,
+      "unit_price": 3600,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Wired Noise-Cancelling Headset (USB, mic ANC) | Qty: 200 | Unit Price (INR): 3,600",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 15,
+      "raw_item_text": "Bluetooth Headset",
+      "qty_quoted": null,
+      "unit_price": 1910,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Bluetooth Headset (BT 5.0, mic) | Qty: 100 | Unit Price (INR): 1,910",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 4",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 16,
+      "raw_item_text": "Conference Speakerphone",
+      "qty_quoted": null,
+      "unit_price": 23320,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference Speakerphone (360-degree mic, USB/BT) | Qty: 25 | Unit Price (INR): 23,320",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 5",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 17,
+      "raw_item_text": "Conference PTZ Camera",
+      "qty_quoted": null,
+      "unit_price": 68900,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Conference PTZ Camera (1080p, 10x zoom) | Qty: 15 | Unit Price (INR): 68,900",
+      "source_location": "table under heading 'Audio/Video & Conferencing', row 6",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 18,
+      "raw_item_text": "65-inch Interactive Display Panel",
+      "qty_quoted": null,
+      "unit_price": 408100,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "65-inch Interactive Display Panel (4K touch, Android OS) | Qty: 8 | Unit Price (INR): 408,100",
+      "source_location": "table under heading 'Displays & Mounting', row 4",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 19,
+      "raw_item_text": "Laptop Sleeve 15.6-inch",
+      "qty_quoted": null,
+      "unit_price": 900,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Sleeve 15.6-inch (Neoprene) | Qty: 300 | Unit Price (INR): 900",
+      "source_location": "table under heading 'Storage & Accessories', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 20,
+      "raw_item_text": "Spare 65W USB-C Charger",
+      "qty_quoted": null,
+      "unit_price": 2230,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Spare 65W USB-C Charger (GaN, universal) | Qty: 100 | Unit Price (INR): 2,230",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 7",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 21,
+      "raw_item_text": "Portable SSD 1TB",
+      "qty_quoted": null,
+      "unit_price": 7630,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Portable SSD 1TB (USB 3.2, external) | Qty: 60 | Unit Price (INR): 7,630",
+      "source_location": "table under heading 'Storage & Accessories', row 2",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 22,
+      "raw_item_text": "USB-C to HDMI Adapter",
+      "qty_quoted": null,
+      "unit_price": 1010,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB-C to HDMI Adapter (4K30 support) | Qty: 150 | Unit Price (INR): 1,010",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 5",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 23,
+      "raw_item_text": "USB Hub 7-port",
+      "qty_quoted": null,
+      "unit_price": 1700,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "USB Hub 7-port (USB 3.0, powered) | Qty: 80 | Unit Price (INR): 1,700",
+      "source_location": "table under heading 'Docking, Peripherals & Input Devices', row 6",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 24,
+      "raw_item_text": "Laptop Cable Lock",
+      "qty_quoted": null,
+      "unit_price": 580,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Laptop Cable Lock (Keyed, Kensington slot) | Qty: 300 | Unit Price (INR): 580",
+      "source_location": "table under heading 'Storage & Accessories', row 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 25,
+      "raw_item_text": "External Blu-ray/DVD Drive",
+      "qty_quoted": null,
+      "unit_price": 4030,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "External Blu-ray/DVD Drive (USB, slim) | Qty: 10 | Unit Price (INR): 4,030",
+      "source_location": "table under heading 'Storage & Accessories', row 4",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 26,
+      "raw_item_text": "Handheld Barcode Scanner (USB)",
+      "qty_quoted": null,
+      "unit_price": 10070,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Handheld Barcode Scanner (USB) (1D/2D, wired) | Qty: 25 | Unit Price (INR): 10,070",
+      "source_location": "table under heading 'Specialty / Warehouse Equipment', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 27,
+      "raw_item_text": "Desktop Label Printer",
+      "qty_quoted": null,
+      "unit_price": 15370,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Desktop Label Printer (Thermal, USB) | Qty: 15 | Unit Price (INR): 15,370",
+      "source_location": "table under heading 'Specialty / Warehouse Equipment', row 2",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 28,
+      "raw_item_text": "Network Switch, 24-port unmanaged",
+      "qty_quoted": null,
+      "unit_price": 8690,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Network Switch, 24-port unmanaged (Gigabit) | Qty: 10 | Unit Price (INR): 8,690",
+      "source_location": "table under heading 'Specialty / Warehouse Equipment', row 3",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 29,
+      "raw_item_text": "Desktop UPS 650VA",
+      "qty_quoted": null,
+      "unit_price": 4880,
+      "currency": "INR",
+      "unit_of_measure": "per unit",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "Desktop UPS 650VA (Line-interactive) | Qty: 40 | Unit Price (INR): 4,880",
+      "source_location": "table under heading 'Power & Networking', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    },
+    {
+      "vendor_id": "techmart",
+      "line_ref": 30,
+      "raw_item_text": "3-Year Onsite Warranty Extension",
+      "qty_quoted": null,
+      "unit_price": 3390,
+      "currency": "INR",
+      "unit_of_measure": "per device",
+      "flags": [
+        "OK"
+      ],
+      "resolvable": true,
+      "source_excerpt": "3-Year Onsite Warranty Extension (Per-device bundle, all laptops) | Qty: 320 | Unit Price (INR): 3,390 | Notes: Applies across all laptop/ultrabook lines",
+      "source_location": "table under heading 'Extended Warranty', row 1",
+      "extraction_confidence": 0.9,
+      "conditional_discount_pct": null,
+      "conditional_discount_description": null
+    }
+  ],
+  "questionnaire_key": "3e1aa57271444b3e90615b77c0822faf6849708cba7e24ee6f8fb5c19d34d731",
+  "questionnaire_answers": [
+    {
+      "vendor_id": "techmart",
+      "question": "Authorized OEM reseller? (name brands + attach proof)",
+      "raw_answer": "We are an authorized reseller for HP and Lenovo. Dell items are sourced through our distribution partner, so we are not directly OEM-authorized for the Dell-equivalent SKUs quoted here.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "Names HP and Lenovo as authorized brands but provides no proof (authorization letters, partner IDs, certificates). Discloses Dell limitation transparently but still no verification documents attached."
+    },
+    {
+      "vendor_id": "techmart",
+      "question": "ISO 9001 certified? (certificate number)",
+      "raw_answer": "Yes, ISO 9001 certified.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "Claims ISO 9001 certification but provides no certificate number as explicitly requested by the question."
+    },
+    {
+      "vendor_id": "techmart",
+      "question": "RoHS / Energy Star compliance on hardware supplied?",
+      "raw_answer": "All our products meet applicable regulations.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "Generic statement 'meet applicable regulations' without specific confirmation of RoHS or Energy Star compliance as asked."
+    },
+    {
+      "vendor_id": "techmart",
+      "question": "Local service center cities and average onsite response SLA",
+      "raw_answer": "Service desks in Bengaluru, Mumbai, Delhi, Pune, Chennai and Hyderabad. Standard response SLA is 24 hours.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Names six specific cities (Bengaluru, Mumbai, Delhi, Pune, Chennai, Hyderabad) and provides concrete SLA figure (24 hours). Verifiable and specific."
+    },
+    {
+      "vendor_id": "techmart",
+      "question": "Standard warranty terms per product category",
+      "raw_answer": "Standard OEM warranty passed through - 1 year on laptops unless extension is separately purchased.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Provides specific warranty term (1 year on laptops) and clarifies the pass-through nature and extension option. Concrete and specific to the question asked."
+    },
+    {
+      "vendor_id": "techmart",
+      "question": "Asset disposal / data-wipe policy for buyback of old devices",
+      "raw_answer": "We wipe drives before disposal as a standard practice.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "States 'standard practice' for drive wiping but provides no specifics on the process, standards used (e.g., DoD 5220.22-M), certification, or documented policy."
+    },
+    {
+      "vendor_id": "techmart",
+      "question": "Similar-scale deployment references (2+, with contact)",
+      "raw_answer": "1) A mid-size fintech client (name confidential), 200-seat rollout, 2024. 2) A logistics company in Pune, approx. 150 seats, 2023.",
+      "quality": "ANSWERED_EVASIVE",
+      "notes": "Provides two references but both lack contactable information: first marked confidential (no name or contact), second gives only city and approximate size with no contact person or verifiable details. Question explicitly asked for contact information."
+    },
+    {
+      "vendor_id": "techmart",
+      "question": "Average lead time from PO to delivery",
+      "raw_answer": "3 to 4 weeks depending on the specific laptop model and current stock position.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Provides specific timeframe (3-4 weeks) with reasonable qualifiers about variability factors. Concrete and responsive to the question."
+    }
+  ],
+  "created_at": "2026-09-29T20:37:57.995Z",
+  "origin": "reconstructed-from-validated-run"
+}

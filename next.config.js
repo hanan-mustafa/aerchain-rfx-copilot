@@ -6,7 +6,8 @@ const nextConfig = {
     // Next's file tracing can't see -- without this they are missing from
     // the Vercel function bundles.
     outputFileTracingIncludes: {
-      "/api/extract": ["./data/vendor-uploads/**", "./data/seed/**"],
+      "/api/extract": ["./data/vendor-uploads/**", "./data/extraction-cache/**", "./data/seed/**"],
+      "/api/files/[vendorId]": ["./data/vendor-uploads/**"],
       "/api/vendors": ["./data/seed/**"],
       "/api/chat": ["./data/seed/**"],
     },

@@ -59,6 +59,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Rakesh Menon, rakesh.menon@apexbusiness.in",
     source_format: "xlsx",
     source_file: "Vendor_A_Apex_Business_Systems_Quote.xlsx",
+    edge_case: "Clean control case: fills the buyer's template exactly, all 30 lines in INR.",
   },
   {
     vendor_id: "techmart",
@@ -66,6 +67,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Priya Sharma, priya.sharma@techmartsol.com",
     source_format: "docx",
     source_file: "Vendor_B_TechMart_Solutions_Quote.docx",
+    edge_case: "Own layout: items grouped by the vendor's categories, not the RFx line numbers; prices quoted GST-inclusive.",
   },
   {
     vendor_id: "global_it",
@@ -73,6 +75,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Sanjay Bhatt, sanjay.bhatt@globalitdist.co.in",
     source_format: "pdf",
     source_file: "Vendor_C_Global_IT_Distributors_Quote.pdf",
+    edge_case: "A 4% early-payment rebate that changes every price is disclosed only in a numbered note on a later page.",
   },
   {
     vendor_id: "quickserve",
@@ -80,6 +83,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Manoj Iyer, quickservetraders@gmail.com",
     source_format: "email",
     source_file: "Vendor_D_QuickServe_Traders_Email.txt",
+    edge_case: "Casual email: four laptop tiers collapsed into one 'average' price, six lines skipped.",
   },
   {
     vendor_id: "sunrise",
@@ -87,6 +91,7 @@ export const VENDORS: VendorMeta[] = [
     contact: "Devendra Patil (phone only)",
     source_format: "image",
     source_file: "Vendor_E_Sunrise_Computech_RateCard.jpg",
+    edge_case: "Phone photo of a tilted printed rate card: priced in USD, cable locks quoted per box of 10, four lines missing.",
   },
 ];
 

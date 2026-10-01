@@ -13,9 +13,11 @@ cp .env.example .env.local   # add your ANTHROPIC_API_KEY
 npm run dev
 ```
 
-Open http://localhost:3000, click **Run extraction** (this makes real Claude API calls
-against the five vendor files in `data/vendor-uploads/`, all five vendors in parallel —
-expect about a minute), then use the chat panel.
+Open http://localhost:3000. The landing page shows the five raw vendor files (with previews
+and links to the originals). **Run extraction** runs the pipeline; files that were already
+extracted are served from the extraction cache (no API call, about a second), and
+**Re-extract live with Claude** forces real Claude calls for all five files (about a minute,
+uses API credits). Then use the chat panel (chat always calls Claude).
 
 ### Deploying to Vercel
 
@@ -97,6 +99,19 @@ vendor's collapsed multi-SKU price into an invented per-line breakdown
 (`UNRESOLVED_AMBIGUOUS` + `resolvable: false` instead); never do currency or unit
 conversion yourself (that's normalization's job); always cite a real, checkable
 `source_excerpt`.
+
+### Extraction cache (`lib/extractionCache.ts`)
+
+The LLM steps (price extraction and questionnaire classification) are cached per vendor,
+keyed on a SHA-256 of the file's bytes, the model id and the shared extraction prompt. An
+unchanged file is never sent to Claude twice; normalization and the questionnaire gate are
+deterministic and always re-run, so changes there still apply to cached runs. Entries live
+in `data/extraction-cache/` (committed, so a fresh deploy demos with zero API calls); on
+Vercel new entries go to `/tmp`. Per-format extractor instructions are not hashed
+automatically: **bump `EXTRACTION_CACHE_VERSION` when changing `lib/extractors/*.ts` or the
+classifier prompt.** The committed entries were rebuilt from the validated seed run by
+`scripts/seed-extraction-cache.ts`, which proves (with no API key set) that a cached run
+reproduces that run exactly; a live re-extract replaces them with Claude's raw output.
 
 ### Normalization (`lib/normalize.ts`)
 
@@ -195,9 +210,11 @@ data/
   RFx_Template_ITHardware_FY27.xlsx
   Ground_Truth_Answer_Key_INTERNAL.xlsx   (not part of the app — validation reference)
   seed/comparison-store.json              validated snapshot served when no live run is on disk
+  extraction-cache/<vendor>.json          stored LLM output per file (see Extraction cache)
 scripts/
   test-normalize.ts             normalization math checks (no API key needed)
   test-questionnaire-gate.ts    gate rule checks (no API key needed)
   validate-ground-truth.ts      checks the current store against the answer key
   eval-sunrise-vision.ts        vision-model accuracy on the rate-card photo (real API calls)
+  seed-extraction-cache.ts      rebuilds data/extraction-cache from the seed run and verifies it
 ```
