@@ -1,6 +1,6 @@
 /**
- * Cross-checks the current comparison store (data/store/comparison-store.json,
- * written by POST /api/extract) against data/Ground_Truth_Answer_Key_INTERNAL.xlsx.
+ * Cross-checks a comparison store (default data/seed/comparison-store.json,
+ * the validated sample run) against data/Ground_Truth_Answer_Key_INTERNAL.xlsx.
  *
  *   npx tsx scripts/validate-ground-truth.ts
  *
@@ -15,7 +15,9 @@ import * as XLSX from "xlsx";
 import { ComparisonStore, NormalizedLine } from "../lib/schema";
 import { FX_RATES } from "../lib/normalize";
 
-const STORE_PATH = path.join(process.cwd(), "data", "store", "comparison-store.json");
+// Defaults to the committed snapshot; pass a path to check another store, e.g. one
+// exported from the app after a live re-process.
+const STORE_PATH = process.argv[2] ?? path.join(process.cwd(), "data", "seed", "comparison-store.json");
 const GT_PATH = path.join(process.cwd(), "data", "Ground_Truth_Answer_Key_INTERNAL.xlsx");
 
 // Column order in the "Per-Vendor Unit Prices" sheet.
@@ -67,7 +69,7 @@ function close(a: number | null | undefined, b: number): boolean {
 
 function main() {
   if (!fs.existsSync(STORE_PATH)) {
-    console.error(`No store at ${STORE_PATH} -- run extraction first (POST /api/extract).`);
+    console.error(`No store at ${STORE_PATH} -- pass the path to a comparison store JSON.`);
     process.exit(1);
   }
   const store: ComparisonStore = JSON.parse(fs.readFileSync(STORE_PATH, "utf-8"));

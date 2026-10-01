@@ -3,10 +3,19 @@
 import { useState } from "react";
 import { VendorMeta, VendorQuestionnaireVerdict } from "@/lib/schema";
 
+const GATE_LABEL: Record<string, string> = { PASS: "Qualified", BORDERLINE: "Borderline", FAIL: "Not qualified" };
+
 const GATE_COLOR: Record<string, { fg: string; bg: string }> = {
   PASS: { fg: "var(--ok)", bg: "var(--ok-dim)" },
   BORDERLINE: { fg: "var(--warn)", bg: "var(--warn-dim)" },
   FAIL: { fg: "var(--fail)", bg: "var(--fail-dim)" },
+};
+
+const QUALITY_LABEL: Record<string, string> = {
+  ANSWERED_WITH_PROOF: "· verified detail",
+  ANSWERED_VAGUE: "· vague",
+  ANSWERED_EVASIVE: "· evasive",
+  UNANSWERED: "· no answer",
 };
 
 export function QuestionnaireStrip({
@@ -21,7 +30,7 @@ export function QuestionnaireStrip({
   return (
     <div style={{ borderBottom: "1px solid var(--line)", paddingBottom: "14px", marginBottom: "18px" }}>
       <div style={{ fontSize: "12px", color: "var(--ink-dim)", marginBottom: "8px" }}>
-        Questionnaire gate — click a vendor to see why
+        Qualification · select a vendor to see why
       </div>
       <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
         {vendors.map((v) => {
@@ -42,7 +51,7 @@ export function QuestionnaireStrip({
                 textAlign: "left",
               }}
             >
-              {v.full_name.split(" ")[0]} — {verdict?.gate_result ?? "…"}
+              {v.full_name.split(" ")[0]} · {verdict ? GATE_LABEL[verdict.gate_result] : "…"}
             </button>
           );
         })}
@@ -83,7 +92,7 @@ export function QuestionnaireStrip({
                               : "var(--warn)",
                         }}
                       >
-                        [{a.quality.replace(/_/g, " ").toLowerCase()}]
+                        {QUALITY_LABEL[a.quality]}
                       </span>
                     </li>
                   ))}

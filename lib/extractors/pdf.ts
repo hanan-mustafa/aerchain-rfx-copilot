@@ -1,7 +1,7 @@
 import pdf from "pdf-parse";
-import { ExtractedLine, LineItemSpec } from "../schema";
+import { RfxDefinition } from "../schema";
 import { askForJSON } from "../claude";
-import { buildExtractionSystemPrompt, parseExtractionResponse } from "./shared";
+import { buildExtractionSystemPrompt, parseExtractionResponse, ExtractionResult } from "./shared";
 
 /**
  * Text-layer extraction, not OCR/vision -- this is a native PDF (reportlab
@@ -41,14 +41,14 @@ async function pdfToPagedText(buf: Buffer): Promise<string[]> {
 export async function extractFromPdf(
   buf: Buffer,
   vendorId: string,
-  lineItems: LineItemSpec[]
-): Promise<ExtractedLine[]> {
+  rfx: RfxDefinition
+): Promise<ExtractionResult> {
   const pages = await pdfToPagedText(buf);
   const tagged = pages
     .map((p, i) => `=== PAGE ${i + 1} ===\n${(p ?? "").trim()}`)
     .join("\n\n");
 
-  const system = buildExtractionSystemPrompt(lineItems);
+  const system = buildExtractionSystemPrompt(rfx);
   const user = `Here is the vendor's PDF quotation, with page boundaries marked. Pay close \
 attention to footnotes/notes sections -- they may materially change a price shown earlier in \
 the document (e.g. a rebate or condition disclosed only in a numbered note on a later page). \

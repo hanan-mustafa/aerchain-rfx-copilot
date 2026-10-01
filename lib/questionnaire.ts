@@ -1,10 +1,5 @@
 import { z } from "zod";
-import {
-  QuestionnaireAnswer,
-  QuestionnaireAnswerQuality,
-  QuestionnaireGateResult,
-  VendorQuestionnaireVerdict,
-} from "./schema";
+import { QuestionnaireAnswer, QuestionnaireAnswerQuality } from "./schema";
 import { askForJSON } from "./claude";
 
 /**
@@ -16,15 +11,6 @@ import { askForJSON } from "./claude";
  * vendor disqualified," the answer must be a rule they can read, not
  * "the model decided."
  */
-
-const QUESTIONNAIRE_GATE_RULES = [
-  "authorized OEM reseller",
-  "ISO 9001",
-  "RoHS",
-  "Energy Star",
-  "data-wipe",
-  "asset disposal",
-];
 
 const ClassificationWire = z.object({
   classifications: z.array(
@@ -38,7 +24,7 @@ const ClassificationWire = z.object({
 
 export async function classifyQuestionnaireAnswers(
   vendorId: string,
-  rawAnswers: { question: string; raw_answer: string }[]
+  rawAnswers: { question: string; raw_answer: string; question_id?: string; source_excerpt?: string; source_location?: string }[]
 ): Promise<QuestionnaireAnswer[]> {
   const system = `You classify procurement vendor questionnaire answers by quality. For each \
 question/answer pair, decide:
@@ -69,57 +55,14 @@ Output ONLY this JSON shape, nothing else:
 
   return rawAnswers.map((a, i) => ({
     vendor_id: vendorId,
+    question_id: a.question_id,
     question: a.question,
     raw_answer: a.raw_answer,
+    source_excerpt: a.source_excerpt,
+    source_location: a.source_location,
     quality: parsed.classifications[i]?.quality ?? ("UNANSWERED" as QuestionnaireAnswerQuality),
     notes: parsed.classifications[i]?.notes,
   }));
 }
 
-/**
- * The transparent gate rule: FAIL if any compliance-critical question
- * (OEM authorization, ISO 9001, RoHS/Energy Star, or data-wipe policy) is
- * UNANSWERED or ANSWERED_EVASIVE. BORDERLINE if any is ANSWERED_VAGUE but
- * none FAIL outright. Otherwise PASS. This rule is intentionally simple
- * and stated in plain English so it can be shown to a buyer or vendor on
- * request -- see gate_reasons in the output.
- */
-export function applyQuestionnaireGate(
-  vendorId: string,
-  answers: QuestionnaireAnswer[]
-): VendorQuestionnaireVerdict {
-  const criticalQuestions = answers.filter((a) =>
-    QUESTIONNAIRE_GATE_RULES.some((kw) => a.question.toLowerCase().includes(kw.toLowerCase()))
-  );
-
-  const failing = criticalQuestions.filter(
-    (a) => a.quality === "UNANSWERED" || a.quality === "ANSWERED_EVASIVE"
-  );
-  const vague = criticalQuestions.filter((a) => a.quality === "ANSWERED_VAGUE");
-
-  let gate_result: QuestionnaireGateResult;
-  const gate_reasons: string[] = [];
-
-  if (failing.length > 0) {
-    gate_result = "FAIL";
-    gate_reasons.push(
-      `Rule: FAIL if any compliance-critical question is unanswered or evasive. Triggered by: ${failing
-        .map((f) => `"${f.question}" (${f.quality})`)
-        .join("; ")}.`
-    );
-  } else if (vague.length > 0) {
-    gate_result = "BORDERLINE";
-    gate_reasons.push(
-      `Rule: BORDERLINE if any compliance-critical question is answered without verifiable specifics. Triggered by: ${vague
-        .map((v) => `"${v.question}"`)
-        .join("; ")}.`
-    );
-  } else {
-    gate_result = "PASS";
-    gate_reasons.push(
-      "Rule: PASS -- all compliance-critical questions (OEM authorization, ISO 9001, RoHS/Energy Star, data-wipe policy) answered with verifiable specifics."
-    );
-  }
-
-  return { vendor_id: vendorId, answers, gate_result, gate_reasons };
-}
+export { applyQuestionnaireGate } from "./gate";

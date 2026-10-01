@@ -34,7 +34,7 @@ export function ComparisonTable({
   return (
     <div style={{ overflowX: "auto", border: "1px solid var(--line)", borderRadius: "4px" }}>
       <div style={{ padding: "8px 12px", fontSize: "12px", color: "var(--ink-dim)", borderBottom: "1px solid var(--line)" }}>
-        Click any price to see exactly where it came from and how it was converted.
+        Select a price to see the vendor&rsquo;s original wording and how it was converted. All prices in INR per RFx unit.
       </div>
       <table style={{ borderCollapse: "collapse", width: "100%", minWidth: "900px" }}>
         <thead>
@@ -108,6 +108,29 @@ export function ComparisonTable({
             </tr>
           ))}
         </tbody>
+        <tfoot>
+          <tr style={{ borderTop: "2px solid var(--line-strong)", background: "#fbfaf7" }}>
+            <td style={{ ...tdStyle, fontWeight: 600 }}>
+              Total quoted
+              <div style={{ fontSize: "11px", color: "var(--ink-dim)", fontWeight: 400 }}>Priced lines only, headline prices</div>
+            </td>
+            <td style={tdStyle} />
+            {store.vendors.map((v) => {
+              const lines = store.normalized_lines.filter((l) => l.vendor_id === v.vendor_id);
+              const priced = lines.filter((l) => l.normalized_line_total_inr !== null);
+              const total = priced.reduce((sum, l) => sum + (l.normalized_line_total_inr ?? 0), 0);
+              const missing = store.line_items.length - priced.length;
+              return (
+                <td key={v.vendor_id} style={{ ...tdStyle, verticalAlign: "top" }}>
+                  <div className="mono" style={{ fontWeight: 600 }}>₹{formatInr(total)}</div>
+                  <div style={{ fontSize: "11px", color: missing ? "var(--warn)" : "var(--ink-dim)" }}>
+                    {missing ? `${missing} line${missing === 1 ? "" : "s"} not priced` : `All ${store.line_items.length} lines`}
+                  </div>
+                </td>
+              );
+            })}
+          </tr>
+        </tfoot>
       </table>
     </div>
   );

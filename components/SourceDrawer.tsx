@@ -16,11 +16,13 @@ export function SourceDrawer({
   cell,
   onSelect,
   onClose,
+  onOpenFile,
 }: {
   store: ComparisonStore;
   cell: CellRef;
   onSelect: (cell: CellRef) => void;
   onClose: () => void;
+  onOpenFile: (vendorId: string) => void;
 }) {
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -88,7 +90,7 @@ export function SourceDrawer({
           {line.alternate_basis && (
             <div style={{ marginTop: "8px", padding: "8px 10px", background: "var(--warn-dim)", borderRadius: "4px", fontSize: "12.5px" }}>
               <span className="mono" style={{ fontWeight: 600 }}>₹{formatInr(line.alternate_basis.unit_price_inr)}</span>{" "}
-              {line.alternate_basis.label}. Both prices are kept; you choose which to compare on.
+              {line.alternate_basis.label}. Both prices are kept so you can choose which to compare on.
             </div>
           )}
         </section>
@@ -111,7 +113,7 @@ export function SourceDrawer({
           <h4 className="drawer-h">What the vendor wrote</h4>
           {backfilled ? (
             <div style={{ fontSize: "12.5px", color: "var(--ink-dim)" }}>
-              Nothing: this line does not appear anywhere in {vendor.full_name}&rsquo;s response.
+              This line doesn&rsquo;t appear anywhere in {vendor.full_name}&rsquo;s response.
             </div>
           ) : (
             <>
@@ -141,26 +143,24 @@ export function SourceDrawer({
               )}
             </>
           )}
-          <a
-            href={`/api/files/${vendor.vendor_id}`}
-            target="_blank"
-            rel="noreferrer"
-            style={{ display: "inline-block", marginTop: "8px", fontSize: "12.5px" }}
+          <button
+            onClick={() => onOpenFile(vendor.vendor_id)}
+            style={{ display: "inline-block", marginTop: "8px", fontSize: "12.5px", border: "none", background: "none", padding: 0, color: "var(--accent)", textDecoration: "underline", textAlign: "left" }}
           >
-            Open {vendor.source_file} ↗
-          </a>
+            Open {store.vendor_files?.[vendor.vendor_id] ?? "original response"} ↗
+          </button>
         </section>
 
         {line.conversion_notes.length > 0 && (
           <section>
-            <h4 className="drawer-h">How this number was produced</h4>
+            <h4 className="drawer-h">How this price was calculated</h4>
             <ol style={{ margin: 0, paddingLeft: "18px", fontSize: "12.5px", display: "flex", flexDirection: "column", gap: "4px" }}>
               {line.conversion_notes.map((n, i) => (
                 <li key={i}>{n}</li>
               ))}
             </ol>
             <div style={{ fontSize: "11px", color: "var(--ink-dim)", marginTop: "6px" }}>
-              Computed in deterministic code (lib/normalize.ts), not by the model.
+              Conversions use fixed rules and the exchange rate set for this RFx, so the same quote always gives the same price.
             </div>
           </section>
         )}
@@ -197,7 +197,7 @@ export function SourceDrawer({
             </tbody>
           </table>
           <div style={{ fontSize: "11px", color: "var(--ink-dim)", marginTop: "6px" }}>
-            Headline prices; click a vendor to see its source.
+            Headline prices. Select a vendor to see its source.
           </div>
         </section>
       </div>
