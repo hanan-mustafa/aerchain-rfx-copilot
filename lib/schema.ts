@@ -82,10 +82,13 @@ export type QuestionnaireAnswerQuality =
 
 export interface QuestionnaireAnswer {
   vendor_id: string;
+  question_id?: string; // QuestionnaireItem.id this answers
   question: string;
   raw_answer: string;
   quality: QuestionnaireAnswerQuality;
   notes?: string; // e.g. "claims OEM authorization but no certificate attached"
+  source_excerpt?: string; // where in the vendor's response the answer came from
+  source_location?: string;
 }
 
 export type QuestionnaireGateResult = "PASS" | "BORDERLINE" | "FAIL";
@@ -95,6 +98,81 @@ export interface VendorQuestionnaireVerdict {
   answers: QuestionnaireAnswer[];
   gate_result: QuestionnaireGateResult;
   gate_reasons: string[]; // which rule(s) drove the verdict -- must be traceable, not a black box
+}
+
+/** One question the buyer asks every vendor. critical=true questions drive the qualification gate. */
+export interface QuestionnaireItem {
+  id: string;
+  question: string;
+  critical: boolean;
+}
+
+/** A commercial requirement the buyer states in the RFx (e.g. "Quote validity: at least 15 days"). */
+export interface RfxTerm {
+  id: string;
+  label: string;
+  requirement: string;
+}
+
+/**
+ * The RFx itself, as data: drafted with the co-pilot (or loaded from the
+ * sample), then sent to vendors. Everything downstream -- extraction
+ * prompts, normalization, the qualification gate, the analyst -- reads the
+ * RFx from here rather than from constants.
+ */
+export interface RfxDefinition {
+  rfx_id: string;
+  title: string;
+  buyer_org: string;
+  scope: string;
+  currency: "INR";
+  line_items: LineItemSpec[];
+  questionnaire: QuestionnaireItem[];
+  terms: RfxTerm[];
+  response_due: string | null; // ISO date
+  created_at: string;
+}
+
+/** Commercial terms a vendor stated, as extracted from their response. */
+export type CommercialTermKey = "payment_terms" | "quote_validity" | "freight" | "taxes" | "warranty" | "lead_time";
+
+export const COMMERCIAL_TERM_LABELS: Record<CommercialTermKey, string> = {
+  payment_terms: "Payment terms",
+  quote_validity: "Quote validity",
+  freight: "Freight / delivery",
+  taxes: "GST / taxes",
+  warranty: "Warranty",
+  lead_time: "Lead time",
+};
+
+export interface ExtractedTerm {
+  key: CommercialTermKey;
+  value: string; // short normalized wording, e.g. "Net 30", "GST inclusive"
+  source_excerpt: string;
+  source_location: string;
+}
+
+/** A vendor's answer to one questionnaire item, as found in their response. */
+export interface ExtractedAnswer {
+  question_id: string;
+  raw_answer: string; // "(not answered)" when the response does not address it
+  source_excerpt: string;
+  source_location: string;
+}
+
+/**
+ * Everything read out of one vendor's response document(s). Produced by a
+ * single extraction call per document (prices, questionnaire answers and
+ * terms together) and cached by file hash.
+ */
+export interface ProcessedResponse {
+  vendor_id: string;
+  file_name: string;
+  lines: ExtractedLine[];
+  answers: QuestionnaireAnswer[]; // raw answers + quality classification
+  terms: ExtractedTerm[];
+  processed_at: string;
+  from_cache: boolean;
 }
 
 export interface LineItemSpec {
@@ -111,7 +189,8 @@ export interface VendorMeta {
   contact: string;
   source_format: "xlsx" | "docx" | "pdf" | "image" | "email";
   source_file: string;
-  edge_case?: string; // the deliberate "ugly edge" this response tests, shown on the landing page
+  edge_case?: string; // the deliberate "ugly edge" this response tests (sample data only)
+  email?: string;
 }
 
 /**
@@ -129,4 +208,7 @@ export interface ComparisonStore {
   // Per vendor: whether this run called Claude ("live") or reused a stored
   // extraction of the identical file ("cache"). See lib/extractionCache.ts.
   extraction_sources?: Record<string, "live" | "cache">;
+  rfx?: RfxDefinition;
+  vendor_terms?: Record<string, ExtractedTerm[]>; // vendor_id -> commercial terms
+  vendor_files?: Record<string, string>; // vendor_id -> response file name
 }

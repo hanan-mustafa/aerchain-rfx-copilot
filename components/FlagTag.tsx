@@ -32,3 +32,18 @@ export function FlagTag({ flag }: { flag: ConfidenceFlag }) {
     </span>
   );
 }
+
+/** Plain-English meaning of each flag, shown in the source drawer. */
+export const FLAG_EXPLANATION: Record<ConfidenceFlag, string> = {
+  OK: "Read cleanly and matched one-to-one to this RFx line.",
+  LOW_CONFIDENCE:
+    "This value couldn't be read with full confidence: approximate wording, a hard-to-read photo, figures that contradict each other, or two independent reads that disagreed. Check the source before relying on it.",
+  UNIT_MISMATCH:
+    "The vendor priced this in a different unit than the RFx asks for. Where the unit is clear (e.g. per box of 10), the price is converted automatically; otherwise it's left blank for you to review.",
+  CURRENCY_CONVERTED: "The vendor quoted in a foreign currency. Converted to INR at the exchange rate fixed for this RFx.",
+  NOT_QUOTED: "The vendor did not price this line.",
+  UNRESOLVED_AMBIGUOUS:
+    "One vendor figure covers several RFx lines (for example, one average price across laptop tiers). It isn't split into made-up per-line prices, so there's no comparable price until the vendor provides a breakdown.",
+  CONDITIONAL_PRICING:
+    "The price depends on a condition, such as an early-payment rebate. Both the headline and the conditional price are shown; you choose which to compare on.",
+};

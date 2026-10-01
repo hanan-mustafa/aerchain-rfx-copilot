@@ -15,7 +15,7 @@ if (fs.existsSync(".env.local")) {
   }
 }
 import { MODEL } from "../lib/claude";
-import { LINE_ITEMS } from "../lib/rfxData";
+import { SAMPLE_RFX } from "../lib/rfxData";
 // Sunrise ground truth in USD; "box" = quoted per box of 10 (line 24). Lines
 // 25, 27, 28 and 30 are not quoted on the card.
 const EXPECT: Record<number,[number,string]> = {1:[506.02,"u"],2:[698.80,"u"],3:[891.57,"u"],4:[1421.69,"u"],5:[118.07,"u"],6:[198.80,"u"],7:[38.55,"u"],8:[65.06,"u"],9:[17.47,"u"],10:[7.83,"u"],11:[4.22,"u"],12:[26.51,"u"],13:[81.93,"u"],14:[40.96,"u"],15:[21.69,"u"],16:[265.06,"u"],17:[783.13,"u"],18:[4638.55,"u"],19:[10.24,"u"],20:[25.30,"u"],21:[86.75,"u"],22:[11.45,"u"],23:[19.28,"u"],24:[66.27,"box"],26:[114.46,"u"],29:[55.42,"u"]};
@@ -29,7 +29,7 @@ async function main(){
     const jobs = Array.from({length: runs}, async (_, r) => {
       const t=Date.now();
       try {
-        const lines = await extractFromImage(buf, "image/jpeg", "sunrise", LINE_ITEMS);
+        const { lines } = await extractFromImage(buf, "image/jpeg", "sunrise", SAMPLE_RFX);
         const errs: string[] = [];
         const byRef = new Map(lines.map(l=>[l.line_ref,l]));
         for (const [ref,[p,u]] of Object.entries(EXPECT)) { const l=byRef.get(+ref); if(!l){errs.push(`${ref}:missing`);continue;}

@@ -1,7 +1,7 @@
 import mammoth from "mammoth";
-import { ExtractedLine, LineItemSpec } from "../schema";
+import { RfxDefinition } from "../schema";
 import { askForJSON } from "../claude";
-import { buildExtractionSystemPrompt, parseExtractionResponse } from "./shared";
+import { buildExtractionSystemPrompt, parseExtractionResponse, ExtractionResult } from "./shared";
 
 /**
  * mammoth converts to structured HTML rather than plain text so that table
@@ -13,10 +13,10 @@ import { buildExtractionSystemPrompt, parseExtractionResponse } from "./shared";
 export async function extractFromDocx(
   buf: Buffer,
   vendorId: string,
-  lineItems: LineItemSpec[]
-): Promise<ExtractedLine[]> {
+  rfx: RfxDefinition
+): Promise<ExtractionResult> {
   const { value: html } = await mammoth.convertToHtml({ buffer: buf });
-  const system = buildExtractionSystemPrompt(lineItems);
+  const system = buildExtractionSystemPrompt(rfx);
   const user = `Here is the vendor's Word document, converted to HTML (tables and headings \
 preserved so you can see how THEY organized it -- note it may not follow the buyer's line \
 numbering at all). Use heading/table position (e.g. "table under heading 'Compute (Laptops & \

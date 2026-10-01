@@ -1,7 +1,7 @@
 import * as XLSX from "xlsx";
-import { ExtractedLine, LineItemSpec } from "../schema";
+import { RfxDefinition } from "../schema";
 import { askForJSON } from "../claude";
-import { buildExtractionSystemPrompt, parseExtractionResponse } from "./shared";
+import { buildExtractionSystemPrompt, parseExtractionResponse, ExtractionResult } from "./shared";
 
 /**
  * Deterministic parse comes first (never send a spreadsheet as an image --
@@ -39,10 +39,10 @@ function workbookToReferencedText(buf: Buffer): string {
 export async function extractFromXlsx(
   buf: Buffer,
   vendorId: string,
-  lineItems: LineItemSpec[]
-): Promise<ExtractedLine[]> {
+  rfx: RfxDefinition
+): Promise<ExtractionResult> {
   const referencedText = workbookToReferencedText(buf);
-  const system = buildExtractionSystemPrompt(lineItems);
+  const system = buildExtractionSystemPrompt(rfx);
   const user = `Here is the vendor's spreadsheet, serialized as "SheetName!CellRef=value" pairs \
 (this IS the exact cell content -- use the cell refs verbatim as source_location, e.g. \
 "Line Items!F14"):\n\n${referencedText}`;

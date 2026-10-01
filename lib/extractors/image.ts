@@ -1,10 +1,6 @@
-import { ExtractedLine, LineItemSpec } from "../schema";
+import { ExtractedLine, RfxDefinition } from "../schema";
 import { claude, MODEL } from "../claude";
-import {
-  buildExtractionSystemPrompt,
-  parseExtractionResponse,
-  ExtractionResponseWire,
-} from "./shared";
+import { buildExtractionSystemPrompt, parseExtractionResponse, ExtractionResult } from "./shared";
 
 /**
  * DESIGN NOTE on cross-checking a photographed source:
@@ -32,10 +28,10 @@ async function visionExtractPass(
   base64Image: string,
   mediaType: string,
   vendorId: string,
-  lineItems: LineItemSpec[],
+  rfx: RfxDefinition,
   passLabel: string
-): Promise<ExtractedLine[]> {
-  const system = buildExtractionSystemPrompt(lineItems);
+): Promise<ExtractionResult> {
+  const system = buildExtractionSystemPrompt(rfx);
   // The photo is tilted, so the item-name column sits visibly higher than
   // the numbers of the same row. The QTY column is the anchor that ties a
   // row together: it is printed on the same slanted line as that row's
@@ -94,14 +90,18 @@ export async function extractFromImage(
   buf: Buffer,
   mediaType: string,
   vendorId: string,
-  lineItems: LineItemSpec[]
-): Promise<ExtractedLine[]> {
+  rfx: RfxDefinition
+): Promise<ExtractionResult> {
   const base64Image = buf.toString("base64");
 
-  const [passA, passB] = await Promise.all([
-    visionExtractPass(base64Image, mediaType, vendorId, lineItems, "A"),
-    visionExtractPass(base64Image, mediaType, vendorId, lineItems, "B"),
+  const [resultA, resultB] = await Promise.all([
+    visionExtractPass(base64Image, mediaType, vendorId, rfx, "A"),
+    visionExtractPass(base64Image, mediaType, vendorId, rfx, "B"),
   ]);
+  // Prices are cross-checked between the two reads; questionnaire answers
+  // and terms (free text, not figures) are taken from pass A.
+  const passA = resultA.lines;
+  const passB = resultB.lines;
 
   // Reconcile: for each line_ref present in pass A, check pass B's value.
   // Price disagreement beyond 2%, or a different unit of measure -> force LOW_CONFIDENCE and keep pass A's value
@@ -170,5 +170,5 @@ export async function extractFromImage(
       `${onlyInA.length ? `; only in A: ${onlyInA.join(",")}` : ""}${onlyInB.length ? `; only in B: ${onlyInB.join(",")}` : ""}`
   );
 
-  return reconciled;
+  return { lines: reconciled, answers: resultA.answers, terms: resultA.terms };
 }

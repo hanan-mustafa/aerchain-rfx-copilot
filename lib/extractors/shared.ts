@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ExtractedLine, ConfidenceFlag, LineItemSpec } from "../schema";
+import { ExtractedLine, ConfidenceFlag, ExtractedAnswer, ExtractedTerm, RfxDefinition } from "../schema";
 
 // Schema Claude's JSON output must match, per extracted line. Kept close to
 // ExtractedLine but as a wire format (strings for enums) so we can validate
@@ -30,14 +30,37 @@ export const ExtractedLineWire = z.object({
   conditional_discount_description: z.string().nullable(),
 });
 
+const SourcedWire = { source_excerpt: z.string().default(""), source_location: z.string().default("") };
+
 export const ExtractionResponseWire = z.object({
   lines: z.array(ExtractedLineWire),
+  // Optional so a response that omits them still parses; defaults to "none found".
+  questionnaire_answers: z
+    .array(z.object({ question_id: z.string(), raw_answer: z.string(), ...SourcedWire }))
+    .default([]),
+  commercial_terms: z
+    .array(
+      z.object({
+        key: z.enum(["payment_terms", "quote_validity", "freight", "taxes", "warranty", "lead_time"]),
+        value: z.string(),
+        ...SourcedWire,
+      })
+    )
+    .default([]),
 });
 
-export function buildExtractionSystemPrompt(lineItems: LineItemSpec[]): string {
-  const rfxTable = lineItems
+/** Everything one extraction call reads out of a vendor document. */
+export interface ExtractionResult {
+  lines: ExtractedLine[];
+  answers: ExtractedAnswer[];
+  terms: ExtractedTerm[];
+}
+
+export function buildExtractionSystemPrompt(rfx: RfxDefinition): string {
+  const rfxTable = rfx.line_items
     .map((li) => `${li.no}. ${li.item} (${li.spec}) - UoM: ${li.uom}, Qty required: ${li.qty}`)
     .join("\n");
+  const questionTable = rfx.questionnaire.map((q) => `${q.id}: ${q.question}`).join("\n");
 
   return `You are a procurement data extraction engine. You read a vendor's RFx response, \
 in whatever format and structure it arrives, and extract EVERY price/line-item you find into \
@@ -46,6 +69,9 @@ Your only job is faithful, literal extraction plus honest flagging of anything u
 
 THE BUYER'S RFx LINE ITEMS (for you to map vendor text onto by line_ref):
 ${rfxTable}
+
+THE BUYER'S QUESTIONNAIRE (answer ids for questionnaire_answers):
+${questionTable || "(none)"}
 
 RULES (violating these is a serious error):
 1. Map each vendor price to the RFx line number (line_ref) it corresponds to, using your judgment \
@@ -101,33 +127,44 @@ contradiction in source_excerpt. Never substitute a line total or any number you
   - "NOT_QUOTED": only for a line the vendor explicitly declines or defers quoting (rule 6).
   - "UNRESOLVED_AMBIGUOUS": one vendor figure covers several RFx lines or cannot be tied to one (rule 2).
   - "CONDITIONAL_PRICING": the price depends on a condition (rule 5).
-12. Output ONLY valid JSON matching this exact shape, nothing else, no commentary, no markdown fences:
+12. questionnaire_answers: one entry per questionnaire id above. raw_answer is the vendor's answer \
+quoted as closely as possible (do not judge its quality); if the response does not address a \
+question, set raw_answer to "(not answered)" with empty source_excerpt/source_location.
+13. commercial_terms: the vendor's stated terms, only where the response states them -- never infer. \
+key is one of payment_terms, quote_validity, freight, taxes (including whether prices include GST), \
+warranty, lead_time; value is a short plain summary (e.g. "Net 30", "15 days", "GST inclusive"); \
+source_excerpt quotes the vendor.
+14. Output ONLY valid JSON matching this exact shape, nothing else, no commentary, no markdown fences:
 {"lines": [{"line_ref": number|null, "raw_item_text": string, "qty_quoted": number|null, \
 "unit_price": number|null, "currency": "INR"|"USD"|"EUR"|"OTHER", "unit_of_measure": string, \
 "flags": string[], "resolvable": boolean, "source_excerpt": string, "source_location": string, \
 "extraction_confidence": number, "conditional_discount_pct": number|null, \
-"conditional_discount_description": string|null}]}`;
+"conditional_discount_description": string|null}], \
+"questionnaire_answers": [{"question_id": string, "raw_answer": string, "source_excerpt": string, \
+"source_location": string}], \
+"commercial_terms": [{"key": string, "value": string, "source_excerpt": string, "source_location": string}]}`;
 }
 
-export function parseExtractionResponse(
-  jsonText: string,
-  vendorId: string
-): ExtractedLine[] {
+export function parseExtractionResponse(jsonText: string, vendorId: string): ExtractionResult {
   const parsed = ExtractionResponseWire.parse(JSON.parse(jsonText));
-  return parsed.lines.map((l) => ({
-    vendor_id: vendorId,
-    line_ref: l.line_ref,
-    raw_item_text: l.raw_item_text,
-    qty_quoted: l.qty_quoted,
-    unit_price: l.unit_price,
-    currency: l.currency,
-    unit_of_measure: l.unit_of_measure,
-    flags: l.flags as ConfidenceFlag[],
-    resolvable: l.resolvable,
-    source_excerpt: l.source_excerpt,
-    source_location: l.source_location,
-    extraction_confidence: l.extraction_confidence,
-    conditional_discount_pct: l.conditional_discount_pct,
-    conditional_discount_description: l.conditional_discount_description,
-  }));
+  return {
+    lines: parsed.lines.map((l) => ({
+      vendor_id: vendorId,
+      line_ref: l.line_ref,
+      raw_item_text: l.raw_item_text,
+      qty_quoted: l.qty_quoted,
+      unit_price: l.unit_price,
+      currency: l.currency,
+      unit_of_measure: l.unit_of_measure,
+      flags: l.flags as ConfidenceFlag[],
+      resolvable: l.resolvable,
+      source_excerpt: l.source_excerpt,
+      source_location: l.source_location,
+      extraction_confidence: l.extraction_confidence,
+      conditional_discount_pct: l.conditional_discount_pct,
+      conditional_discount_description: l.conditional_discount_description,
+    })),
+    answers: parsed.questionnaire_answers,
+    terms: parsed.commercial_terms,
+  };
 }

@@ -1,0 +1,722 @@
+{
+  "cache_key": "6fa190d1859307a1d70546c85ee118f5",
+  "vendor_id": "apex",
+  "file_name": "Vendor_A_Apex_Business_Systems_Quote.xlsx",
+  "extraction": {
+    "lines": [
+      {
+        "vendor_id": "apex",
+        "line_ref": 1,
+        "raw_item_text": "Business Laptop - Entry",
+        "qty_quoted": null,
+        "unit_price": 42000,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F2=42000, Line Items!G2=INR, Line Items!D2=per unit",
+        "source_location": "Line Items!F2",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 2,
+        "raw_item_text": "Business Laptop - Standard",
+        "qty_quoted": null,
+        "unit_price": 58000,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F3=58000, Line Items!G3=INR, Line Items!D3=per unit",
+        "source_location": "Line Items!F3",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 3,
+        "raw_item_text": "Business Laptop - Premium",
+        "qty_quoted": null,
+        "unit_price": 74000,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F4=74000, Line Items!G4=INR, Line Items!D4=per unit",
+        "source_location": "Line Items!F4",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 4,
+        "raw_item_text": "Executive Ultrabook",
+        "qty_quoted": null,
+        "unit_price": 118000,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F5=118000, Line Items!G5=INR, Line Items!D5=per unit",
+        "source_location": "Line Items!F5",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 5,
+        "raw_item_text": "Monitor 24-inch FHD",
+        "qty_quoted": null,
+        "unit_price": 9800,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F6=9800, Line Items!G6=INR, Line Items!D6=per unit",
+        "source_location": "Line Items!F6",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 6,
+        "raw_item_text": "Monitor 27-inch QHD",
+        "qty_quoted": null,
+        "unit_price": 16500,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F7=16500, Line Items!G7=INR, Line Items!D7=per unit",
+        "source_location": "Line Items!F7",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 7,
+        "raw_item_text": "Dual Monitor Arm/Stand",
+        "qty_quoted": null,
+        "unit_price": 3200,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F8=3200, Line Items!G8=INR, Line Items!D8=per unit",
+        "source_location": "Line Items!F8",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 8,
+        "raw_item_text": "USB-C Docking Station",
+        "qty_quoted": null,
+        "unit_price": 5400,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F9=5400, Line Items!G9=INR, Line Items!D9=per unit",
+        "source_location": "Line Items!F9",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 9,
+        "raw_item_text": "Wireless Keyboard+Mouse Combo",
+        "qty_quoted": null,
+        "unit_price": 1450,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F10=1450, Line Items!G10=INR, Line Items!D10=per unit",
+        "source_location": "Line Items!F10",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 10,
+        "raw_item_text": "Wired Keyboard",
+        "qty_quoted": null,
+        "unit_price": 650,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F11=650, Line Items!G11=INR, Line Items!D11=per unit",
+        "source_location": "Line Items!F11",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 11,
+        "raw_item_text": "Wired Optical Mouse",
+        "qty_quoted": null,
+        "unit_price": 350,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F12=350, Line Items!G12=INR, Line Items!D12=per unit",
+        "source_location": "Line Items!F12",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 12,
+        "raw_item_text": "USB Webcam 1080p",
+        "qty_quoted": null,
+        "unit_price": 2200,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F13=2200, Line Items!G13=INR, Line Items!D13=per unit",
+        "source_location": "Line Items!F13",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 13,
+        "raw_item_text": "USB Webcam 4K",
+        "qty_quoted": null,
+        "unit_price": 6800,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F14=6800, Line Items!G14=INR, Line Items!D14=per unit",
+        "source_location": "Line Items!F14",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 14,
+        "raw_item_text": "Wired Noise-Cancelling Headset",
+        "qty_quoted": null,
+        "unit_price": 3400,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F15=3400, Line Items!G15=INR, Line Items!D15=per unit",
+        "source_location": "Line Items!F15",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 15,
+        "raw_item_text": "Bluetooth Headset",
+        "qty_quoted": null,
+        "unit_price": 1800,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F16=1800, Line Items!G16=INR, Line Items!D16=per unit",
+        "source_location": "Line Items!F16",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 16,
+        "raw_item_text": "Conference Speakerphone",
+        "qty_quoted": null,
+        "unit_price": 22000,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F17=22000, Line Items!G17=INR, Line Items!D17=per unit",
+        "source_location": "Line Items!F17",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 17,
+        "raw_item_text": "Conference PTZ Camera",
+        "qty_quoted": null,
+        "unit_price": 65000,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F18=65000, Line Items!G18=INR, Line Items!D18=per unit",
+        "source_location": "Line Items!F18",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 18,
+        "raw_item_text": "65-inch Interactive Display Panel",
+        "qty_quoted": null,
+        "unit_price": 385000,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F19=385000, Line Items!G19=INR, Line Items!D19=per unit",
+        "source_location": "Line Items!F19",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 19,
+        "raw_item_text": "Laptop Sleeve 15.6-inch",
+        "qty_quoted": null,
+        "unit_price": 850,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F20=850, Line Items!G20=INR, Line Items!D20=per unit",
+        "source_location": "Line Items!F20",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 20,
+        "raw_item_text": "Spare 65W USB-C Charger",
+        "qty_quoted": null,
+        "unit_price": 2100,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F21=2100, Line Items!G21=INR, Line Items!D21=per unit",
+        "source_location": "Line Items!F21",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 21,
+        "raw_item_text": "Portable SSD 1TB",
+        "qty_quoted": null,
+        "unit_price": 7200,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F22=7200, Line Items!G22=INR, Line Items!D22=per unit",
+        "source_location": "Line Items!F22",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 22,
+        "raw_item_text": "USB-C to HDMI Adapter",
+        "qty_quoted": null,
+        "unit_price": 950,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F23=950, Line Items!G23=INR, Line Items!D23=per unit",
+        "source_location": "Line Items!F23",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 23,
+        "raw_item_text": "USB Hub 7-port",
+        "qty_quoted": null,
+        "unit_price": 1600,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F24=1600, Line Items!G24=INR, Line Items!D24=per unit",
+        "source_location": "Line Items!F24",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 24,
+        "raw_item_text": "Laptop Cable Lock",
+        "qty_quoted": null,
+        "unit_price": 550,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F25=550, Line Items!G25=INR, Line Items!D25=per unit",
+        "source_location": "Line Items!F25",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 25,
+        "raw_item_text": "External Blu-ray/DVD Drive",
+        "qty_quoted": null,
+        "unit_price": 3800,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F26=3800, Line Items!G26=INR, Line Items!D26=per unit",
+        "source_location": "Line Items!F26",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 26,
+        "raw_item_text": "Handheld Barcode Scanner (USB)",
+        "qty_quoted": null,
+        "unit_price": 9500,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F27=9500, Line Items!G27=INR, Line Items!D27=per unit",
+        "source_location": "Line Items!F27",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 27,
+        "raw_item_text": "Desktop Label Printer",
+        "qty_quoted": null,
+        "unit_price": 14500,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F28=14500, Line Items!G28=INR, Line Items!D28=per unit",
+        "source_location": "Line Items!F28",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 28,
+        "raw_item_text": "Network Switch, 24-port unmanaged",
+        "qty_quoted": null,
+        "unit_price": 8200,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F29=8200, Line Items!G29=INR, Line Items!D29=per unit",
+        "source_location": "Line Items!F29",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 29,
+        "raw_item_text": "Desktop UPS 650VA",
+        "qty_quoted": null,
+        "unit_price": 4600,
+        "currency": "INR",
+        "unit_of_measure": "per unit",
+        "flags": [
+          "OK"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F30=4600, Line Items!G30=INR, Line Items!D30=per unit",
+        "source_location": "Line Items!F30",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      },
+      {
+        "vendor_id": "apex",
+        "line_ref": 30,
+        "raw_item_text": "3-Year Onsite Warranty Extension",
+        "qty_quoted": null,
+        "unit_price": 3200,
+        "currency": "INR",
+        "unit_of_measure": "per device",
+        "flags": [
+          "OK",
+          "UNIT_MISMATCH"
+        ],
+        "resolvable": true,
+        "source_excerpt": "Line Items!F31=3200, Line Items!G31=INR, Line Items!D31=lot, Line Items!E31=1, Line Items!H31=1024000, Line Items!I31='Applies to all 320 laptop/ultrabook units (lines 1-4)'. The stated unit price of 3200 with qty 1 lot yields line total 1024000 only if price is per device (1024000 / 320 = 3200), and remark confirms 320 units.",
+        "source_location": "Line Items!F31",
+        "extraction_confidence": 0.9,
+        "conditional_discount_pct": null,
+        "conditional_discount_description": null
+      }
+    ],
+    "answers": [
+      {
+        "question_id": "q_oem",
+        "raw_answer": "Yes - Authorized Premier Partner for Dell, HP and Lenovo. Partner certificates attached as Annexure A.",
+        "source_excerpt": "Yes - Authorized Premier Partner for Dell, HP and Lenovo. Partner certificates attached as Annexure A.",
+        "source_location": "Vendor questionnaire response"
+      },
+      {
+        "question_id": "q_iso",
+        "raw_answer": "Yes - ISO 9001:2015 certified. Certificate No. IN-QMS-4471, valid till Mar 2027.",
+        "source_excerpt": "Yes - ISO 9001:2015 certified. Certificate No. IN-QMS-4471, valid till Mar 2027.",
+        "source_location": "Vendor questionnaire response"
+      },
+      {
+        "question_id": "q_rohs",
+        "raw_answer": "Yes - all supplied hardware is RoHS compliant and Energy Star rated where applicable to the category.",
+        "source_excerpt": "Yes - all supplied hardware is RoHS compliant and Energy Star rated where applicable to the category.",
+        "source_location": "Vendor questionnaire response"
+      },
+      {
+        "question_id": "q_service",
+        "raw_answer": "12 service center cities. SLA: 4 business hours onsite response in metros, 8 hours in Tier-2 cities.",
+        "source_excerpt": "12 service center cities. SLA: 4 business hours onsite response in metros, 8 hours in Tier-2 cities.",
+        "source_location": "Vendor questionnaire response"
+      },
+      {
+        "question_id": "q_warranty",
+        "raw_answer": "Laptops/Ultrabooks: 3-year onsite (OEM). Monitors: 3-year onsite. Peripherals: 1-year replacement. UPS: 2-year onsite.",
+        "source_excerpt": "Laptops/Ultrabooks: 3-year onsite (OEM). Monitors: 3-year onsite. Peripherals: 1-year replacement. UPS: 2-year onsite.",
+        "source_location": "Vendor questionnaire response"
+      },
+      {
+        "question_id": "q_disposal",
+        "raw_answer": "NIST 800-88 compliant data sanitization; certificate of data destruction issued per device.",
+        "source_excerpt": "NIST 800-88 compliant data sanitization; certificate of data destruction issued per device.",
+        "source_location": "Vendor questionnaire response"
+      },
+      {
+        "question_id": "q_references",
+        "raw_answer": "1) Meridian Financial Services - 450-seat refresh, Mar 2025, contact: it.procurement@meridianfs.in. 2) Coastal Logistics Group - 280-seat refresh, Aug 2024, contact: nikhil.rao@coastallogistics.in.",
+        "source_excerpt": "1) Meridian Financial Services - 450-seat refresh, Mar 2025, contact: it.procurement@meridianfs.in. 2) Coastal Logistics Group - 280-seat refresh, Aug 2024, contact: nikhil.rao@coastallogistics.in.",
+        "source_location": "Vendor questionnaire response"
+      },
+      {
+        "question_id": "q_lead_time",
+        "raw_answer": "10 business days ex-stock for standard SKUs; 3-4 weeks for the 65-inch display panel.",
+        "source_excerpt": "10 business days ex-stock for standard SKUs; 3-4 weeks for the 65-inch display panel.",
+        "source_location": "Vendor questionnaire response"
+      }
+    ],
+    "terms": [
+      {
+        "key": "payment_terms",
+        "value": "50% advance, 50% on delivery",
+        "source_excerpt": "Payment Terms: 50% advance, 50% on delivery",
+        "source_location": "Commercial Terms!B2"
+      },
+      {
+        "key": "quote_validity",
+        "value": "30 days",
+        "source_excerpt": "Quote Validity: 30 days from quote date",
+        "source_location": "Commercial Terms!B3"
+      },
+      {
+        "key": "freight",
+        "value": "Delivered (DAP), freight included",
+        "source_excerpt": "Freight Terms: Delivered at Buyer's site (DAP), freight included",
+        "source_location": "Commercial Terms!B4"
+      },
+      {
+        "key": "taxes",
+        "value": "18% GST extra",
+        "source_excerpt": "GST / Tax Treatment: 18% GST extra, as applicable",
+        "source_location": "Commercial Terms!B5"
+      },
+      {
+        "key": "warranty",
+        "value": "Laptops & monitors 3-yr onsite; peripherals 1-yr",
+        "source_excerpt": "Laptops/Ultrabooks: 3-year onsite (OEM). Monitors: 3-year onsite. Peripherals: 1-year replacement. UPS: 2-year onsite.",
+        "source_location": "Questionnaire!C6"
+      },
+      {
+        "key": "lead_time",
+        "value": "10 business days (display panel 3-4 weeks)",
+        "source_excerpt": "10 business days ex-stock for standard SKUs; 3-4 weeks for the 65-inch display panel.",
+        "source_location": "Questionnaire!C9"
+      }
+    ]
+  },
+  "classified_answers": [
+    {
+      "vendor_id": "apex",
+      "question": "Authorized OEM reseller? (name brands + attach proof)",
+      "raw_answer": "Yes - Authorized Premier Partner for Dell, HP and Lenovo. Partner certificates attached as Annexure A.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Names specific brands (Dell, HP, Lenovo), claims Premier Partner status, and references attached partner certificates (Annexure A) as proof.",
+      "question_id": "q_oem",
+      "source_excerpt": "Yes - Authorized Premier Partner for Dell, HP and Lenovo. Partner certificates attached as Annexure A.",
+      "source_location": "Vendor questionnaire response"
+    },
+    {
+      "vendor_id": "apex",
+      "question": "ISO 9001 certified? (certificate number)",
+      "raw_answer": "Yes - ISO 9001:2015 certified. Certificate No. IN-QMS-4471, valid till Mar 2027.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Provides specific certificate number (IN-QMS-4471), version (ISO 9001:2015), and validity period (through Mar 2027).",
+      "question_id": "q_iso",
+      "source_excerpt": "Yes - ISO 9001:2015 certified. Certificate No. IN-QMS-4471, valid till Mar 2027.",
+      "source_location": "Vendor questionnaire response"
+    },
+    {
+      "vendor_id": "apex",
+      "question": "RoHS / Energy Star compliance on hardware supplied?",
+      "raw_answer": "Yes - all supplied hardware is RoHS compliant and Energy Star rated where applicable to the category.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Direct, unhedged affirmative covering full scope: states all supplied hardware is RoHS compliant and Energy Star rated where applicable. Question asks whether compliance exists, not for certificate numbers, so this specific confirmation constitutes proof.",
+      "question_id": "q_rohs",
+      "source_excerpt": "Yes - all supplied hardware is RoHS compliant and Energy Star rated where applicable to the category.",
+      "source_location": "Vendor questionnaire response"
+    },
+    {
+      "vendor_id": "apex",
+      "question": "Local service center cities and average onsite response SLA",
+      "raw_answer": "12 service center cities. SLA: 4 business hours onsite response in metros, 8 hours in Tier-2 cities.",
+      "quality": "ANSWERED_VAGUE",
+      "notes": "States '12 service center cities' but does not name them. SLA figures are specific (4 hours metros, 8 hours Tier-2) but without named cities, the service footprint cannot be verified.",
+      "question_id": "q_service",
+      "source_excerpt": "12 service center cities. SLA: 4 business hours onsite response in metros, 8 hours in Tier-2 cities.",
+      "source_location": "Vendor questionnaire response"
+    },
+    {
+      "vendor_id": "apex",
+      "question": "Standard warranty terms per product category",
+      "raw_answer": "Laptops/Ultrabooks: 3-year onsite (OEM). Monitors: 3-year onsite. Peripherals: 1-year replacement. UPS: 2-year onsite.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Provides specific warranty terms for each product category with concrete durations and service types (e.g., 3-year onsite for laptops, 1-year replacement for peripherals).",
+      "question_id": "q_warranty",
+      "source_excerpt": "Laptops/Ultrabooks: 3-year onsite (OEM). Monitors: 3-year onsite. Peripherals: 1-year replacement. UPS: 2-year onsite.",
+      "source_location": "Vendor questionnaire response"
+    },
+    {
+      "vendor_id": "apex",
+      "question": "Asset disposal / data-wipe policy for buyback of old devices",
+      "raw_answer": "NIST 800-88 compliant data sanitization; certificate of data destruction issued per device.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Cites specific standard (NIST 800-88) and commits to issuing certificate of data destruction per device, providing verifiable specifics.",
+      "question_id": "q_disposal",
+      "source_excerpt": "NIST 800-88 compliant data sanitization; certificate of data destruction issued per device.",
+      "source_location": "Vendor questionnaire response"
+    },
+    {
+      "vendor_id": "apex",
+      "question": "Similar-scale deployment references (2+, with contact)",
+      "raw_answer": "1) Meridian Financial Services - 450-seat refresh, Mar 2025, contact: it.procurement@meridianfs.in. 2) Coastal Logistics Group - 280-seat refresh, Aug 2024, contact: nikhil.rao@coastallogistics.in.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Provides two references with company names, deployment scale (450-seat, 280-seat), dates, and contactable email addresses for verification.",
+      "question_id": "q_references",
+      "source_excerpt": "1) Meridian Financial Services - 450-seat refresh, Mar 2025, contact: it.procurement@meridianfs.in. 2) Coastal Logistics Group - 280-seat refresh, Aug 2024, contact: nikhil.rao@coastallogistics.in.",
+      "source_location": "Vendor questionnaire response"
+    },
+    {
+      "vendor_id": "apex",
+      "question": "Average lead time from PO to delivery",
+      "raw_answer": "10 business days ex-stock for standard SKUs; 3-4 weeks for the 65-inch display panel.",
+      "quality": "ANSWERED_WITH_PROOF",
+      "notes": "Specific timelines provided: 10 business days for standard SKUs and 3-4 weeks for the 65-inch display panel.",
+      "question_id": "q_lead_time",
+      "source_excerpt": "10 business days ex-stock for standard SKUs; 3-4 weeks for the 65-inch display panel.",
+      "source_location": "Vendor questionnaire response"
+    }
+  ],
+  "created_at": "2026-09-29T20:37:57.995Z",
+  "origin": "reconstructed-from-validated-run"
+}

@@ -1,6 +1,6 @@
-import { ExtractedLine, LineItemSpec } from "../schema";
+import { RfxDefinition } from "../schema";
 import { askForJSON } from "../claude";
-import { buildExtractionSystemPrompt, parseExtractionResponse } from "./shared";
+import { buildExtractionSystemPrompt, parseExtractionResponse, ExtractionResult } from "./shared";
 
 /**
  * Plain text needs no format-specific pre-processing, but this is the
@@ -13,12 +13,12 @@ import { buildExtractionSystemPrompt, parseExtractionResponse } from "./shared";
 export async function extractFromEmail(
   text: string,
   vendorId: string,
-  lineItems: LineItemSpec[]
-): Promise<ExtractedLine[]> {
+  rfx: RfxDefinition
+): Promise<ExtractionResult> {
   const paragraphs = text.split(/\n\s*\n/).map((p, i) => `[paragraph ${i + 1}] ${p.trim()}`);
   const numbered = paragraphs.join("\n\n");
 
-  const system = buildExtractionSystemPrompt(lineItems);
+  const system = buildExtractionSystemPrompt(rfx);
   const user = `Here is the vendor's email reply, with paragraphs numbered for you to cite as \
 source_location. This vendor is known to write casually and may skip items, use approximate \
 language ("around Rs X"), or quote one price across multiple RFx lines at once -- follow rule #2 \
