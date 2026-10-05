@@ -29,3 +29,10 @@ export function formatInr(n: number | null | undefined, opts: { compact?: boolea
   }
   return `₹${n.toLocaleString("en-IN", { maximumFractionDigits: 0 })}`;
 }
+
+/** Asks before deleting an RFx; deletion can't be undone (except restoring the sample). */
+export function confirmDeleteRfx(entry: WorkspaceRfx): boolean {
+  const name = entry.rfx.title || "Untitled RFx";
+  const restore = entry.is_sample ? " You can restore the sample RFx later from the sidebar." : " This can't be undone.";
+  return window.confirm(`Delete "${name}"? Its vendors, responses, chat history and award decision will be removed.${restore}`);
+}

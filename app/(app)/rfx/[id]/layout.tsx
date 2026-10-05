@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useRfxFromRoute } from "@/lib/useRfx";
-import { STATUS_BADGE, STATUS_LABEL, formatDate, responseCounts } from "@/lib/rfxStatus";
+import { STATUS_BADGE, STATUS_LABEL, confirmDeleteRfx, formatDate, responseCounts } from "@/lib/rfxStatus";
 import { downloadRfxPack } from "@/lib/downloads";
 
 export default function RfxLayout({ children }: { children: React.ReactNode }) {
   const { id, entry, ws } = useRfxFromRoute();
   const pathname = usePathname();
+  const router = useRouter();
 
   if (!ws.ready) return <div className="empty">Loading…</div>;
   if (!entry) {
@@ -46,9 +47,21 @@ export default function RfxLayout({ children }: { children: React.ReactNode }) {
             {formatDate(entry.rfx.response_due)}
           </div>
         </div>
-        <button className="btn" onClick={() => downloadRfxPack(entry.rfx)}>
-          Download RFx template
-        </button>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button
+            className="btn btn-ghost btn-danger"
+            onClick={() => {
+              if (!confirmDeleteRfx(entry)) return;
+              router.replace("/");
+              ws.remove(entry.rfx.rfx_id);
+            }}
+          >
+            Delete
+          </button>
+          <button className="btn" onClick={() => downloadRfxPack(entry.rfx)}>
+            Download RFx template
+          </button>
+        </div>
       </div>
       <nav className="tabs" aria-label="RFx sections">
         {tabs.map((t) => (

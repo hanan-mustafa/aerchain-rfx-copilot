@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { useWorkspace } from "@/lib/workspace";
-import { STATUS_BADGE, STATUS_LABEL, formatDate, formatInr, responseCounts } from "@/lib/rfxStatus";
+import { STATUS_BADGE, STATUS_LABEL, confirmDeleteRfx, formatDate, formatInr, responseCounts } from "@/lib/rfxStatus";
 
 export default function RfxListPage() {
-  const { rfxs, ready, error } = useWorkspace();
+  const { rfxs, ready, error, remove } = useWorkspace();
 
   return (
     <>
@@ -42,6 +42,7 @@ export default function RfxListPage() {
                 <th>Line items</th>
                 <th>Due</th>
                 <th>Award</th>
+                <th aria-label="Actions" />
               </tr>
             </thead>
             <tbody>
@@ -66,6 +67,15 @@ export default function RfxListPage() {
                     <td>{r.rfx.line_items.length}</td>
                     <td>{formatDate(r.rfx.response_due)}</td>
                     <td>{r.award ? formatInr(r.award.total_inr, { compact: true }) : <span className="muted">—</span>}</td>
+                    <td style={{ textAlign: "right" }}>
+                      <button
+                        className="btn btn-ghost btn-sm btn-danger"
+                        aria-label={`Delete ${r.rfx.title || "Untitled RFx"}`}
+                        onClick={() => confirmDeleteRfx(r) && remove(r.rfx.rfx_id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
                   </tr>
                 );
               })}

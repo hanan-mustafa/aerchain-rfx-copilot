@@ -17,6 +17,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
   const pathname = usePathname();
   const { rfxs, resetSample } = useWorkspace();
   const recent = rfxs.slice(0, 6);
+  const hasSample = rfxs.some((r) => r.is_sample);
 
   return (
     <nav className={`sidebar ${collapsed ? "sidebar-collapsed" : ""}`} aria-label="Main">
@@ -54,10 +55,10 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
           <button
             style={{ border: "none", background: "none", padding: 0, marginTop: "8px", fontSize: "12px", color: "var(--accent)" }}
             onClick={() => {
-              if (window.confirm("Restore the sample RFx to its original state? Your own RFxs are not affected.")) resetSample();
+              if (window.confirm(hasSample ? "Restore the sample RFx to its original state? Your own RFxs are not affected." : "Restore the sample RFx? Your own RFxs are not affected.")) resetSample();
             }}
           >
-            Reset sample RFx
+            {hasSample ? "Reset sample RFx" : "Restore sample RFx"}
           </button>
         </div>
         <button

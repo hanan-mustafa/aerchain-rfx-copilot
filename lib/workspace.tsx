@@ -3,6 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { ComparisonStore, ProcessedResponse, RfxDefinition, VendorMeta } from "./schema";
 import { buildComparison } from "./comparison";
+import { deleteFilesWithPrefix } from "./fileStore";
 import type { AwardAllocation } from "./award";
 
 /**
@@ -56,6 +57,7 @@ export interface WorkspaceRfx {
 
 interface WorkspaceState {
   rfxs: WorkspaceRfx[];
+  sample_removed?: boolean; // the buyer deleted the sample RFx: don't bring it back on load
 }
 
 const STORAGE_KEY = "rfx-copilot.workspace.v1";
@@ -150,7 +152,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const stored = load();
-    if (stored && stored.rfxs.some((r) => r.is_sample)) {
+    if (stored && (stored.rfxs.some((r) => r.is_sample) || stored.sample_removed)) {
       setState(stored);
       setReady(true);
       return;
@@ -182,6 +184,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
 
   const update = useCallback((rfxId: string, fn: (entry: WorkspaceRfx) => WorkspaceRfx) => {
     setState((s) => ({
+      ...s,
       rfxs: s.rfxs.map((r) => (r.rfx.rfx_id === rfxId ? { ...fn(r), updated_at: new Date().toISOString() } : r)),
     }));
   }, []);
@@ -190,17 +193,33 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
     setState((s) => {
       const exists = s.rfxs.some((r) => r.rfx.rfx_id === entry.rfx.rfx_id);
       const stamped = { ...entry, updated_at: new Date().toISOString() };
-      return { rfxs: exists ? s.rfxs.map((r) => (r.rfx.rfx_id === entry.rfx.rfx_id ? stamped : r)) : [stamped, ...s.rfxs] };
+      return { ...s, rfxs: exists ? s.rfxs.map((r) => (r.rfx.rfx_id === entry.rfx.rfx_id ? stamped : r)) : [stamped, ...s.rfxs] };
     });
   }, []);
 
+  // Deletes the RFx and everything kept for it in this browser: its chat and
+  // co-pilot history and the uploaded response files.
   const remove = useCallback((rfxId: string) => {
-    setState((s) => ({ rfxs: s.rfxs.filter((r) => r.rfx.rfx_id !== rfxId) }));
+    setState((s) => {
+      const target = s.rfxs.find((r) => r.rfx.rfx_id === rfxId);
+      return {
+        rfxs: s.rfxs.filter((r) => r.rfx.rfx_id !== rfxId),
+        sample_removed: s.sample_removed || !!target?.is_sample,
+      };
+    });
+    for (const key of [`rfx-copilot.chat.${rfxId}`, `rfx-copilot.chat-cache.${rfxId}`, `rfx-copilot.copilot.${rfxId}`]) {
+      try {
+        window.localStorage.removeItem(key);
+      } catch {
+        // storage unavailable
+      }
+    }
+    deleteFilesWithPrefix(`${rfxId}/`).catch(() => undefined);
   }, []);
 
   const resetSample = useCallback(async () => {
     const sample = await fetchSample();
-    setState((s) => ({ rfxs: [sample, ...s.rfxs.filter((r) => !r.is_sample)] }));
+    setState((s) => ({ rfxs: [sample, ...s.rfxs.filter((r) => !r.is_sample)], sample_removed: false }));
   }, []);
 
   const api = useMemo<WorkspaceApi>(

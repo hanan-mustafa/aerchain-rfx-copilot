@@ -42,3 +42,22 @@ export async function openStoredFile(key: string): Promise<boolean> {
   window.open(URL.createObjectURL(blob), "_blank", "noopener");
   return true;
 }
+
+/** Removes every stored file whose key starts with the prefix (e.g. all files of one RFx). */
+export async function deleteFilesWithPrefix(prefix: string): Promise<void> {
+  const db = await open();
+  await new Promise<void>((resolve, reject) => {
+    const tx = db.transaction(STORE, "readwrite");
+    const store = tx.objectStore(STORE);
+    const req = store.openCursor(IDBKeyRange.bound(prefix, prefix + "\uffff"));
+    req.onsuccess = () => {
+      const cursor = req.result;
+      if (cursor) {
+        cursor.delete();
+        cursor.continue();
+      }
+    };
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
